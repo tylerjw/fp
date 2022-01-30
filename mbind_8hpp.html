@@ -107,7 +107,7 @@ Functions</h2></td></tr>
 <tr class="separator:ac1dba7026a1b4234fc668101d9863558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57cf530ab900ef0a9cc497110090612d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
 <tr class="memitem:a57cf530ab900ef0a9cc497110090612d"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">mbind</a> (const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</td></tr>
-<tr class="memdesc:a57cf530ab900ef0a9cc497110090612d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad optional bind <code>Functional Programming in C++</code> book.  <a href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">More...</a><br /></td></tr>
+<tr class="memdesc:a57cf530ab900ef0a9cc497110090612d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad optional bind.  <a href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">More...</a><br /></td></tr>
 <tr class="separator:a57cf530ab900ef0a9cc497110090612d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
 <tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a> (const std::optional&lt; T &gt; &amp;opt, F f)</td></tr>
@@ -115,7 +115,7 @@ Functions</h2></td></tr>
 <tr class="separator:abd8b70189113e335e72d993e2596371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
 <tr class="memitem:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">mbind</a> (const expected&lt; T, E &gt; &amp;exp, F f)</td></tr>
-<tr class="memdesc:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad expected&lt;T,E&gt; <code>Functional Programming in C++</code> book.  <a href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">More...</a><br /></td></tr>
+<tr class="memdesc:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad expected&lt;T,E&gt;  <a href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">More...</a><br /></td></tr>
 <tr class="separator:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ce433224c18ada101504503e4ab09c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
 <tr class="memitem:a08ce433224c18ada101504503e4ab09c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a08ce433224c18ada101504503e4ab09c">operator|</a> (const expected&lt; T, E &gt; &amp;exp, F f)</td></tr>
@@ -216,7 +216,7 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
 </table>
 </div><div class="memdoc">
 
-<p>Monad expected&lt;T,E&gt; <code>Functional Programming in C++</code> book. </p>
+<p>Monad expected&lt;T,E&gt; </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">exp</td><td>The expected&lt;T,E&gt; input </td></tr>
@@ -275,7 +275,7 @@ template&lt;typename T , typename F &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Monad optional bind <code>Functional Programming in C++</code> book. </p>
+<p>Monad optional bind. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>The input optional </td></tr>
@@ -298,7 +298,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="mbind_8hpp_a57cf530ab900ef0a9cc497110090612d_icgraph.png" border="0" usemap="#mbind_8hpp_a57cf530ab900ef0a9cc497110090612d_icgraph" alt=""/></div>
 <map name="mbind_8hpp_a57cf530ab900ef0a9cc497110090612d_icgraph" id="mbind_8hpp_a57cf530ab900ef0a9cc497110090612d_icgraph">
-<area shape="rect" title="Monad optional bind Functional Programming in C++ book." alt="" coords="291,31,353,57"/>
+<area shape="rect" title="Monad optional bind." alt="" coords="291,31,353,57"/>
 <area shape="rect" href="mbind_8hpp.html#a56c92cead3ceea26c308fac121e3cbea" title="Monadic compose two monad functions." alt="" coords="148,5,243,32"/>
 <area shape="rect" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a" title="Overload of the | operator as bind." alt="" coords="155,56,236,83"/>
 <area shape="rect" href="mbind_8hpp.html#afb298004ae5c3b8dcb7ae857ec792617" title="Variadic mcompose." alt="" coords="5,5,100,32"/>
@@ -360,14 +360,14 @@ template&lt;typename F , typename G &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A functional composition of two monad functions </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00165">165</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00164">164</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="mbind_8hpp_a56c92cead3ceea26c308fac121e3cbea_cgraph.png" border="0" usemap="#mbind_8hpp_a56c92cead3ceea26c308fac121e3cbea_cgraph" alt=""/></div>
 <map name="mbind_8hpp_a56c92cead3ceea26c308fac121e3cbea_cgraph" id="mbind_8hpp_a56c92cead3ceea26c308fac121e3cbea_cgraph">
 <area shape="rect" title="Monadic compose two monad functions." alt="" coords="5,5,100,32"/>
-<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind Functional Programming in C++ book." alt="" coords="148,5,211,32"/>
+<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind." alt="" coords="148,5,211,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -443,7 +443,7 @@ template&lt;typename T , typename G , typename... Types&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A functional composition of variadic monad functions </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00183">183</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00182">182</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -451,7 +451,7 @@ Here is the call graph for this function:</div>
 <map name="mbind_8hpp_afb298004ae5c3b8dcb7ae857ec792617_cgraph" id="mbind_8hpp_afb298004ae5c3b8dcb7ae857ec792617_cgraph">
 <area shape="rect" title="Variadic mcompose." alt="" coords="5,5,100,32"/>
 <area shape="rect" href="mbind_8hpp.html#a56c92cead3ceea26c308fac121e3cbea" title="Monadic compose two monad functions." alt="" coords="148,5,243,32"/>
-<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind Functional Programming in C++ book." alt="" coords="291,5,353,32"/>
+<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind." alt="" coords="291,5,353,32"/>
 </map>
 </div>
 
@@ -500,7 +500,7 @@ template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::typ
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The return value of the function </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00145">145</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00144">144</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
 
 </div>
 </div>
@@ -559,14 +559,14 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The return type of the function </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00127">127</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00126">126</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="mbind_8hpp_a08ce433224c18ada101504503e4ab09c_cgraph.png" border="0" usemap="#mbind_8hpp_a08ce433224c18ada101504503e4ab09c_cgraph" alt=""/></div>
 <map name="mbind_8hpp_a08ce433224c18ada101504503e4ab09c_cgraph" id="mbind_8hpp_a08ce433224c18ada101504503e4ab09c_cgraph">
 <area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
-<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind Functional Programming in C++ book." alt="" coords="135,5,197,32"/>
+<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind." alt="" coords="135,5,197,32"/>
 </map>
 </div>
 
@@ -632,7 +632,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph.png" border="0" usemap="#mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" alt=""/></div>
 <map name="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" id="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph">
 <area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
-<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind Functional Programming in C++ book." alt="" coords="135,5,197,32"/>
+<area shape="rect" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind." alt="" coords="135,5,197,32"/>
 </map>
 </div>
 

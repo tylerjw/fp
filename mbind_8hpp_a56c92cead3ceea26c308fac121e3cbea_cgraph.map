@@ -1,4 +1,4 @@
 <map id="mcompose" name="mcompose">
 <area shape="rect" id="node1" title="Monadic compose two monad functions." alt="" coords="5,5,100,32"/>
-<area shape="rect" id="node2" href="$mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind Functional Programming in C++ book." alt="" coords="148,5,211,32"/>
+<area shape="rect" id="node2" href="$mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d" title="Monad optional bind." alt="" coords="148,5,211,32"/>
 </map>
