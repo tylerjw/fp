@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nodiscard_80',['NoDiscard',['../structNoDiscard.html',1,'']]]
+  ['range_83',['range',['../structvalidate_1_1range.html',1,'validate']]]
 ];

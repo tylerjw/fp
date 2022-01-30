@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['curried_76',['Curried',['../classCurried.html',1,'']]]
+  ['error_79',['Error',['../structError.html',1,'']]]
 ];

@@ -70,19 +70,47 @@ $(function() {
 <div class="title">no_discard.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="no__discard_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">monad/all.hpp</a>&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    3</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> f = <a class="code" href="structNoDiscard.html">NoDiscard</a>{[] { <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, <span class="stringliteral">&quot;yikes!&quot;</span>}; }};</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  fmt::print(<span class="stringliteral">&quot;{}\n&quot;</span>, f());</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="comment">// [Error: [Unknown] yikes!]</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<a href="no__discard_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright 2022 PickNik Inc</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//    * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//      notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//    * Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//      notice, this list of conditions and the following disclaimer in the</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//      documentation and/or other materials provided with the distribution.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//    * Neither the name of the PickNik Inc nor the names of its</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//      contributors may be used to endorse or promote products derived from</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//      this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">monad/all.hpp</a>&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   31</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> f = <a class="code" href="structNoDiscard.html">NoDiscard</a>{[] { <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, <span class="stringliteral">&quot;yikes!&quot;</span>}; }};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  fmt::print(<span class="stringliteral">&quot;{}\n&quot;</span>, f());</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">// [Error: [Unknown] yikes!]</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructError_html"><div class="ttname"><a href="structError.html">Error</a></div><div class="ttdoc">Error type used by Result&lt;T&gt;</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00073">result.hpp:73</a></div></div>
 <div class="ttc" id="aCMakeLists_8txt_html_a7bb786bce3be30b1de4c12fb24700e7b"><div class="ttname"><a href="CMakeLists_8txt.html#a7bb786bce3be30b1de4c12fb24700e7b">cmake_minimum_required</a></div><div class="ttdeci">cmake_minimum_required(VERSION 3.15) project(monad) find_package(ament_cmake REQUIRED) find_package(fmt REQUIRED) find_package(range-v3 REQUIRED) add_library(monad INTERFACE) target_include_directories(monad INTERFACE $&lt; BUILD_INTERFACE</div><div class="ttdef"><b>Definition:</b> <a href="CMakeLists_8txt_source.html#l00001">CMakeLists.txt:1</a></div></div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div></div>
 <div class="ttc" id="anamespacefmt_html"><div class="ttname"><a href="namespacefmt.html">fmt</a></div></div>
-<div class="ttc" id="ano__discard_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8cpp_source.html#l00003">no_discard.cpp:3</a></div></div>
+<div class="ttc" id="ano__discard_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8cpp_source.html#l00031">no_discard.cpp:31</a></div></div>
 <div class="ttc" id="astructNoDiscard_html"><div class="ttname"><a href="structNoDiscard.html">NoDiscard</a></div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00039">no_discard.hpp:39</a></div></div>
 <div class="ttc" id="aall_8hpp_html"><div class="ttname"><a href="all_8hpp.html">all.hpp</a></div></div>
 <!-- start footer part -->

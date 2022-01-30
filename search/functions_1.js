@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['format_97',['format',['../structfmt_1_1formatter_3_01Error_01_4.html#a6cc93ef40609a1c7da6a407dd69a354d',1,'fmt::formatter&lt; Error &gt;::format()'],['../structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#ade898803a25a122269b9975e98004580',1,'fmt::formatter&lt; Result&lt; T &gt; &gt;::format()']]]
+  ['divide_5f4_5fby_98',['divide_4_by',['../result_8cpp.html#a603c14957a91e5a91862cafbb177f0f9',1,'result.cpp']]],
+  ['do_5fmath_99',['do_math',['../result_8cpp.html#a5d80dcfaf6724bf1a637914b4209c2ad',1,'result.cpp']]]
 ];
