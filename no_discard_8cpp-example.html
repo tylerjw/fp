@@ -74,9 +74,8 @@ $(function() {
 </dl>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">monad/all.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a name="a0"></a><a class="code" href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
-<div class="line">{</div>
-<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> f = <a name="_a1"></a><a class="code" href="structNoDiscard.html">NoDiscard</a>{[]{ <span class="keywordflow">return</span> <a name="_a2"></a><a class="code" href="structError.html">Error</a>{<a name="a3"></a><a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, <span class="stringliteral">&quot;yikes!&quot;</span>}; }};</div>
+<div class="line"><span class="keywordtype">int</span> <a name="a0"></a><a class="code" href="no__discard_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> f = <a name="_a1"></a><a class="code" href="structNoDiscard.html">NoDiscard</a>{[] { <span class="keywordflow">return</span> <a name="_a2"></a><a class="code" href="structError.html">Error</a>{<a name="a3"></a><a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, <span class="stringliteral">&quot;yikes!&quot;</span>}; }};</div>
 <div class="line">  fmt::print(<span class="stringliteral">&quot;{}\n&quot;</span>, f());</div>
 <div class="line">  <span class="comment">// [Error: [Unknown] yikes!]</span></div>
 <div class="line">}</div>
