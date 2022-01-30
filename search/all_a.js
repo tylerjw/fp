@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['range_53',['range',['../structvalidate_1_1range.html',1,'validate']]],
-  ['readme_2emd_54',['README.md',['../README_8md.html',1,'']]],
-  ['resource_5fexhausted_55',['RESOURCE_EXHAUSTED',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627',1,'result.hpp']]],
-  ['resourceexhausted_56',['ResourceExhausted',['../result_8hpp.html#a55bc897dc7c73f4af7b790bac8d52f37',1,'result.hpp']]],
-  ['result_57',['Result',['../result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11',1,'result.hpp']]],
-  ['result_2ehpp_58',['result.hpp',['../result_8hpp.html',1,'']]]
+  ['parse_51',['parse',['../structfmt_1_1formatter_3_01Error_01_4.html#a93426e1f7196ce9db8cb1454a8aec8a0',1,'fmt::formatter&lt; Error &gt;::parse()'],['../structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#a04aa622c86ad39030bd35a8e28206d65',1,'fmt::formatter&lt; Result&lt; T &gt; &gt;::parse()']]],
+  ['permission_5fdenined_52',['PERMISSION_DENINED',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106',1,'result.hpp']]],
+  ['permissiondenied_53',['PermissionDenied',['../result_8hpp.html#adfdc018c2056f50b01f9b1b3a0ef2d06',1,'result.hpp']]]
 ];

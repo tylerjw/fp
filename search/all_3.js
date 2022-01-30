@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['error_13',['Error',['../structError.html',1,'']]],
-  ['errorcode_14',['ErrorCode',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18',1,'result.hpp']]],
-  ['exception_15',['Exception',['../result_8hpp.html#a285373a4f17b546f020d6d7b8542613a',1,'Exception():&#160;result.hpp'],['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf',1,'EXCEPTION():&#160;result.hpp']]]
+  ['data_5floss_12',['DATA_LOSS',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20',1,'result.hpp']]],
+  ['dataloss_13',['DataLoss',['../result_8hpp.html#a50f06a45648da8963d2b162a13fbb382',1,'result.hpp']]]
 ];

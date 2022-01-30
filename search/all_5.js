@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['in_24',['in',['../namespacevalidate.html#a511d9c9fd641680d48cab89a01294356',1,'validate']]],
-  ['internal_25',['Internal',['../result_8hpp.html#a0de0b8ba63e727a84a4ab92aaf9e3999',1,'Internal():&#160;result.hpp'],['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81',1,'INTERNAL():&#160;result.hpp']]],
-  ['invalid_5fargument_26',['INVALID_ARGUMENT',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d',1,'result.hpp']]],
-  ['invalidargument_27',['InvalidArgument',['../result_8hpp.html#af4cb0c84a7aed70edf3265be3b1a8249',1,'result.hpp']]]
+  ['f_5f_17',['f_',['../structNoDiscard.html#a3faa84a638bcd34b45a98cba7f49392e',1,'NoDiscard']]],
+  ['failed_5fprecondition_18',['FAILED_PRECONDITION',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431',1,'result.hpp']]],
+  ['failedprecondition_19',['FailedPrecondition',['../result_8hpp.html#a1b3f817e39e1cb580d00992c061bf957',1,'result.hpp']]],
+  ['fmt_20',['fmt',['../namespacefmt.html',1,'']]],
+  ['format_21',['format',['../structfmt_1_1formatter_3_01Error_01_4.html#a6cc93ef40609a1c7da6a407dd69a354d',1,'fmt::formatter&lt; Error &gt;::format()'],['../structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#ade898803a25a122269b9975e98004580',1,'fmt::formatter&lt; Result&lt; T &gt; &gt;::format()']]],
+  ['formatter_3c_20error_20_3e_22',['formatter&lt; Error &gt;',['../structfmt_1_1formatter_3_01Error_01_4.html',1,'fmt']]],
+  ['formatter_3c_20result_3c_20t_20_3e_20_3e_23',['formatter&lt; Result&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html',1,'fmt']]],
+  ['from_24',['from',['../structvalidate_1_1range.html#a99faa1e51c643e3366a996f5b2ba2dae',1,'validate::range']]]
 ];
