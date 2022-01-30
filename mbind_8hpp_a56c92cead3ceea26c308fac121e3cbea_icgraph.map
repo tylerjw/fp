@@ -1,0 +1,4 @@
+<map id="mcompose" name="mcompose">
+<area shape="rect" id="node1" title="Monadic compose two monad functions." alt="" coords="148,5,243,32"/>
+<area shape="rect" id="node2" href="$mbind_8hpp.html#afb298004ae5c3b8dcb7ae857ec792617" title="Variadic mcompose." alt="" coords="5,5,100,32"/>
+</map>
