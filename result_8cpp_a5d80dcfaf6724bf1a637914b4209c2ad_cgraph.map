@@ -1,7 +1,7 @@
 <map id="do_math" name="do_math">
 <area shape="rect" id="node1" title=" " alt="" coords="5,56,84,83"/>
-<area shape="rect" id="node2" href="$result_8cpp.html#a603c14957a91e5a91862cafbb177f0f9" title=" " alt="" coords="133,5,233,32"/>
-<area shape="rect" id="node4" href="$result_8hpp.html#a79b3dd7d6907b51e80b2dd7e2ee617a0" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="132,56,235,83"/>
-<area shape="rect" id="node5" href="$result_8cpp.html#a04f8da9410a7c3ed0112bb1848f2d047" title=" " alt="" coords="142,107,225,133"/>
-<area shape="rect" id="node3" href="$namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="283,56,441,83"/>
+<area shape="rect" id="node2" href="$result_8cpp.html#a603c14957a91e5a91862cafbb177f0f9" title=" " alt="" coords="159,5,259,32"/>
+<area shape="rect" id="node4" href="$namespacemonad.html#a40ae70f040fdee0432cb429671da5d95" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="132,56,287,83"/>
+<area shape="rect" id="node5" href="$result_8cpp.html#a04f8da9410a7c3ed0112bb1848f2d047" title=" " alt="" coords="168,107,251,133"/>
+<area shape="rect" id="node3" href="$namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="335,56,493,83"/>
 </map>

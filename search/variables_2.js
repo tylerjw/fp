@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dataloss_381',['DataLoss',['../result_8hpp.html#a50f06a45648da8963d2b162a13fbb382',1,'result.hpp']]]
+  ['dataloss_383',['DataLoss',['../namespacemonad.html#a7018c4e62ff73d049e2ba6bdcb867657',1,'monad']]]
 ];

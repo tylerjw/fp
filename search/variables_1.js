@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['canceled_379',['Canceled',['../result_8hpp.html#ab8d2063aaf4b4c28757691408e99b521',1,'result.hpp']]],
-  ['code_380',['code',['../structError.html#a3fd10fc0be9fa90f230b46b0618e9df3',1,'Error']]]
+  ['canceled_381',['Canceled',['../namespacemonad.html#a0d121e02e6ee0353ff57db8632be572a',1,'monad']]],
+  ['code_382',['code',['../structmonad_1_1Error.html#afc6aa391beb33465c6a9fc72781d6faf',1,'monad::Error']]]
 ];

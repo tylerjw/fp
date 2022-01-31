@@ -1,0 +1,4 @@
+<map id="monad::mtry" name="monad::mtry">
+<area shape="rect" id="node1" title="Monadic try, used to lift a function that throws an exception one that returns an expected&lt;T,..." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="160,5,319,32"/>
+</map>

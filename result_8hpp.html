@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
@@ -124,894 +125,115 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structError.html">Error</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structError.html" title="Error type used by Result&lt;T&gt;">Error</a> type used by Result&lt;T&gt;  <a href="structError.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmonad_1_1Error.html">monad::Error</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structmonad_1_1Error.html" title="Error type used by Result&lt;T&gt;">Error</a> type used by Result&lt;T&gt;  <a href="structmonad_1_1Error.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01Error_01_4.html">fmt::formatter&lt; Error &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">fmt format implementation for <a class="el" href="structError.html" title="Error type used by Result&lt;T&gt;">Error</a> type  <a href="structfmt_1_1formatter_3_01Error_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01monad_1_1Error_01_4.html">fmt::formatter&lt; monad::Error &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">fmt format implementation for Error type  <a href="structfmt_1_1formatter_3_01monad_1_1Error_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html">fmt::formatter&lt; Result&lt; T &gt; &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">fmt format implementation for Result&lt;T&gt; type  <a href="structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html">fmt::formatter&lt; monad::Result&lt; T &gt; &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">fmt format implementation for Result&lt;T&gt; type  <a href="structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacemonad"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html">monad</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa1312da5f43346f19ba013b5733bfd11"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa1312da5f43346f19ba013b5733bfd11"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a> = <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, <a class="el" href="structError.html">Error</a> &gt;</td></tr>
-<tr class="separator:aa1312da5f43346f19ba013b5733bfd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bd9b0f1ea08ea2d0dc6820f99df5365"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3bd9b0f1ea08ea2d0dc6820f99df5365"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a3bd9b0f1ea08ea2d0dc6820f99df5365">monad::Result</a> = expected&lt; T, Error &gt;</td></tr>
+<tr class="separator:a3bd9b0f1ea08ea2d0dc6820f99df5365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a5d0f3b4a99b1ebb74d2e4f2e9207bc18"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18">ErrorCode</a> : int { <br />
-&#160;&#160;<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18ae0aa021e21dddbd6d8cecec71e9cf564">ErrorCode::OK</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2">ErrorCode::CANCELLED</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d">ErrorCode::INVALID_ARGUMENT</a>, 
+<tr class="memitem:ab27b5c808c2422088ba5a5aedc82eef1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1">monad::ErrorCode</a> : int { <br />
+&#160;&#160;<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1ae0aa021e21dddbd6d8cecec71e9cf564">monad::ErrorCode::OK</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a9f935beb31030ad0d4d26126c0f39bf2">monad::ErrorCode::CANCELLED</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a696b031073e74bf2cb98e5ef201d4aa3">monad::ErrorCode::UNKNOWN</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1af295a0c3e37c94f078e1c5476479132d">monad::ErrorCode::INVALID_ARGUMENT</a>, 
 <br />
-&#160;&#160;<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a070a0fb40f6c308ab544b227660aadff">ErrorCode::TIMEOUT</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d">ErrorCode::NOT_FOUND</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed">ErrorCode::ALREADY_EXISTS</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106">ErrorCode::PERMISSION_DENINED</a>, 
+&#160;&#160;<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a070a0fb40f6c308ab544b227660aadff">monad::ErrorCode::TIMEOUT</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a8c02547a8a3b02382bac3557bcb2280d">monad::ErrorCode::NOT_FOUND</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a08e6da8e58b2bcd070be3b5274d51eed">monad::ErrorCode::ALREADY_EXISTS</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1af819039636add117ded2bb0613cac106">monad::ErrorCode::PERMISSION_DENINED</a>, 
 <br />
-&#160;&#160;<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627">ErrorCode::RESOURCE_EXHAUSTED</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431">ErrorCode::FAILED_PRECONDITION</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025">ErrorCode::ABORTED</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a6feaf66704b269610cff9431d5519cad">ErrorCode::OUT_OF_RANGE</a>, 
+&#160;&#160;<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a4a739fa42dcdbdb8dfe5a5e4d9c5a627">monad::ErrorCode::RESOURCE_EXHAUSTED</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1acd586de98c3bf7bd95fb4be2bb826431">monad::ErrorCode::FAILED_PRECONDITION</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a4e6c860e5da10e31c5fd9cb76ddc2025">monad::ErrorCode::ABORTED</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a6feaf66704b269610cff9431d5519cad">monad::ErrorCode::OUT_OF_RANGE</a>, 
 <br />
-&#160;&#160;<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18aaa528108d473f663f8947b4d16e7c13c">ErrorCode::UNIMPLEMENTED</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81">ErrorCode::INTERNAL</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead">ErrorCode::UNAVAILABLE</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20">ErrorCode::DATA_LOSS</a>, 
+&#160;&#160;<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1aaa528108d473f663f8947b4d16e7c13c">monad::ErrorCode::UNIMPLEMENTED</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a182fa1c42a2468f8488e6dcf75a81b81">monad::ErrorCode::INTERNAL</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a084f4ca2c0fe703e46514a144b4d6ead">monad::ErrorCode::UNAVAILABLE</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1afb1a9c3daaa0683c4ffac41183243e20">monad::ErrorCode::DATA_LOSS</a>, 
 <br />
-&#160;&#160;<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a456dc2351b6dbb9db3b40552b2e8c5a9">ErrorCode::UNAUTHENTICATED</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf">ErrorCode::EXCEPTION</a>, 
-<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a72b49a7cbf0c0e3dff052d091d838252">ErrorCode::__END</a>
+&#160;&#160;<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a456dc2351b6dbb9db3b40552b2e8c5a9">monad::ErrorCode::UNAUTHENTICATED</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1acccc265b14c17af799a1834f4fbbe7cf">monad::ErrorCode::EXCEPTION</a>, 
+<a class="el" href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a72b49a7cbf0c0e3dff052d091d838252">monad::ErrorCode::__END</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a5d0f3b4a99b1ebb74d2e4f2e9207bc18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for ErrorCodes inspired by absl::StatusCode.  <a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18">More...</a><br /></td></tr>
-<tr class="separator:a5d0f3b4a99b1ebb74d2e4f2e9207bc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ab27b5c808c2422088ba5a5aedc82eef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for ErrorCodes inspired by absl::StatusCode.  <a href="namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1">More...</a><br /></td></tr>
+<tr class="separator:ab27b5c808c2422088ba5a5aedc82eef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2f81d337b23614c3b22f976d47825c90"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a2f81d337b23614c3b22f976d47825c90">toStringView</a> (const <a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18">ErrorCode</a> &amp;code)</td></tr>
-<tr class="memdesc:a2f81d337b23614c3b22f976d47825c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ErrorCode to string_view for easy formatting  <a href="result_8hpp.html#a2f81d337b23614c3b22f976d47825c90">More...</a><br /></td></tr>
-<tr class="separator:a2f81d337b23614c3b22f976d47825c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a79b3dd7d6907b51e80b2dd7e2ee617a0">make_result</a> (T value)</td></tr>
-<tr class="memdesc:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a Result&lt;T&gt; from a T value.  <a href="result_8hpp.html#a79b3dd7d6907b51e80b2dd7e2ee617a0">More...</a><br /></td></tr>
-<tr class="separator:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2784776d5f36738c7aed6d0da73e0266"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
-<tr class="memitem:a2784776d5f36738c7aed6d0da73e0266"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266">has_error</a> (const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;exp)</td></tr>
-<tr class="memdesc:a2784776d5f36738c7aed6d0da73e0266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter function for testing if a result has an error.  <a href="result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266">More...</a><br /></td></tr>
-<tr class="separator:a2784776d5f36738c7aed6d0da73e0266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7f3646cc13a1d9e81005018b2ba3199"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
-<tr class="memitem:aa7f3646cc13a1d9e81005018b2ba3199"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#aa7f3646cc13a1d9e81005018b2ba3199">maybe_error</a> (<a class="el" href="classtl_1_1expected.html">expected</a>&lt; Args, E &gt;... args)</td></tr>
-<tr class="separator:aa7f3646cc13a1d9e81005018b2ba3199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84775508572c5fab6f1ede9ae54aea43"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a84775508572c5fab6f1ede9ae54aea43">monad::toStringView</a> (const ErrorCode &amp;code)</td></tr>
+<tr class="memdesc:a84775508572c5fab6f1ede9ae54aea43"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ErrorCode to string_view for easy formatting  <a href="namespacemonad.html#a84775508572c5fab6f1ede9ae54aea43">More...</a><br /></td></tr>
+<tr class="separator:a84775508572c5fab6f1ede9ae54aea43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ae70f040fdee0432cb429671da5d95"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a40ae70f040fdee0432cb429671da5d95"><td class="memTemplItemLeft" align="right" valign="top">constexpr Result&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a40ae70f040fdee0432cb429671da5d95">monad::make_result</a> (T value)</td></tr>
+<tr class="memdesc:a40ae70f040fdee0432cb429671da5d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a Result&lt;T&gt; from a T value.  <a href="namespacemonad.html#a40ae70f040fdee0432cb429671da5d95">More...</a><br /></td></tr>
+<tr class="separator:a40ae70f040fdee0432cb429671da5d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1fd211f7d0a5838c37b851aad403f6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
+<tr class="memitem:a6c1fd211f7d0a5838c37b851aad403f6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a6c1fd211f7d0a5838c37b851aad403f6">monad::has_error</a> (const expected&lt; T, E &gt; &amp;exp)</td></tr>
+<tr class="memdesc:a6c1fd211f7d0a5838c37b851aad403f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter function for testing if a result has an error.  <a href="namespacemonad.html#a6c1fd211f7d0a5838c37b851aad403f6">More...</a><br /></td></tr>
+<tr class="separator:a6c1fd211f7d0a5838c37b851aad403f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27ce322865671781e7816b336de93149"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
+<tr class="memitem:a27ce322865671781e7816b336de93149"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a27ce322865671781e7816b336de93149">monad::maybe_error</a> (expected&lt; Args, E &gt;... args)</td></tr>
+<tr class="separator:a27ce322865671781e7816b336de93149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad451bef25a570719ebe50efcefd74a03"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#ad451bef25a570719ebe50efcefd74a03">Ok</a> = [] { return <a class="el" href="structError.html">Error</a>{<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18ae0aa021e21dddbd6d8cecec71e9cf564">ErrorCode::OK</a>, &quot;&quot;}; }</td></tr>
-<tr class="separator:ad451bef25a570719ebe50efcefd74a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8d2063aaf4b4c28757691408e99b521"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#ab8d2063aaf4b4c28757691408e99b521">Canceled</a></td></tr>
-<tr class="separator:ab8d2063aaf4b4c28757691408e99b521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a24093e678a9de648a4af7dbc17a91f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a6a24093e678a9de648a4af7dbc17a91f">Unknown</a></td></tr>
-<tr class="separator:a6a24093e678a9de648a4af7dbc17a91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4cb0c84a7aed70edf3265be3b1a8249"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#af4cb0c84a7aed70edf3265be3b1a8249">InvalidArgument</a></td></tr>
-<tr class="separator:af4cb0c84a7aed70edf3265be3b1a8249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ad855c36bb00fd526dc913cf166e134"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a8ad855c36bb00fd526dc913cf166e134">Timeout</a></td></tr>
-<tr class="separator:a8ad855c36bb00fd526dc913cf166e134"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce40842b3d18cfb38891be6ab74d81b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#afce40842b3d18cfb38891be6ab74d81b">NotFound</a></td></tr>
-<tr class="separator:afce40842b3d18cfb38891be6ab74d81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08f55487cdd30a2a38a766b21b3117ed"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a08f55487cdd30a2a38a766b21b3117ed">AlreadyExists</a></td></tr>
-<tr class="separator:a08f55487cdd30a2a38a766b21b3117ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfdc018c2056f50b01f9b1b3a0ef2d06"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#adfdc018c2056f50b01f9b1b3a0ef2d06">PermissionDenied</a></td></tr>
-<tr class="separator:adfdc018c2056f50b01f9b1b3a0ef2d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55bc897dc7c73f4af7b790bac8d52f37"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a55bc897dc7c73f4af7b790bac8d52f37">ResourceExhausted</a></td></tr>
-<tr class="separator:a55bc897dc7c73f4af7b790bac8d52f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b3f817e39e1cb580d00992c061bf957"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a1b3f817e39e1cb580d00992c061bf957">FailedPrecondition</a></td></tr>
-<tr class="separator:a1b3f817e39e1cb580d00992c061bf957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de92804b02145ea47f680aa35b43cc5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a0de92804b02145ea47f680aa35b43cc5">Aborted</a></td></tr>
-<tr class="separator:a0de92804b02145ea47f680aa35b43cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bcce9245c1493e1eb1ffabef1143b0d"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a2bcce9245c1493e1eb1ffabef1143b0d">OutOfRange</a></td></tr>
-<tr class="separator:a2bcce9245c1493e1eb1ffabef1143b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb1c98bb4e9782c80a348c087573d15b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#abb1c98bb4e9782c80a348c087573d15b">Unimplemented</a></td></tr>
-<tr class="separator:abb1c98bb4e9782c80a348c087573d15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0de0b8ba63e727a84a4ab92aaf9e3999"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a0de0b8ba63e727a84a4ab92aaf9e3999">Internal</a></td></tr>
-<tr class="separator:a0de0b8ba63e727a84a4ab92aaf9e3999"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86986c0ec9b704afe5c81878f55980fe"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a86986c0ec9b704afe5c81878f55980fe">Unavailable</a></td></tr>
-<tr class="separator:a86986c0ec9b704afe5c81878f55980fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50f06a45648da8963d2b162a13fbb382"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a50f06a45648da8963d2b162a13fbb382">DataLoss</a></td></tr>
-<tr class="separator:a50f06a45648da8963d2b162a13fbb382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b8089303295cd282b20fc63ce9a8499"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a1b8089303295cd282b20fc63ce9a8499">Unauthenticated</a></td></tr>
-<tr class="separator:a1b8089303295cd282b20fc63ce9a8499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a285373a4f17b546f020d6d7b8542613a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a285373a4f17b546f020d6d7b8542613a">Exception</a></td></tr>
-<tr class="separator:a285373a4f17b546f020d6d7b8542613a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687b9951e463641546779aa205b72301"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a687b9951e463641546779aa205b72301">monad::Ok</a> = [] { return Error{ErrorCode::OK, &quot;&quot;}; }</td></tr>
+<tr class="separator:a687b9951e463641546779aa205b72301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d121e02e6ee0353ff57db8632be572a"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a0d121e02e6ee0353ff57db8632be572a">monad::Canceled</a></td></tr>
+<tr class="separator:a0d121e02e6ee0353ff57db8632be572a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab555ed21d55b50b1feeeb96f975ca15b"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#ab555ed21d55b50b1feeeb96f975ca15b">monad::Unknown</a></td></tr>
+<tr class="separator:ab555ed21d55b50b1feeeb96f975ca15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a613b837d0336c527210d9b5d66bae5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a4a613b837d0336c527210d9b5d66bae5">monad::InvalidArgument</a></td></tr>
+<tr class="separator:a4a613b837d0336c527210d9b5d66bae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5ff34e50cadd03cda42540592f6c93"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a6e5ff34e50cadd03cda42540592f6c93">monad::Timeout</a></td></tr>
+<tr class="separator:a6e5ff34e50cadd03cda42540592f6c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeae208b799e20248592b5c146b3912c"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#aaeae208b799e20248592b5c146b3912c">monad::NotFound</a></td></tr>
+<tr class="separator:aaeae208b799e20248592b5c146b3912c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5adf73985c47f48fc749a09a7aad8284"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a5adf73985c47f48fc749a09a7aad8284">monad::AlreadyExists</a></td></tr>
+<tr class="separator:a5adf73985c47f48fc749a09a7aad8284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaeeebb603dd502e8c095de15d2726f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#aaeaeeebb603dd502e8c095de15d2726f">monad::PermissionDenied</a></td></tr>
+<tr class="separator:aaeaeeebb603dd502e8c095de15d2726f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a7fe81e297694278d020128e31500e5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a3a7fe81e297694278d020128e31500e5">monad::ResourceExhausted</a></td></tr>
+<tr class="separator:a3a7fe81e297694278d020128e31500e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8276a7f480454ce2ab2ad43aeeed02a1"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a8276a7f480454ce2ab2ad43aeeed02a1">monad::FailedPrecondition</a></td></tr>
+<tr class="separator:a8276a7f480454ce2ab2ad43aeeed02a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0c76e1f24812dc6070d99393698bda"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a7c0c76e1f24812dc6070d99393698bda">monad::Aborted</a></td></tr>
+<tr class="separator:a7c0c76e1f24812dc6070d99393698bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff5cdbfe416e0341a07c5df98dac49a5"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#aff5cdbfe416e0341a07c5df98dac49a5">monad::OutOfRange</a></td></tr>
+<tr class="separator:aff5cdbfe416e0341a07c5df98dac49a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb939e1b203eedac6efb93719c4522ae"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#abb939e1b203eedac6efb93719c4522ae">monad::Unimplemented</a></td></tr>
+<tr class="separator:abb939e1b203eedac6efb93719c4522ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e679b6a96d52bbc1e0c5c55d8769960"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a0e679b6a96d52bbc1e0c5c55d8769960">monad::Internal</a></td></tr>
+<tr class="separator:a0e679b6a96d52bbc1e0c5c55d8769960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb73bc0f238cb26d53a7746a38521822"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#afb73bc0f238cb26d53a7746a38521822">monad::Unavailable</a></td></tr>
+<tr class="separator:afb73bc0f238cb26d53a7746a38521822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7018c4e62ff73d049e2ba6bdcb867657"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a7018c4e62ff73d049e2ba6bdcb867657">monad::DataLoss</a></td></tr>
+<tr class="separator:a7018c4e62ff73d049e2ba6bdcb867657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b0323a98c793fd528a227bd21b65fd6"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a3b0323a98c793fd528a227bd21b65fd6">monad::Unauthenticated</a></td></tr>
+<tr class="separator:a3b0323a98c793fd528a227bd21b65fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad564210ab6dd09103c0d0e9d415e19da"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html#ad564210ab6dd09103c0d0e9d415e19da">monad::Exception</a></td></tr>
+<tr class="separator:ad564210ab6dd09103c0d0e9d415e19da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="aa1312da5f43346f19ba013b5733bfd11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1312da5f43346f19ba013b5733bfd11">&#9670;&nbsp;</a></span>Result</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a> =  <a class="el" href="classtl_1_1expected.html">expected</a>&lt;T, <a class="el" href="structError.html">Error</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00196">196</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d0f3b4a99b1ebb74d2e4f2e9207bc18">&#9670;&nbsp;</a></span>ErrorCode</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18">ErrorCode</a> : int</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enum for ErrorCodes inspired by absl::StatusCode. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18ae0aa021e21dddbd6d8cecec71e9cf564"></a>OK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2"></a>CANCELLED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d"></a>INVALID_ARGUMENT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a070a0fb40f6c308ab544b227660aadff"></a>TIMEOUT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d"></a>NOT_FOUND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed"></a>ALREADY_EXISTS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106"></a>PERMISSION_DENINED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627"></a>RESOURCE_EXHAUSTED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431"></a>FAILED_PRECONDITION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025"></a>ABORTED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a6feaf66704b269610cff9431d5519cad"></a>OUT_OF_RANGE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18aaa528108d473f663f8947b4d16e7c13c"></a>UNIMPLEMENTED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81"></a>INTERNAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead"></a>UNAVAILABLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20"></a>DATA_LOSS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a456dc2351b6dbb9db3b40552b2e8c5a9"></a>UNAUTHENTICATED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf"></a>EXCEPTION&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a72b49a7cbf0c0e3dff052d091d838252"></a>__END&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00049">49</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a2784776d5f36738c7aed6d0da73e0266"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2784776d5f36738c7aed6d0da73e0266">&#9670;&nbsp;</a></span>has_error()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename E &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr bool has_error </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;&#160;</td>
-          <td class="paramname"><em>exp</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Filter function for testing if a result has an error. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">exp</td><td>The expected type to test </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The value type </td></tr>
-    <tr><td class="paramname">E</td><td>The error type </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>if the expected has an error </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00258">258</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph.png" border="0" usemap="#result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph" alt=""/></div>
-<map name="result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph" id="result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph">
-<area shape="rect" title="Filter function for testing if a result has an error." alt="" coords="387,5,469,32"/>
-<area shape="rect" href="result_8hpp.html#aa7f3646cc13a1d9e81005018b2ba3199" title=" " alt="" coords="233,5,339,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#a6eb8b2e132b4b9f11f15daedd3dcd23a" title=" " alt="" coords="108,5,185,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a79b3dd7d6907b51e80b2dd7e2ee617a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79b3dd7d6907b51e80b2dd7e2ee617a0">&#9670;&nbsp;</a></span>make_result()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a>&lt;T&gt; make_result </td>
-          <td>(</td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Makes a Result&lt;T&gt; from a T value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of value</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A Result&lt;T&gt; containing value </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a8">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#a5">result.cpp</a>.</dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00208">208</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph.png" border="0" usemap="#result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph" alt=""/></div>
-<map name="result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph" id="result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph">
-<area shape="rect" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="235,31,337,57"/>
-<area shape="rect" href="result_8cpp.html#a5d80dcfaf6724bf1a637914b4209c2ad" title=" " alt="" coords="108,5,187,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#a6eb8b2e132b4b9f11f15daedd3dcd23a" title=" " alt="" coords="109,56,186,83"/>
-<area shape="rect" href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aa7f3646cc13a1d9e81005018b2ba3199"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7f3646cc13a1d9e81005018b2ba3199">&#9670;&nbsp;</a></span>maybe_error()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename E , typename... Args&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr std::optional&lt;E&gt; maybe_error </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtl_1_1expected.html">expected</a>&lt; Args, E &gt;...&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a9">maybe_error.cpp</a>.</dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00272">272</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph.png" border="0" usemap="#result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph" alt=""/></div>
-<map name="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph" id="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,111,32"/>
-<area shape="rect" href="result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266" title="Filter function for testing if a result has an error." alt="" coords="159,5,241,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph.png" border="0" usemap="#result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph" alt=""/></div>
-<map name="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph" id="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph">
-<area shape="rect" title=" " alt="" coords="233,5,339,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#a6eb8b2e132b4b9f11f15daedd3dcd23a" title=" " alt="" coords="108,5,185,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a2f81d337b23614c3b22f976d47825c90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f81d337b23614c3b22f976d47825c90">&#9670;&nbsp;</a></span>toStringView()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr std::string_view toStringView </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18">ErrorCode</a> &amp;&#160;</td>
-          <td class="paramname"><em>code</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>convert ErrorCode to string_view for easy formatting </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>The error code </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00145">145</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="result_8hpp_a2f81d337b23614c3b22f976d47825c90_icgraph.png" border="0" usemap="#result_8hpp_a2f81d337b23614c3b22f976d47825c90_icgraph" alt=""/></div>
-<map name="result_8hpp_a2f81d337b23614c3b22f976d47825c90_icgraph" id="result_8hpp_a2f81d337b23614c3b22f976d47825c90_icgraph">
-<area shape="rect" title="convert ErrorCode to string_view for easy formatting" alt="" coords="215,13,320,39"/>
-<area shape="rect" href="structfmt_1_1formatter_3_01Error_01_4.html#a6cc93ef40609a1c7da6a407dd69a354d" title=" " alt="" coords="5,5,167,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a0de92804b02145ea47f680aa35b43cc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0de92804b02145ea47f680aa35b43cc5">&#9670;&nbsp;</a></span>Aborted</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Aborted</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025">ErrorCode::ABORTED</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00115">115</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a08f55487cdd30a2a38a766b21b3117ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08f55487cdd30a2a38a766b21b3117ed">&#9670;&nbsp;</a></span>AlreadyExists</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto AlreadyExists</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed">ErrorCode::ALREADY_EXISTS</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00103">103</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ab8d2063aaf4b4c28757691408e99b521"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8d2063aaf4b4c28757691408e99b521">&#9670;&nbsp;</a></span>Canceled</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Canceled</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2">ErrorCode::CANCELLED</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00088">88</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a50f06a45648da8963d2b162a13fbb382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50f06a45648da8963d2b162a13fbb382">&#9670;&nbsp;</a></span>DataLoss</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto DataLoss</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20">ErrorCode::DATA_LOSS</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00130">130</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a285373a4f17b546f020d6d7b8542613a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a285373a4f17b546f020d6d7b8542613a">&#9670;&nbsp;</a></span>Exception</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Exception</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf">ErrorCode::EXCEPTION</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00136">136</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a1b3f817e39e1cb580d00992c061bf957"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b3f817e39e1cb580d00992c061bf957">&#9670;&nbsp;</a></span>FailedPrecondition</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto FailedPrecondition</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431">ErrorCode::FAILED_PRECONDITION</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00112">112</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a0de0b8ba63e727a84a4ab92aaf9e3999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0de0b8ba63e727a84a4ab92aaf9e3999">&#9670;&nbsp;</a></span>Internal</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Internal</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81">ErrorCode::INTERNAL</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00124">124</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="af4cb0c84a7aed70edf3265be3b1a8249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4cb0c84a7aed70edf3265be3b1a8249">&#9670;&nbsp;</a></span>InvalidArgument</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto InvalidArgument</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d">ErrorCode::INVALID_ARGUMENT</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a2">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#a2">result.cpp</a>.</dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00094">94</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="afce40842b3d18cfb38891be6ab74d81b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afce40842b3d18cfb38891be6ab74d81b">&#9670;&nbsp;</a></span>NotFound</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto NotFound</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d">ErrorCode::NOT_FOUND</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00100">100</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="ad451bef25a570719ebe50efcefd74a03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad451bef25a570719ebe50efcefd74a03">&#9670;&nbsp;</a></span>Ok</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Ok = [] { return <a class="el" href="structError.html">Error</a>{<a class="el" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18ae0aa021e21dddbd6d8cecec71e9cf564">ErrorCode::OK</a>, &quot;&quot;}; }</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00087">87</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a2bcce9245c1493e1eb1ffabef1143b0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bcce9245c1493e1eb1ffabef1143b0d">&#9670;&nbsp;</a></span>OutOfRange</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto OutOfRange</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a6feaf66704b269610cff9431d5519cad">ErrorCode::OUT_OF_RANGE</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00118">118</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="adfdc018c2056f50b01f9b1b3a0ef2d06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfdc018c2056f50b01f9b1b3a0ef2d06">&#9670;&nbsp;</a></span>PermissionDenied</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto PermissionDenied</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106">ErrorCode::PERMISSION_DENINED</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00106">106</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a55bc897dc7c73f4af7b790bac8d52f37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55bc897dc7c73f4af7b790bac8d52f37">&#9670;&nbsp;</a></span>ResourceExhausted</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto ResourceExhausted</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627">ErrorCode::RESOURCE_EXHAUSTED</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00109">109</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a8ad855c36bb00fd526dc913cf166e134"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ad855c36bb00fd526dc913cf166e134">&#9670;&nbsp;</a></span>Timeout</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Timeout</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a070a0fb40f6c308ab544b227660aadff">ErrorCode::TIMEOUT</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00097">97</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a1b8089303295cd282b20fc63ce9a8499"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b8089303295cd282b20fc63ce9a8499">&#9670;&nbsp;</a></span>Unauthenticated</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Unauthenticated</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a456dc2351b6dbb9db3b40552b2e8c5a9">ErrorCode::UNAUTHENTICATED</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00133">133</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a86986c0ec9b704afe5c81878f55980fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86986c0ec9b704afe5c81878f55980fe">&#9670;&nbsp;</a></span>Unavailable</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Unavailable</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead">ErrorCode::UNAVAILABLE</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00127">127</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="abb1c98bb4e9782c80a348c087573d15b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb1c98bb4e9782c80a348c087573d15b">&#9670;&nbsp;</a></span>Unimplemented</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Unimplemented</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18aaa528108d473f663f8947b4d16e7c13c">ErrorCode::UNIMPLEMENTED</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00121">121</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a6a24093e678a9de648a4af7dbc17a91f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a24093e678a9de648a4af7dbc17a91f">&#9670;&nbsp;</a></span>Unknown</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr auto Unknown</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, what};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00091">91</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a6feaf66704b269610cff9431d5519cad"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a6feaf66704b269610cff9431d5519cad">ErrorCode::OUT_OF_RANGE</a></div><div class="ttdeci">@ OUT_OF_RANGE</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a070a0fb40f6c308ab544b227660aadff"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a070a0fb40f6c308ab544b227660aadff">ErrorCode::TIMEOUT</a></div><div class="ttdeci">@ TIMEOUT</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf">ErrorCode::EXCEPTION</a></div><div class="ttdeci">@ EXCEPTION</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2">ErrorCode::CANCELLED</a></div><div class="ttdeci">@ CANCELLED</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d">ErrorCode::NOT_FOUND</a></div><div class="ttdeci">@ NOT_FOUND</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead">ErrorCode::UNAVAILABLE</a></div><div class="ttdeci">@ UNAVAILABLE</div></div>
-<div class="ttc" id="astructError_html"><div class="ttname"><a href="structError.html">Error</a></div><div class="ttdoc">Error type used by Result&lt;T&gt;</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00074">result.hpp:74</a></div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed">ErrorCode::ALREADY_EXISTS</a></div><div class="ttdeci">@ ALREADY_EXISTS</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627">ErrorCode::RESOURCE_EXHAUSTED</a></div><div class="ttdeci">@ RESOURCE_EXHAUSTED</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20">ErrorCode::DATA_LOSS</a></div><div class="ttdeci">@ DATA_LOSS</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a></div><div class="ttdeci">@ UNKNOWN</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a456dc2351b6dbb9db3b40552b2e8c5a9"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a456dc2351b6dbb9db3b40552b2e8c5a9">ErrorCode::UNAUTHENTICATED</a></div><div class="ttdeci">@ UNAUTHENTICATED</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d">ErrorCode::INVALID_ARGUMENT</a></div><div class="ttdeci">@ INVALID_ARGUMENT</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81">ErrorCode::INTERNAL</a></div><div class="ttdeci">@ INTERNAL</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431">ErrorCode::FAILED_PRECONDITION</a></div><div class="ttdeci">@ FAILED_PRECONDITION</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025">ErrorCode::ABORTED</a></div><div class="ttdeci">@ ABORTED</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18aaa528108d473f663f8947b4d16e7c13c"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18aaa528108d473f663f8947b4d16e7c13c">ErrorCode::UNIMPLEMENTED</a></div><div class="ttdeci">@ UNIMPLEMENTED</div></div>
-<div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106">ErrorCode::PERMISSION_DENINED</a></div><div class="ttdeci">@ PERMISSION_DENINED</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

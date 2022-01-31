@@ -102,19 +102,22 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   33</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> day = <span class="stringliteral">&quot;monday&quot;</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> weekends = std::vector&lt;std::string&gt;{<span class="stringliteral">&quot;saturday&quot;</span>, <span class="stringliteral">&quot;sunday&quot;</span>};</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a class="code" href="namespacevalidate.html#a511d9c9fd641680d48cab89a01294356">validate::in</a>(weekends, day);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  fmt::print(<span class="stringliteral">&quot;Is \&#39;{}\&#39; in {}?\n{}\n&quot;</span>, day, weekends, result);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">// Output:</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="comment">// Is &#39;monday&#39; in {&quot;saturday&quot;, &quot;sunday&quot;}?</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// [Result&lt;T&gt;: [Error: [OutOfRange] monday is not in {&quot;saturday&quot;, &quot;sunday&quot;}]]</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacemonad.html">monad</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> day = <span class="stringliteral">&quot;monday&quot;</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> weekends = std::vector&lt;std::string&gt;{<span class="stringliteral">&quot;saturday&quot;</span>, <span class="stringliteral">&quot;sunday&quot;</span>};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a class="code" href="namespacemonad_1_1validate.html#aa4e1178c6c2d9236d748d1e40b72ffb2">validate::in</a>(weekends, day);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  fmt::print(<span class="stringliteral">&quot;Is \&#39;{}\&#39; in {}?\n{}\n&quot;</span>, day, weekends, result);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">// Output:</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="comment">// Is &#39;monday&#39; in {&quot;saturday&quot;, &quot;sunday&quot;}?</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">// [Result&lt;T&gt;: [Error: [OutOfRange] monday is not in {&quot;saturday&quot;, &quot;sunday&quot;}]]</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="avalidate__in_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="validate__in_8cpp_source.html#l00033">validate_in.cpp:33</a></div></div>
-<div class="ttc" id="anamespacevalidate_html_a511d9c9fd641680d48cab89a01294356"><div class="ttname"><a href="namespacevalidate.html#a511d9c9fd641680d48cab89a01294356">validate::in</a></div><div class="ttdeci">constexpr Result&lt; T &gt; in(const Rng &amp;valid_values, const T &amp;value)</div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00094">validate.hpp:94</a></div></div>
+<div class="ttc" id="avalidate__in_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="validate__in_8cpp_source.html#l00035">validate_in.cpp:35</a></div></div>
+<div class="ttc" id="anamespacemonad_html"><div class="ttname"><a href="namespacemonad.html">monad</a></div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00035">mbind.hpp:35</a></div></div>
+<div class="ttc" id="anamespacemonad_1_1validate_html_aa4e1178c6c2d9236d748d1e40b72ffb2"><div class="ttname"><a href="namespacemonad_1_1validate.html#aa4e1178c6c2d9236d748d1e40b72ffb2">monad::validate::in</a></div><div class="ttdeci">constexpr Result&lt; T &gt; in(const Rng &amp;valid_values, const T &amp;value)</div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00094">validate.hpp:94</a></div></div>
 <div class="ttc" id="aall_8hpp_html"><div class="ttname"><a href="all_8hpp.html">all.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -283,6 +283,8 @@ Public Attributes</h2></td></tr>
 class tl::expected&lt; T, E &gt;</h3>
 
 <p>An <code>expected&lt;T, E&gt;</code> object is an object that contains the storage for another object and manages the lifetime of this contained object <code>T</code>. Alternatively it could contain the storage for another unexpected object <code>E</code>. The contained object may not be initialized after the expected object has been initialized, and may not be destroyed before the expected object has been destroyed. The initialization state of the contained object is tracked by the expected object. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#_a0">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#_a0">result.cpp</a>.</dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="expected_8hpp_source.html#l00121">121</a> of file <a class="el" href="expected_8hpp_source.html">expected.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
@@ -1382,9 +1384,9 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classtl_1_1expected_aea2a9099a048578ee49e85549cc6ee3d_icgraph.png" border="0" usemap="#classtl_1_1expected_aea2a9099a048578ee49e85549cc6ee3d_icgraph" alt=""/></div>
 <map name="classtl_1_1expected_aea2a9099a048578ee49e85549cc6ee3d_icgraph" id="classtl_1_1expected_aea2a9099a048578ee49e85549cc6ee3d_icgraph">
 <area shape="rect" title=" " alt="" coords="343,122,481,149"/>
-<area shape="rect" href="structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#ade898803a25a122269b9975e98004580" title=" " alt="" coords="116,5,287,47"/>
+<area shape="rect" href="structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#ace092645ebf7eddd7e3537bc547a7388" title=" " alt="" coords="113,5,289,47"/>
 <area shape="rect" href="namespacetl_1_1detail.html#a326623053a71b66be4acc622c501e1a2" title=" " alt="" coords="108,71,295,98"/>
-<area shape="rect" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9" title="Monad expected&lt;T,E&gt;" alt="" coords="170,122,233,149"/>
+<area shape="rect" href="namespacemonad.html#a3d07086d3dda179f75f8c1bb02434db1" title="Monad expected&lt;T,E&gt;" alt="" coords="143,122,259,149"/>
 <area shape="rect" href="namespacetl_1_1detail.html#ad688c4ed095aa2480add03ab841e4e7f" title=" " alt="" coords="118,173,285,199"/>
 <area shape="rect" href="result_8cpp.html#aacc3f9aa474e87b6408a6bbbd92d6217" title=" " alt="" coords="153,223,250,250"/>
 <area shape="rect" href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,223,60,250"/>
@@ -1464,19 +1466,19 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classtl_1_1expected_a557dd5bdabe9535165a11fc2123ac513_icgraph.png" border="0" usemap="#classtl_1_1expected_a557dd5bdabe9535165a11fc2123ac513_icgraph" alt=""/></div>
 <map name="classtl_1_1expected_a557dd5bdabe9535165a11fc2123ac513_icgraph" id="classtl_1_1expected_a557dd5bdabe9535165a11fc2123ac513_icgraph">
-<area shape="rect" title=" " alt="" coords="459,199,632,225"/>
-<area shape="rect" href="classtl_1_1expected.html#a5c2eb13f61ada488de67f3a428e7ed40" title=" " alt="" coords="236,5,399,32"/>
-<area shape="rect" href="namespacetl_1_1detail.html#a9b721cefdb77360d854a3c0c1a50b31a" title=" " alt="" coords="245,57,389,98"/>
-<area shape="rect" href="structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#ade898803a25a122269b9975e98004580" title=" " alt="" coords="5,267,176,309"/>
-<area shape="rect" href="namespacetl_1_1detail.html#a578686dbf755eac2ea47fb3e46320212" title=" " alt="" coords="224,173,411,200"/>
-<area shape="rect" href="classtl_1_1expected.html#ae61f731db30e79abcfcaa564dd51d057" title=" " alt="" coords="231,224,404,251"/>
-<area shape="rect" href="result_8cpp.html#aacc3f9aa474e87b6408a6bbbd92d6217" title=" " alt="" coords="269,123,366,149"/>
-<area shape="rect" href="classtl_1_1expected.html#a6d42a33d57e23d877c5848383a2ac000" title=" " alt="" coords="247,325,388,352"/>
-<area shape="rect" href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3" title=" " alt="" coords="246,376,389,403"/>
-<area shape="rect" href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="63,123,118,149"/>
-<area shape="rect" href="classtl_1_1expected.html#aa1f80bce937a966e424fa53e5e82dd6e" title=" " alt="" coords="21,435,160,461"/>
-<area shape="rect" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9" title="Monad expected&lt;T,E&gt;" alt="" coords="59,333,122,360"/>
-<area shape="rect" href="classtl_1_1expected.html#a52955d4b15ec92334b510fc15196f5db" title=" " alt="" coords="19,384,162,411"/>
+<area shape="rect" title=" " alt="" coords="464,199,637,225"/>
+<area shape="rect" href="classtl_1_1expected.html#a5c2eb13f61ada488de67f3a428e7ed40" title=" " alt="" coords="241,5,404,32"/>
+<area shape="rect" href="namespacetl_1_1detail.html#a9b721cefdb77360d854a3c0c1a50b31a" title=" " alt="" coords="251,57,395,98"/>
+<area shape="rect" href="structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#ace092645ebf7eddd7e3537bc547a7388" title=" " alt="" coords="5,267,181,309"/>
+<area shape="rect" href="namespacetl_1_1detail.html#a578686dbf755eac2ea47fb3e46320212" title=" " alt="" coords="229,173,416,200"/>
+<area shape="rect" href="classtl_1_1expected.html#ae61f731db30e79abcfcaa564dd51d057" title=" " alt="" coords="236,224,409,251"/>
+<area shape="rect" href="result_8cpp.html#aacc3f9aa474e87b6408a6bbbd92d6217" title=" " alt="" coords="274,123,371,149"/>
+<area shape="rect" href="classtl_1_1expected.html#a6d42a33d57e23d877c5848383a2ac000" title=" " alt="" coords="252,325,393,352"/>
+<area shape="rect" href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3" title=" " alt="" coords="251,376,394,403"/>
+<area shape="rect" href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="66,123,121,149"/>
+<area shape="rect" href="classtl_1_1expected.html#aa1f80bce937a966e424fa53e5e82dd6e" title=" " alt="" coords="24,435,163,461"/>
+<area shape="rect" href="namespacemonad.html#a3d07086d3dda179f75f8c1bb02434db1" title="Monad expected&lt;T,E&gt;" alt="" coords="35,333,151,360"/>
+<area shape="rect" href="classtl_1_1expected.html#a52955d4b15ec92334b510fc15196f5db" title=" " alt="" coords="22,384,165,411"/>
 </map>
 </div>
 
@@ -2338,11 +2340,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classtl_1_1expected_a0f173ccbdbb2df23a3a1e80320a335c3_icgraph.png" border="0" usemap="#classtl_1_1expected_a0f173ccbdbb2df23a3a1e80320a335c3_icgraph" alt=""/></div>
 <map name="classtl_1_1expected_a0f173ccbdbb2df23a3a1e80320a335c3_icgraph" id="classtl_1_1expected_a0f173ccbdbb2df23a3a1e80320a335c3_icgraph">
-<area shape="rect" title=" " alt="" coords="224,93,367,120"/>
-<area shape="rect" href="classtl_1_1expected.html#aa1f80bce937a966e424fa53e5e82dd6e" title=" " alt="" coords="21,5,160,32"/>
-<area shape="rect" href="structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#ade898803a25a122269b9975e98004580" title=" " alt="" coords="5,57,176,98"/>
-<area shape="rect" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9" title="Monad expected&lt;T,E&gt;" alt="" coords="59,123,122,149"/>
-<area shape="rect" href="classtl_1_1expected.html#a52955d4b15ec92334b510fc15196f5db" title=" " alt="" coords="19,173,162,200"/>
+<area shape="rect" title=" " alt="" coords="229,93,372,120"/>
+<area shape="rect" href="classtl_1_1expected.html#aa1f80bce937a966e424fa53e5e82dd6e" title=" " alt="" coords="24,5,163,32"/>
+<area shape="rect" href="structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#ace092645ebf7eddd7e3537bc547a7388" title=" " alt="" coords="5,57,181,98"/>
+<area shape="rect" href="namespacemonad.html#a3d07086d3dda179f75f8c1bb02434db1" title="Monad expected&lt;T,E&gt;" alt="" coords="35,123,151,149"/>
+<area shape="rect" href="classtl_1_1expected.html#a52955d4b15ec92334b510fc15196f5db" title=" " alt="" coords="22,173,165,200"/>
 </map>
 </div>
 

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['aborted_377',['Aborted',['../result_8hpp.html#a0de92804b02145ea47f680aa35b43cc5',1,'result.hpp']]],
-  ['alreadyexists_378',['AlreadyExists',['../result_8hpp.html#a08f55487cdd30a2a38a766b21b3117ed',1,'result.hpp']]]
+  ['aborted_379',['Aborted',['../namespacemonad.html#a7c0c76e1f24812dc6070d99393698bda',1,'monad']]],
+  ['alreadyexists_380',['AlreadyExists',['../namespacemonad.html#a5adf73985c47f48fc749a09a7aad8284',1,'monad']]]
 ];

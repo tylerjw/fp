@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_411',['what',['../structError.html#a7c99971f583d475280a5d3efa2ced854',1,'Error']]]
+  ['what_413',['what',['../structmonad_1_1Error.html#a2dfd2eb9dd47b931fa22d3ebaf431f20',1,'monad::Error']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exception_382',['Exception',['../result_8hpp.html#a285373a4f17b546f020d6d7b8542613a',1,'result.hpp']]]
+  ['exception_384',['Exception',['../namespacemonad.html#ad564210ab6dd09103c0d0e9d415e19da',1,'monad']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['internal_386',['Internal',['../result_8hpp.html#a0de0b8ba63e727a84a4ab92aaf9e3999',1,'result.hpp']]],
-  ['invalidargument_387',['InvalidArgument',['../result_8hpp.html#af4cb0c84a7aed70edf3265be3b1a8249',1,'result.hpp']]]
+  ['internal_388',['Internal',['../namespacemonad.html#a0e679b6a96d52bbc1e0c5c55d8769960',1,'monad']]],
+  ['invalidargument_389',['InvalidArgument',['../namespacemonad.html#a4a613b837d0336c527210d9b5d66bae5',1,'monad']]]
 ];

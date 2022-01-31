@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['data_5floss_23',['DATA_LOSS',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20',1,'result.hpp']]],
-  ['dataloss_24',['DataLoss',['../result_8hpp.html#a50f06a45648da8963d2b162a13fbb382',1,'result.hpp']]],
+  ['data_5floss_23',['DATA_LOSS',['../namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1afb1a9c3daaa0683c4ffac41183243e20',1,'monad']]],
+  ['dataloss_24',['DataLoss',['../namespacemonad.html#a7018c4e62ff73d049e2ba6bdcb867657',1,'monad']]],
   ['decay_5ft_25',['decay_t',['../namespacetl_1_1detail.html#ab811f615dbeedd2f1e95af7df4701984',1,'tl::detail']]],
   ['default_5fconstructor_5ftag_26',['default_constructor_tag',['../structtl_1_1detail_1_1default__constructor__tag.html',1,'tl::detail::default_constructor_tag'],['../structtl_1_1detail_1_1default__constructor__tag.html#a29a945ffa6ba03a4f6d58a2760091370',1,'tl::detail::default_constructor_tag::default_constructor_tag()']]],
   ['destroy_5fval_27',['destroy_val',['../structtl_1_1detail_1_1expected__operations__base.html#a8b5bd6f99fffe9df1c4d05cb1e214b87',1,'tl::detail::expected_operations_base::destroy_val()'],['../structtl_1_1detail_1_1expected__operations__base_3_01void_00_01E_01_4.html#a9960c3bbcb39649bafa19a8c72a65212',1,'tl::detail::expected_operations_base&lt; void, E &gt;::destroy_val()']]],

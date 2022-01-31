@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['aborted_437',['ABORTED',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025',1,'result.hpp']]],
-  ['already_5fexists_438',['ALREADY_EXISTS',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed',1,'result.hpp']]]
+  ['aborted_439',['ABORTED',['../namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a4e6c860e5da10e31c5fd9cb76ddc2025',1,'monad']]],
+  ['already_5fexists_440',['ALREADY_EXISTS',['../namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a08e6da8e58b2bcd070be3b5274d51eed',1,'monad']]]
 ];
