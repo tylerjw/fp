@@ -32,6 +32,7 @@
 
 #include <iostream>
 #include <map>
+#include <optional>
 #include <string>
 #include <string_view>
 
@@ -71,7 +72,7 @@ enum class ErrorCode : int {
  * @brief      Error type used by Result<T>
  */
 struct [[nodiscard]] Error {
-  ErrorCode code = ErrorCode::OK;
+  ErrorCode code = ErrorCode::UNKNOWN;
   std::string what = "";
 
   inline operator bool() const noexcept { return code == ErrorCode::OK; }
@@ -244,3 +245,37 @@ struct fmt::formatter<Result<T>> {
     }
   }
 };
+
+/**
+ * @brief Filter function for testing if a result has an error
+ *
+ * @param exp The expected type to test
+ * @tparam T The value type
+ * @tparam E The error type
+ * @return if the expected has an error
+ */
+template <typename T, typename E>
+constexpr bool has_error(const expected<T, E>& exp) {
+  return !exp;
+}
+
+/**
+ * @brief Tests if any of the expected args passed in has an error.
+ *
+ * @param   The expected<T, E> variables.  All have to use the same error type.
+ * @tparam  E The error type
+ * @tparam  Args The value types for the expected<T, E> args
+ * @return  The first error found or nothing
+ * @example maybe_error.cpp
+ */
+template <typename E, typename... Args>
+constexpr std::optional<E> maybe_error(expected<Args, E>... args) {
+  auto maybe = std::optional<E>{std::nullopt};
+  (
+      [&](auto& exp) {
+        if (maybe.has_value()) return;
+        if (has_error(exp)) maybe = exp.error();
+      }(args),
+      ...);
+  return maybe;
+}

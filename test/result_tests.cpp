@@ -267,6 +267,19 @@ TEST(ResultTests, StringToViewNoThrow) {
   }
 }
 
+TEST(ResultTests, MaybeError) {
+  // GIVEN two Result<T> values
+  const Result<double> a = 6.5;
+  const Result<int> b = make_unexpected(Unknown());
+
+  // WHEN we call maybe_error on those results
+  const auto error = maybe_error(a, b);
+
+  // THEN we expect it to have the Unknown error
+  EXPECT_TRUE(error);
+  EXPECT_EQ(error.value().code, ErrorCode::UNKNOWN);
+}
+
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();

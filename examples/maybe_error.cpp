@@ -37,56 +37,26 @@ Result<double> divide_4_by(double x) {
   return 4.0 / x;
 }
 
-Result<double> safe_sqrt(double x) {
-  if (x < 0) {
-    return make_unexpected(InvalidArgument(
-        fmt::format("sqrt of value < 0.0 is undefined: {}", x)));
+Result<double> f1(double x) { return divide_4_by(x); }
+Result<double> f2(double x) { return divide_4_by(x); }
+Result<double> f3(double x) { return divide_4_by(x); }
+Result<double> f4(double x) { return divide_4_by(x); }
+
+Result<double> do_work() {
+  auto const a = make_result(2.4) | f1 | f2;
+  auto const b = make_result(0.0) | f3 | f4;
+
+  if (auto const error = maybe_error(a, b); error) {
+    return make_unexpected(*error);
   }
 
-  return sqrt(x);
-}
-
-Result<double> do_math(double x) {
-  return make_result(x).and_then(divide_4_by).and_then(safe_sqrt);
-}
-
-void print_errors(Result<double> result) {
-  if (!result.has_value()) {
-    fmt::print("{}\n", result.error());
-  }
+  return *a + *b;
 }
 
 int main() {
-  const auto x = views::iota(-5, 10) |
-                 views::transform([](const int& x) { return x * 0.2; }) |
-                 ranges::to<std::vector>();
-  const auto y =
-      x | views::transform(do_math) | views::filter([](const auto& result) {
-        print_errors(result);
-        return result.has_value();
-      }) |
-      views::transform([](const auto& result) { return result.value(); }) |
-      ranges::to<std::vector>();
-
-  fmt::print("y = sqrt(4.0 / x)\nx = {}\ny = {}\n", x, y);
-
-  // Output:
-  // [Error: [InvalidArgument] sqrt of value < 0.0 is undefined: -4.0]
-  // [Error: [InvalidArgument] sqrt of value < 0.0 is undefined: -5.0]
-  // [Error: [InvalidArgument] sqrt of value < 0.0 is undefined:
-  //   -6.666666666666666]
-  // [Error: [InvalidArgument] sqrt of value < 0.0 is
-  //   undefined: -10.0]
-  // [Error: [InvalidArgument] sqrt of value < 0.0 is
-  //   undefined: -20.0]
-  // [Error: [InvalidArgument] divide by 0]
-  // y = sqrt(4.0 / x)
-  // x = {-1.0, -0.8, -0.6000000000000001, -0.4, -0.2, 0.0, 0.2, 0.4,
-  //   0.6000000000000001, 0.8, 1.0, 1.2000000000000002, 1.4000000000000001,
-  //   1.6, 1.8}
-  // y = {4.47213595499958, 3.1622776601683795, 2.581988897471611,
-  //   2.23606797749979, 2.0, 1.8257418583505536, 1.6903085094570331,
-  //   1.5811388300841898, 1.4907119849998598}
+  auto const result = do_work();
+  fmt::print("result: {}\n", result);
+  // result: [Result<T>: [Error: [InvalidArgument] divide by 0]]
 
   return 0;
 }

@@ -1,5 +1,8 @@
 # Example usage for documentation
 
+add_executable(maybe_error maybe_error.cpp)
+target_link_libraries(maybe_error monad)
+
 add_executable(no_discard no_discard.cpp)
 target_link_libraries(no_discard monad)
 
