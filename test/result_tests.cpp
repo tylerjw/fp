@@ -268,7 +268,7 @@ TEST(ResultTests, StringToViewNoThrow) {
 }
 
 TEST(ResultTests, MaybeError) {
-  // GIVEN two result<T> values
+  // GIVEN two Result<T> values
   const Result<double> a = 6.5;
   const Result<int> b = make_unexpected(Unknown());
 
