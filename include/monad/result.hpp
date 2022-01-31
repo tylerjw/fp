@@ -256,7 +256,7 @@ struct fmt::formatter<Result<T>> {
  */
 template <typename T, typename E>
 constexpr bool has_error(const expected<T, E>& exp) {
-  return (!exp);
+  return !exp;
 }
 
 /**
