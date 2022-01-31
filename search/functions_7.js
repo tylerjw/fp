@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parse_114',['parse',['../structfmt_1_1formatter_3_01Error_01_4.html#a93426e1f7196ce9db8cb1454a8aec8a0',1,'fmt::formatter&lt; Error &gt;::parse()'],['../structfmt_1_1formatter_3_01Result_3_01T_01_4_01_4.html#a04aa622c86ad39030bd35a8e28206d65',1,'fmt::formatter&lt; Result&lt; T &gt; &gt;::parse()']]],
-  ['print_5ferrors_115',['print_errors',['../result_8cpp.html#aacc3f9aa474e87b6408a6bbbd92d6217',1,'result.cpp']]]
+  ['has_5ferror_331',['has_error',['../result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266',1,'result.hpp']]],
+  ['has_5fvalue_332',['has_value',['../structtl_1_1detail_1_1expected__operations__base.html#af760709a4e7cf31d78099e280ec1e06a',1,'tl::detail::expected_operations_base::has_value()'],['../structtl_1_1detail_1_1expected__operations__base_3_01void_00_01E_01_4.html#ac53001044748a1b2f7a7d5f07306c53e',1,'tl::detail::expected_operations_base&lt; void, E &gt;::has_value()'],['../classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513',1,'tl::expected::has_value()']]]
 ];

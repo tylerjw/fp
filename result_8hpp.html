@@ -79,23 +79,29 @@ $(function() {
 <div class="textblock"><code>#include &lt;fmt/format.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;map&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;string_view&gt;</code><br />
-<code>#include &quot;monad/_external/expected.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="expected_8hpp_source.html">monad/_external/expected.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="no__discard_8hpp_source.html">monad/no_discard.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for result.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="result_8hpp__incl.png" border="0" usemap="#include_2monad_2result_8hpp" alt=""/></div>
 <map name="include_2monad_2result_8hpp" id="include_2monad_2result_8hpp">
-<area shape="rect" title=" " alt="" coords="249,5,435,32"/>
+<area shape="rect" title=" " alt="" coords="302,5,489,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,111,107"/>
 <area shape="rect" title=" " alt="" coords="134,80,214,107"/>
 <area shape="rect" title=" " alt="" coords="238,80,289,107"/>
-<area shape="rect" title=" " alt="" coords="313,80,371,107"/>
-<area shape="rect" title=" " alt="" coords="396,80,493,107"/>
-<area shape="rect" title=" " alt="" coords="518,80,742,107"/>
-<area shape="rect" href="no__discard_8hpp.html" title=" " alt="" coords="767,80,936,107"/>
+<area shape="rect" title=" " alt="" coords="313,80,387,107"/>
+<area shape="rect" title=" " alt="" coords="411,80,470,107"/>
+<area shape="rect" title=" " alt="" coords="495,80,592,107"/>
+<area shape="rect" href="expected_8hpp.html" title=" " alt="" coords="617,80,841,107"/>
+<area shape="rect" href="no__discard_8hpp.html" title=" " alt="" coords="865,80,1035,107"/>
+<area shape="rect" title=" " alt="" coords="517,155,604,181"/>
+<area shape="rect" title=" " alt="" coords="628,155,715,181"/>
+<area shape="rect" title=" " alt="" coords="739,155,831,181"/>
+<area shape="rect" title=" " alt="" coords="855,155,915,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -103,13 +109,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="result_8hpp__dep__incl.png" border="0" usemap="#include_2monad_2result_8hppdep" alt=""/></div>
 <map name="include_2monad_2result_8hppdep" id="include_2monad_2result_8hppdep">
-<area shape="rect" title=" " alt="" coords="297,5,484,32"/>
-<area shape="rect" href="all_8hpp.html" title=" " alt="" coords="307,155,474,181"/>
-<area shape="rect" href="validate_8hpp.html" title=" " alt="" coords="359,80,561,107"/>
-<area shape="rect" href="no__discard_8cpp.html" title=" " alt="" coords="5,229,192,256"/>
-<area shape="rect" href="result_8cpp.html" title=" " alt="" coords="216,229,371,256"/>
-<area shape="rect" href="validate__in_8cpp.html" title=" " alt="" coords="395,229,584,256"/>
-<area shape="rect" href="validate__range_8cpp.html" title=" " alt="" coords="609,229,823,256"/>
+<area shape="rect" title=" " alt="" coords="423,5,610,32"/>
+<area shape="rect" href="all_8hpp.html" title=" " alt="" coords="433,155,600,181"/>
+<area shape="rect" href="validate_8hpp.html" title=" " alt="" coords="485,80,687,107"/>
+<area shape="rect" href="maybe__error_8cpp.html" title=" " alt="" coords="5,229,204,256"/>
+<area shape="rect" href="no__discard_8cpp.html" title=" " alt="" coords="229,229,415,256"/>
+<area shape="rect" href="result_8cpp.html" title=" " alt="" coords="439,229,594,256"/>
+<area shape="rect" href="validate__in_8cpp.html" title=" " alt="" coords="618,229,807,256"/>
+<area shape="rect" href="validate__range_8cpp.html" title=" " alt="" coords="832,229,1047,256"/>
 </map>
 </div>
 </div>
@@ -130,7 +137,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aa1312da5f43346f19ba013b5733bfd11"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aa1312da5f43346f19ba013b5733bfd11"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a> = expected&lt; T, <a class="el" href="structError.html">Error</a> &gt;</td></tr>
+<tr class="memitem:aa1312da5f43346f19ba013b5733bfd11"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a> = <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, <a class="el" href="structError.html">Error</a> &gt;</td></tr>
 <tr class="separator:aa1312da5f43346f19ba013b5733bfd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -173,6 +180,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a79b3dd7d6907b51e80b2dd7e2ee617a0">make_result</a> (T value)</td></tr>
 <tr class="memdesc:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a Result&lt;T&gt; from a T value.  <a href="result_8hpp.html#a79b3dd7d6907b51e80b2dd7e2ee617a0">More...</a><br /></td></tr>
 <tr class="separator:a79b3dd7d6907b51e80b2dd7e2ee617a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2784776d5f36738c7aed6d0da73e0266"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
+<tr class="memitem:a2784776d5f36738c7aed6d0da73e0266"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266">has_error</a> (const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;exp)</td></tr>
+<tr class="memdesc:a2784776d5f36738c7aed6d0da73e0266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter function for testing if a result has an error.  <a href="result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266">More...</a><br /></td></tr>
+<tr class="separator:a2784776d5f36738c7aed6d0da73e0266"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f3646cc13a1d9e81005018b2ba3199"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
+<tr class="memitem:aa7f3646cc13a1d9e81005018b2ba3199"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="result_8hpp.html#aa7f3646cc13a1d9e81005018b2ba3199">maybe_error</a> (<a class="el" href="classtl_1_1expected.html">expected</a>&lt; Args, E &gt;... args)</td></tr>
+<tr class="separator:aa7f3646cc13a1d9e81005018b2ba3199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -223,12 +237,12 @@ Variables</h2></td></tr>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a> =  expected&lt;T, <a class="el" href="structError.html">Error</a>&gt;</td>
+          <td class="memname">using <a class="el" href="result_8hpp.html#aa1312da5f43346f19ba013b5733bfd11">Result</a> =  <a class="el" href="classtl_1_1expected.html">expected</a>&lt;T, <a class="el" href="structError.html">Error</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00195">195</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00196">196</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -276,11 +290,68 @@ template&lt;typename T &gt; </div>
 <tr><td class="fieldname"><a id="a5d0f3b4a99b1ebb74d2e4f2e9207bc18a72b49a7cbf0c0e3dff052d091d838252"></a>__END&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00048">48</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00049">49</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a2784776d5f36738c7aed6d0da73e0266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2784776d5f36738c7aed6d0da73e0266">&#9670;&nbsp;</a></span>has_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename E &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool has_error </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;&#160;</td>
+          <td class="paramname"><em>exp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Filter function for testing if a result has an error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">exp</td><td>The expected type to test </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The value type </td></tr>
+    <tr><td class="paramname">E</td><td>The error type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>if the expected has an error </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00258">258</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph.png" border="0" usemap="#result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph" alt=""/></div>
+<map name="result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph" id="result_8hpp_a2784776d5f36738c7aed6d0da73e0266_icgraph">
+<area shape="rect" title="Filter function for testing if a result has an error." alt="" coords="387,5,469,32"/>
+<area shape="rect" href="result_8hpp.html#aa7f3646cc13a1d9e81005018b2ba3199" title=" " alt="" coords="233,5,339,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#a6eb8b2e132b4b9f11f15daedd3dcd23a" title=" " alt="" coords="108,5,185,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a79b3dd7d6907b51e80b2dd7e2ee617a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a79b3dd7d6907b51e80b2dd7e2ee617a0">&#9670;&nbsp;</a></span>make_result()</h2>
 
@@ -321,18 +392,71 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A Result&lt;T&gt; containing value </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="result_8cpp-example.html#a4">result.cpp</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a8">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#a5">result.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00207">207</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00208">208</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph.png" border="0" usemap="#result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph" alt=""/></div>
 <map name="result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph" id="result_8hpp_a79b3dd7d6907b51e80b2dd7e2ee617a0_icgraph">
-<area shape="rect" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="235,5,337,32"/>
+<area shape="rect" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="235,31,337,57"/>
 <area shape="rect" href="result_8cpp.html#a5d80dcfaf6724bf1a637914b4209c2ad" title=" " alt="" coords="108,5,187,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#a6eb8b2e132b4b9f11f15daedd3dcd23a" title=" " alt="" coords="109,56,186,83"/>
 <area shape="rect" href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa7f3646cc13a1d9e81005018b2ba3199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7f3646cc13a1d9e81005018b2ba3199">&#9670;&nbsp;</a></span>maybe_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename E , typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::optional&lt;E&gt; maybe_error </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtl_1_1expected.html">expected</a>&lt; Args, E &gt;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a9">maybe_error.cpp</a>.</dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00272">272</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph.png" border="0" usemap="#result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph" alt=""/></div>
+<map name="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph" id="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,111,32"/>
+<area shape="rect" href="result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266" title="Filter function for testing if a result has an error." alt="" coords="159,5,241,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph.png" border="0" usemap="#result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph" alt=""/></div>
+<map name="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph" id="result_8hpp_aa7f3646cc13a1d9e81005018b2ba3199_icgraph">
+<area shape="rect" title=" " alt="" coords="233,5,339,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#a6eb8b2e132b4b9f11f15daedd3dcd23a" title=" " alt="" coords="108,5,185,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
@@ -370,7 +494,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00144">144</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00145">145</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -407,7 +531,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4e6c860e5da10e31c5fd9cb76ddc2025">ErrorCode::ABORTED</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00114">114</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00115">115</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -434,7 +558,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed">ErrorCode::ALREADY_EXISTS</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00102">102</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00103">103</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -461,7 +585,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2">ErrorCode::CANCELLED</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00087">87</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00088">88</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +612,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20">ErrorCode::DATA_LOSS</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00129">129</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00130">130</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -515,7 +639,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acccc265b14c17af799a1834f4fbbe7cf">ErrorCode::EXCEPTION</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00135">135</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00136">136</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -542,7 +666,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18acd586de98c3bf7bd95fb4be2bb826431">ErrorCode::FAILED_PRECONDITION</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00111">111</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00112">112</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -569,7 +693,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a182fa1c42a2468f8488e6dcf75a81b81">ErrorCode::INTERNAL</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00123">123</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00124">124</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -595,10 +719,10 @@ Here is the caller graph for this function:</div>
 <b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> std::string&amp; what = <span class="stringliteral">&quot;&quot;</span>) {</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af295a0c3e37c94f078e1c5476479132d">ErrorCode::INVALID_ARGUMENT</a>, what};</div>
 <div class="line">}</div>
-</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="result_8cpp-example.html#a1">result.cpp</a>.</dd>
+</div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a2">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#a2">result.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00093">93</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00094">94</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -625,7 +749,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d">ErrorCode::NOT_FOUND</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00099">99</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00100">100</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -649,7 +773,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00086">86</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00087">87</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,7 +800,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a6feaf66704b269610cff9431d5519cad">ErrorCode::OUT_OF_RANGE</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00117">117</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00118">118</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -703,7 +827,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18af819039636add117ded2bb0613cac106">ErrorCode::PERMISSION_DENINED</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00105">105</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00106">106</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -730,7 +854,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627">ErrorCode::RESOURCE_EXHAUSTED</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00108">108</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00109">109</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +881,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a070a0fb40f6c308ab544b227660aadff">ErrorCode::TIMEOUT</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00096">96</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00097">97</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -784,7 +908,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a456dc2351b6dbb9db3b40552b2e8c5a9">ErrorCode::UNAUTHENTICATED</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00132">132</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00133">133</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -811,7 +935,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead">ErrorCode::UNAVAILABLE</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00126">126</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00127">127</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +962,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18aaa528108d473f663f8947b4d16e7c13c">ErrorCode::UNIMPLEMENTED</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00120">120</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00121">121</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -865,7 +989,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> <a class="code" href="structError.html">Error</a>{<a class="code" href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a696b031073e74bf2cb98e5ef201d4aa3">ErrorCode::UNKNOWN</a>, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00090">90</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00091">91</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -876,7 +1000,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a9f935beb31030ad0d4d26126c0f39bf2">ErrorCode::CANCELLED</a></div><div class="ttdeci">@ CANCELLED</div></div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d">ErrorCode::NOT_FOUND</a></div><div class="ttdeci">@ NOT_FOUND</div></div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a084f4ca2c0fe703e46514a144b4d6ead">ErrorCode::UNAVAILABLE</a></div><div class="ttdeci">@ UNAVAILABLE</div></div>
-<div class="ttc" id="astructError_html"><div class="ttname"><a href="structError.html">Error</a></div><div class="ttdoc">Error type used by Result&lt;T&gt;</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00073">result.hpp:73</a></div></div>
+<div class="ttc" id="astructError_html"><div class="ttname"><a href="structError.html">Error</a></div><div class="ttdoc">Error type used by Result&lt;T&gt;</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00074">result.hpp:74</a></div></div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a08e6da8e58b2bcd070be3b5274d51eed">ErrorCode::ALREADY_EXISTS</a></div><div class="ttdeci">@ ALREADY_EXISTS</div></div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a4a739fa42dcdbdb8dfe5a5e4d9c5a627">ErrorCode::RESOURCE_EXHAUSTED</a></div><div class="ttdeci">@ RESOURCE_EXHAUSTED</div></div>
 <div class="ttc" id="aresult_8hpp_html_a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20"><div class="ttname"><a href="result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18afb1a9c3daaa0683c4ffac41183243e20">ErrorCode::DATA_LOSS</a></div><div class="ttdeci">@ DATA_LOSS</div></div>

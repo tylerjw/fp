@@ -1,9 +1,10 @@
 <map id="include/monad/result.hpp" name="include/monad/result.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="297,5,484,32"/>
-<area shape="rect" id="node2" href="$all_8hpp.html" title=" " alt="" coords="307,155,474,181"/>
-<area shape="rect" id="node7" href="$validate_8hpp.html" title=" " alt="" coords="359,80,561,107"/>
-<area shape="rect" id="node3" href="$no__discard_8cpp.html" title=" " alt="" coords="5,229,192,256"/>
-<area shape="rect" id="node4" href="$result_8cpp.html" title=" " alt="" coords="216,229,371,256"/>
-<area shape="rect" id="node5" href="$validate__in_8cpp.html" title=" " alt="" coords="395,229,584,256"/>
-<area shape="rect" id="node6" href="$validate__range_8cpp.html" title=" " alt="" coords="609,229,823,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="423,5,610,32"/>
+<area shape="rect" id="node2" href="$all_8hpp.html" title=" " alt="" coords="433,155,600,181"/>
+<area shape="rect" id="node8" href="$validate_8hpp.html" title=" " alt="" coords="485,80,687,107"/>
+<area shape="rect" id="node3" href="$maybe__error_8cpp.html" title=" " alt="" coords="5,229,204,256"/>
+<area shape="rect" id="node4" href="$no__discard_8cpp.html" title=" " alt="" coords="229,229,415,256"/>
+<area shape="rect" id="node5" href="$result_8cpp.html" title=" " alt="" coords="439,229,594,256"/>
+<area shape="rect" id="node6" href="$validate__in_8cpp.html" title=" " alt="" coords="618,229,807,256"/>
+<area shape="rect" id="node7" href="$validate__range_8cpp.html" title=" " alt="" coords="832,229,1047,256"/>
 </map>

@@ -102,10 +102,10 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;monad/_external/expected.hpp&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="expected_8hpp.html">monad/_external/expected.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using</span> tl::expected;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> tl::make_unexpected;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using</span> <a class="code" href="classtl_1_1expected.html">tl::expected</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using</span> <a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#ac1dba7026a1b4234fc668101d9863558">   48</a></span>&#160;constexpr std::optional&lt;T&gt; <a class="code" href="mbind_8hpp.html#ac1dba7026a1b4234fc668101d9863558">make_opt</a>(T value) {</div>
@@ -129,16 +129,16 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E, <span class="keyword">typename</span> F,</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          <span class="keyword">typename</span> Ret = <span class="keyword">typename</span> std::result_of&lt;F(T)&gt;::type&gt;</div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">  104</a></span>&#160;constexpr Ret <a class="code" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">mbind</a>(<span class="keyword">const</span> expected&lt;T, E&gt;&amp; exp, F f) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">  104</a></span>&#160;constexpr Ret <a class="code" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">mbind</a>(<span class="keyword">const</span> <a class="code" href="classtl_1_1expected.html">expected&lt;T, E&gt;</a>&amp; exp, F f) {</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span> (exp) {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> f(exp.value());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> f(exp.<a class="code" href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3">value</a>());</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">return</span> make_unexpected(exp.error());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">make_unexpected</a>(exp.<a class="code" href="classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d">error</a>());</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E, <span class="keyword">typename</span> F,</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;          <span class="keyword">typename</span> Ret = <span class="keyword">typename</span> std::result_of&lt;F(T)&gt;::type&gt;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#a08ce433224c18ada101504503e4ab09c">  126</a></span>&#160;constexpr Ret <a class="code" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a>(<span class="keyword">const</span> expected&lt;T, E&gt;&amp; exp, F f) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#a08ce433224c18ada101504503e4ab09c">  126</a></span>&#160;constexpr Ret <a class="code" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a>(<span class="keyword">const</span> <a class="code" href="classtl_1_1expected.html">expected&lt;T, E&gt;</a>&amp; exp, F f) {</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">mbind</a>(exp, f);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
@@ -148,7 +148,7 @@ $(function() {
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">return</span> Exp{f()};</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> make_unexpected(std::current_exception());</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">make_unexpected</a>(std::current_exception());</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  }</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
@@ -163,11 +163,16 @@ $(function() {
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="mbind_8hpp.html#a56c92cead3ceea26c308fac121e3cbea">mcompose</a>(exp, vars...);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacetl_html_a01de1a0282a693451af969f35e88bcf9"><div class="ttname"><a href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a></div><div class="ttdeci">unexpected&lt; typename std::decay&lt; E &gt;::type &gt; make_unexpected(E &amp;&amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l00178">expected.hpp:178</a></div></div>
 <div class="ttc" id="ambind_8hpp_html_a57cf530ab900ef0a9cc497110090612d"><div class="ttname"><a href="mbind_8hpp.html#a57cf530ab900ef0a9cc497110090612d">mbind</a></div><div class="ttdeci">constexpr auto mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</div><div class="ttdoc">Monad optional bind.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00064">mbind.hpp:64</a></div></div>
 <div class="ttc" id="ambind_8hpp_html_abd8b70189113e335e72d993e2596371a"><div class="ttname"><a href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a></div><div class="ttdeci">constexpr auto operator|(const std::optional&lt; T &gt; &amp;opt, F f)</div><div class="ttdoc">Overload of the | operator as bind.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00085">mbind.hpp:85</a></div></div>
 <div class="ttc" id="ambind_8hpp_html_a56c92cead3ceea26c308fac121e3cbea"><div class="ttname"><a href="mbind_8hpp.html#a56c92cead3ceea26c308fac121e3cbea">mcompose</a></div><div class="ttdeci">constexpr auto mcompose(F f, G g)</div><div class="ttdoc">Monadic compose two monad functions.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00164">mbind.hpp:164</a></div></div>
 <div class="ttc" id="ambind_8hpp_html_ac1dba7026a1b4234fc668101d9863558"><div class="ttname"><a href="mbind_8hpp.html#ac1dba7026a1b4234fc668101d9863558">make_opt</a></div><div class="ttdeci">constexpr std::optional&lt; T &gt; make_opt(T value)</div><div class="ttdoc">Makes an optional&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00048">mbind.hpp:48</a></div></div>
+<div class="ttc" id="aclasstl_1_1expected_html_a0f173ccbdbb2df23a3a1e80320a335c3"><div class="ttname"><a href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3">tl::expected::value</a></div><div class="ttdeci">const TL_EXPECTED_11_CONSTEXPR U &amp; value() const &amp;</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01957">expected.hpp:1957</a></div></div>
+<div class="ttc" id="aclasstl_1_1expected_html_aea2a9099a048578ee49e85549cc6ee3d"><div class="ttname"><a href="classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d">tl::expected::error</a></div><div class="ttdeci">constexpr const E &amp; error() const &amp;</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01984">expected.hpp:1984</a></div></div>
+<div class="ttc" id="aexpected_8hpp_html"><div class="ttname"><a href="expected_8hpp.html">expected.hpp</a></div></div>
 <div class="ttc" id="ambind_8hpp_html_ab5c5b323c75180bac5953ce22f6d8a41"><div class="ttname"><a href="mbind_8hpp.html#ab5c5b323c75180bac5953ce22f6d8a41">mtry</a></div><div class="ttdeci">constexpr Exp mtry(F f)</div><div class="ttdoc">Monadic try, used to lift a function that throws an exception one that returns an expected&lt;T,...</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00144">mbind.hpp:144</a></div></div>
+<div class="ttc" id="aclasstl_1_1expected_html"><div class="ttname"><a href="classtl_1_1expected.html">tl::expected</a></div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l00121">expected.hpp:121</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -73,15 +73,19 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
-<code>#include &quot;monad/_external/expected.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="expected_8hpp_source.html">monad/_external/expected.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mbind.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="mbind_8hpp__incl.png" border="0" usemap="#include_2monad_2mbind_8hpp" alt=""/></div>
 <map name="include_2monad_2mbind_8hpp" id="include_2monad_2mbind_8hpp">
-<area shape="rect" title=" " alt="" coords="34,5,225,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,80,107"/>
-<area shape="rect" title=" " alt="" coords="104,80,328,107"/>
+<area shape="rect" title=" " alt="" coords="35,5,225,32"/>
+<area shape="rect" title=" " alt="" coords="6,80,81,107"/>
+<area shape="rect" href="expected_8hpp.html" title=" " alt="" coords="105,80,329,107"/>
+<area shape="rect" title=" " alt="" coords="5,155,92,181"/>
+<area shape="rect" title=" " alt="" coords="116,155,203,181"/>
+<area shape="rect" title=" " alt="" coords="227,155,319,181"/>
+<area shape="rect" title=" " alt="" coords="343,155,403,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -89,12 +93,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="mbind_8hpp__dep__incl.png" border="0" usemap="#include_2monad_2mbind_8hppdep" alt=""/></div>
 <map name="include_2monad_2mbind_8hppdep" id="include_2monad_2mbind_8hppdep">
-<area shape="rect" title=" " alt="" coords="295,5,486,32"/>
-<area shape="rect" href="all_8hpp.html" title=" " alt="" coords="307,80,474,107"/>
-<area shape="rect" href="no__discard_8cpp.html" title=" " alt="" coords="5,155,192,181"/>
-<area shape="rect" href="result_8cpp.html" title=" " alt="" coords="216,155,371,181"/>
-<area shape="rect" href="validate__in_8cpp.html" title=" " alt="" coords="395,155,584,181"/>
-<area shape="rect" href="validate__range_8cpp.html" title=" " alt="" coords="609,155,823,181"/>
+<area shape="rect" title=" " alt="" coords="421,5,612,32"/>
+<area shape="rect" href="all_8hpp.html" title=" " alt="" coords="433,80,600,107"/>
+<area shape="rect" href="maybe__error_8cpp.html" title=" " alt="" coords="5,155,204,181"/>
+<area shape="rect" href="no__discard_8cpp.html" title=" " alt="" coords="229,155,415,181"/>
+<area shape="rect" href="result_8cpp.html" title=" " alt="" coords="439,155,594,181"/>
+<area shape="rect" href="validate__in_8cpp.html" title=" " alt="" coords="618,155,807,181"/>
+<area shape="rect" href="validate__range_8cpp.html" title=" " alt="" coords="832,155,1047,181"/>
 </map>
 </div>
 </div>
@@ -115,11 +120,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:abd8b70189113e335e72d993e2596371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">More...</a><br /></td></tr>
 <tr class="separator:abd8b70189113e335e72d993e2596371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
-<tr class="memitem:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">mbind</a> (const expected&lt; T, E &gt; &amp;exp, F f)</td></tr>
+<tr class="memitem:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">mbind</a> (const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
 <tr class="memdesc:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad expected&lt;T,E&gt;  <a href="mbind_8hpp.html#a76f982e88c7a9d5ad744555a1e5e3aa9">More...</a><br /></td></tr>
 <tr class="separator:a76f982e88c7a9d5ad744555a1e5e3aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ce433224c18ada101504503e4ab09c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
-<tr class="memitem:a08ce433224c18ada101504503e4ab09c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a08ce433224c18ada101504503e4ab09c">operator|</a> (const expected&lt; T, E &gt; &amp;exp, F f)</td></tr>
+<tr class="memitem:a08ce433224c18ada101504503e4ab09c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a08ce433224c18ada101504503e4ab09c">operator|</a> (const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
 <tr class="memdesc:a08ce433224c18ada101504503e4ab09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#a08ce433224c18ada101504503e4ab09c">More...</a><br /></td></tr>
 <tr class="separator:a08ce433224c18ada101504503e4ab09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5c5b323c75180bac5953ce22f6d8a41"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
@@ -195,7 +200,7 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
         <tr>
           <td class="memname">constexpr Ret mbind </td>
           <td>(</td>
-          <td class="paramtype">const expected&lt; T, E &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;&#160;</td>
           <td class="paramname"><em>exp</em>, </td>
         </tr>
         <tr>
@@ -237,6 +242,19 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
 <dl class="section return"><dt>Returns</dt><dd>The return type of the function </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00104">104</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbind_8hpp_a76f982e88c7a9d5ad744555a1e5e3aa9_cgraph.png" border="0" usemap="#mbind_8hpp_a76f982e88c7a9d5ad744555a1e5e3aa9_cgraph" alt=""/></div>
+<map name="mbind_8hpp_a76f982e88c7a9d5ad744555a1e5e3aa9_cgraph" id="mbind_8hpp_a76f982e88c7a9d5ad744555a1e5e3aa9_cgraph">
+<area shape="rect" title="Monad expected&lt;T,E&gt;" alt="" coords="5,56,68,83"/>
+<area shape="rect" href="classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d" title=" " alt="" coords="126,5,265,32"/>
+<area shape="rect" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="116,56,275,83"/>
+<area shape="rect" href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3" title=" " alt="" coords="124,107,267,133"/>
+<area shape="rect" href="classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513" title=" " alt="" coords="332,81,505,108"/>
+<area shape="rect" href="namespacetl_1_1detail.html#aa5e6dc2362309394a354a099490713ea" title=" " alt="" coords="323,132,515,159"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -502,6 +520,15 @@ template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::typ
 <dl class="section return"><dt>Returns</dt><dd>The return value of the function </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00144">144</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbind_8hpp_ab5c5b323c75180bac5953ce22f6d8a41_cgraph.png" border="0" usemap="#mbind_8hpp_ab5c5b323c75180bac5953ce22f6d8a41_cgraph" alt=""/></div>
+<map name="mbind_8hpp_ab5c5b323c75180bac5953ce22f6d8a41_cgraph" id="mbind_8hpp_ab5c5b323c75180bac5953ce22f6d8a41_cgraph">
+<area shape="rect" title="Monadic try, used to lift a function that throws an exception one that returns an expected&lt;T,..." alt="" coords="5,5,59,32"/>
+<area shape="rect" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="107,5,265,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -519,7 +546,7 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
         <tr>
           <td class="memname">constexpr Ret operator| </td>
           <td>(</td>
-          <td class="paramtype">const expected&lt; T, E &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classtl_1_1expected.html">expected</a>&lt; T, E &gt; &amp;&#160;</td>
           <td class="paramname"><em>exp</em>, </td>
         </tr>
         <tr>

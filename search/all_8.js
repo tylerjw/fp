@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['no_5fdiscard_2ecpp_38',['no_discard.cpp',['../no__discard_8cpp.html',1,'']]],
-  ['no_5fdiscard_2ehpp_39',['no_discard.hpp',['../no__discard_8hpp.html',1,'']]],
-  ['nodiscard_40',['NoDiscard',['../structNoDiscard.html',1,'NoDiscard&lt; F &gt;'],['../structNoDiscard.html#afcb8160200c924fadbaca4e631d04ebb',1,'NoDiscard::NoDiscard()']]],
-  ['not_5ffound_41',['NOT_FOUND',['../result_8hpp.html#a5d0f3b4a99b1ebb74d2e4f2e9207bc18a8c02547a8a3b02382bac3557bcb2280d',1,'result.hpp']]],
-  ['notfound_42',['NotFound',['../result_8hpp.html#afce40842b3d18cfb38891be6ab74d81b',1,'result.hpp']]]
+  ['has_5ferror_90',['has_error',['../result_8hpp.html#a2784776d5f36738c7aed6d0da73e0266',1,'result.hpp']]],
+  ['has_5fvalue_91',['has_value',['../structtl_1_1detail_1_1expected__operations__base.html#af760709a4e7cf31d78099e280ec1e06a',1,'tl::detail::expected_operations_base::has_value()'],['../structtl_1_1detail_1_1expected__operations__base_3_01void_00_01E_01_4.html#ac53001044748a1b2f7a7d5f07306c53e',1,'tl::detail::expected_operations_base&lt; void, E &gt;::has_value()'],['../classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513',1,'tl::expected::has_value()']]]
 ];
