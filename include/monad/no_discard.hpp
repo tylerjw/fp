@@ -28,6 +28,8 @@
 
 #pragma once
 
+namespace monad {
+
 /**
  * @brief      Template for creating lambdas with the nodiscard attribute
  *
@@ -45,3 +47,5 @@ struct NoDiscard {
     return f_(std::forward<T>(t)...);
   }
 };
+
+}  // namespace monad

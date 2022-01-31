@@ -33,6 +33,8 @@
 #include "gtest/gtest.h"
 #include "monad/all.hpp"
 
+using namespace monad;
+
 TEST(ValidateTests, ValidateRangeFromIntTrue) {
   // GIVEN validation of the range [-10, inf, -]
   const auto test = validate::range<int>{.from = -10};

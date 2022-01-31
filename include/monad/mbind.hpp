@@ -32,6 +32,8 @@
 
 #include "monad/_external/expected.hpp"
 
+namespace monad {
+
 using tl::expected;
 using tl::make_unexpected;
 
@@ -183,3 +185,5 @@ constexpr auto mcompose(T t, G g, Types... vars) {
   auto exp = mcompose(t, g);
   return mcompose(exp, vars...);
 }
+
+}  // namespace monad

@@ -28,6 +28,7 @@
 
 #include <monad/all.hpp>
 
+using namespace monad;
 namespace views = ::ranges::views;
 
 Result<double> divide_4_by(double x) {

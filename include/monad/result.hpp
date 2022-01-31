@@ -39,6 +39,8 @@
 #include "monad/_external/expected.hpp"
 #include "monad/no_discard.hpp"
 
+namespace monad {
+
 using tl::expected;
 using tl::make_unexpected;
 using tl::unexpected;
@@ -210,43 +212,6 @@ constexpr Result<T> make_result(T value) {
 }
 
 /**
- * @brief      fmt format implementation for Error type
- */
-template <>
-struct fmt::formatter<Error> {
-  template <typename ParseContext>
-  constexpr auto parse(ParseContext& ctx) {
-    return ctx.begin();
-  }
-
-  template <typename FormatContext>
-  auto format(const Error& error, FormatContext& ctx) {
-    return format_to(ctx.out(), "[Error: [{}] {}]", toStringView(error.code),
-                     error.what);
-  }
-};
-
-/**
- * @brief      fmt format implementation for Result<T> type
- */
-template <typename T>
-struct fmt::formatter<Result<T>> {
-  template <typename ParseContext>
-  constexpr auto parse(ParseContext& ctx) {
-    return ctx.begin();
-  }
-
-  template <typename FormatContext>
-  auto format(const Result<T>& result, FormatContext& ctx) {
-    if (result.has_value()) {
-      return format_to(ctx.out(), "[Result<T>: value={}]", result.value());
-    } else {
-      return format_to(ctx.out(), "[Result<T>: {}]", result.error());
-    }
-  }
-};
-
-/**
  * @brief Filter function for testing if a result has an error
  *
  * @param exp The expected type to test
@@ -279,3 +244,42 @@ constexpr std::optional<E> maybe_error(expected<Args, E>... args) {
       ...);
   return maybe;
 }
+
+}  // namespace monad
+
+/**
+ * @brief      fmt format implementation for Error type
+ */
+template <>
+struct fmt::formatter<monad::Error> {
+  template <typename ParseContext>
+  constexpr auto parse(ParseContext& ctx) {
+    return ctx.begin();
+  }
+
+  template <typename FormatContext>
+  auto format(const monad::Error& error, FormatContext& ctx) {
+    return format_to(ctx.out(), "[Error: [{}] {}]", toStringView(error.code),
+                     error.what);
+  }
+};
+
+/**
+ * @brief      fmt format implementation for Result<T> type
+ */
+template <typename T>
+struct fmt::formatter<monad::Result<T>> {
+  template <typename ParseContext>
+  constexpr auto parse(ParseContext& ctx) {
+    return ctx.begin();
+  }
+
+  template <typename FormatContext>
+  auto format(const monad::Result<T>& result, FormatContext& ctx) {
+    if (result.has_value()) {
+      return format_to(ctx.out(), "[Result<T>: value={}]", result.value());
+    } else {
+      return format_to(ctx.out(), "[Result<T>: {}]", result.error());
+    }
+  }
+};

@@ -28,6 +28,8 @@
 
 #include <monad/all.hpp>
 
+using namespace monad;
+
 void validate_int_step() {
   const auto value = 14;
   const auto result = validate::range<int>{.from = 0, .step = 3}(value);

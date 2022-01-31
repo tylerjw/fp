@@ -38,7 +38,7 @@
 
 #include "monad/result.hpp"
 
-namespace validate {
+namespace monad::validate {
 
 /**
  * @brief      Validate a range
@@ -113,4 +113,4 @@ const auto make_named = [](const Error& error, const std::string& name) {
                .what = fmt::format("{}: {}", name, error.what)};
 };
 
-}  // namespace validate
+}  // namespace monad::validate

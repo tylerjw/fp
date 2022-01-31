@@ -29,6 +29,8 @@
 #include "gtest/gtest.h"
 #include "monad/all.hpp"
 
+using namespace monad;
+
 TEST(ResultTests, OkErrorTrue) {
   // GIVEN Ok error
   const auto error = Ok();

@@ -40,7 +40,3 @@
 #include "monad/no_discard.hpp"
 #include "monad/result.hpp"
 #include "monad/validate.hpp"
-
-using tl::expected;
-using tl::make_unexpected;
-using tl::unexpected;
