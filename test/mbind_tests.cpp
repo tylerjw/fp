@@ -34,6 +34,8 @@
 #include "gtest/gtest.h"
 #include "monad/all.hpp"
 
+using namespace monad;
+
 std::optional<int> maybe_non_zero(int in) {
   return (in == 0) ? std::nullopt : make_opt(in);
 }

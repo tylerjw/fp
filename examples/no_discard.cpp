@@ -28,6 +28,8 @@
 
 #include <monad/all.hpp>
 
+using namespace monad;
+
 int main() {
   const auto f = NoDiscard{[] { return Error{ErrorCode::UNKNOWN, "yikes!"}; }};
   fmt::print("{}\n", f());
