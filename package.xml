@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>monad</name>
+  <name>fp</name>
   <version>0.0.0</version>
   <description>FP extensions for C++</description>
   <maintainer email="squirrel428@pm.me">Tyler Weaver</maintainer>

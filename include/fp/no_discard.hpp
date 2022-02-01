@@ -28,7 +28,7 @@
 
 #pragma once
 
-namespace monad {
+namespace fp {
 
 /**
  * @brief      Template for creating lambdas with the nodiscard attribute
@@ -48,4 +48,4 @@ struct NoDiscard {
   }
 };
 
-}  // namespace monad
+}  // namespace fp

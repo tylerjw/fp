@@ -36,10 +36,10 @@
 #include <string>
 #include <string_view>
 
-#include "monad/_external/expected.hpp"
-#include "monad/no_discard.hpp"
+#include "fp/_external/expected.hpp"
+#include "fp/no_discard.hpp"
 
-namespace monad {
+namespace fp {
 
 /**
  * @brief      Enum for ErrorCodes inspired by absl::StatusCode
@@ -242,20 +242,20 @@ constexpr std::optional<E> maybe_error(tl::expected<Args, E>... args) {
   return maybe;
 }
 
-}  // namespace monad
+}  // namespace fp
 
 /**
  * @brief      fmt format implementation for Error type
  */
 template <>
-struct fmt::formatter<monad::Error> {
+struct fmt::formatter<fp::Error> {
   template <typename ParseContext>
   constexpr auto parse(ParseContext& ctx) {
     return ctx.begin();
   }
 
   template <typename FormatContext>
-  auto format(const monad::Error& error, FormatContext& ctx) {
+  auto format(const fp::Error& error, FormatContext& ctx) {
     return format_to(ctx.out(), "[Error: [{}] {}]", toStringView(error.code),
                      error.what);
   }
@@ -265,14 +265,14 @@ struct fmt::formatter<monad::Error> {
  * @brief      fmt format implementation for Result<T> type
  */
 template <typename T>
-struct fmt::formatter<monad::Result<T>> {
+struct fmt::formatter<fp::Result<T>> {
   template <typename ParseContext>
   constexpr auto parse(ParseContext& ctx) {
     return ctx.begin();
   }
 
   template <typename FormatContext>
-  auto format(const monad::Result<T>& result, FormatContext& ctx) {
+  auto format(const fp::Result<T>& result, FormatContext& ctx) {
     if (result.has_value()) {
       return format_to(ctx.out(), "[Result<T>: value={}]", result.value());
     } else {

@@ -26,32 +26,31 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <monad/all.hpp>
+#include <fp/all.hpp>
 
 namespace views = ::ranges::views;
 
-monad::Result<double> divide_4_by(double x) {
+fp::Result<double> divide_4_by(double x) {
   if (x == 0.0) {
-    return tl::make_unexpected(
-        monad::InvalidArgument(fmt::format("divide by 0")));
+    return tl::make_unexpected(fp::InvalidArgument(fmt::format("divide by 0")));
   }
   return 4.0 / x;
 }
 
-monad::Result<double> safe_sqrt(double x) {
+fp::Result<double> safe_sqrt(double x) {
   if (x < 0) {
-    return tl::make_unexpected(monad::InvalidArgument(
+    return tl::make_unexpected(fp::InvalidArgument(
         fmt::format("sqrt of value < 0.0 is undefined: {}", x)));
   }
 
   return sqrt(x);
 }
 
-monad::Result<double> do_math(double x) {
-  return monad::make_result(x).and_then(divide_4_by).and_then(safe_sqrt);
+fp::Result<double> do_math(double x) {
+  return fp::make_result(x).and_then(divide_4_by).and_then(safe_sqrt);
 }
 
-void print_errors(monad::Result<double> result) {
+void print_errors(fp::Result<double> result) {
   if (!result.has_value()) {
     fmt::print("{}\n", result.error());
   }

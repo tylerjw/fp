@@ -26,28 +26,27 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <monad/all.hpp>
+#include <fp/all.hpp>
 
 namespace views = ::ranges::views;
 
-monad::Result<double> divide_4_by(double x) {
+fp::Result<double> divide_4_by(double x) {
   if (x == 0.0) {
-    return tl::make_unexpected(
-        monad::InvalidArgument(fmt::format("divide by 0")));
+    return tl::make_unexpected(fp::InvalidArgument(fmt::format("divide by 0")));
   }
   return 4.0 / x;
 }
 
-monad::Result<double> f1(double x) { return divide_4_by(x); }
-monad::Result<double> f2(double x) { return divide_4_by(x); }
-monad::Result<double> f3(double x) { return divide_4_by(x); }
-monad::Result<double> f4(double x) { return divide_4_by(x); }
+fp::Result<double> f1(double x) { return divide_4_by(x); }
+fp::Result<double> f2(double x) { return divide_4_by(x); }
+fp::Result<double> f3(double x) { return divide_4_by(x); }
+fp::Result<double> f4(double x) { return divide_4_by(x); }
 
-monad::Result<double> do_work() {
-  auto const a = monad::make_result(2.4) | f1 | f2;
-  auto const b = monad::make_result(0.0) | f3 | f4;
+fp::Result<double> do_work() {
+  auto const a = fp::make_result(2.4) | f1 | f2;
+  auto const b = fp::make_result(0.0) | f3 | f4;
 
-  if (auto const error = monad::maybe_error(a, b); error) {
+  if (auto const error = fp::maybe_error(a, b); error) {
     return tl::make_unexpected(*error);
   }
 
