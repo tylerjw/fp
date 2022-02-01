@@ -26,12 +26,12 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
+#include "fp/all.hpp"
 #include "gtest/gtest.h"
-#include "monad/all.hpp"
 
 TEST(ResultTests, OkErrorTrue) {
   // GIVEN Ok error
-  const auto error = monad::Ok();
+  const auto error = fp::Ok();
 
   // WHEN we cast to bool
   // THEN we expect it to be true
@@ -40,7 +40,7 @@ TEST(ResultTests, OkErrorTrue) {
 
 TEST(ResultTests, CanceledErrorFalse) {
   // GIVEN Canceled error
-  const auto error = monad::Canceled();
+  const auto error = fp::Canceled();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -49,7 +49,7 @@ TEST(ResultTests, CanceledErrorFalse) {
 
 TEST(ResultTests, UnknownErrorFalse) {
   // GIVEN Unknown error
-  const auto error = monad::Unknown();
+  const auto error = fp::Unknown();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -58,7 +58,7 @@ TEST(ResultTests, UnknownErrorFalse) {
 
 TEST(ResultTests, InvalidArgumentErrorFalse) {
   // GIVEN InvalidArgument error
-  const auto error = monad::InvalidArgument();
+  const auto error = fp::InvalidArgument();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -67,7 +67,7 @@ TEST(ResultTests, InvalidArgumentErrorFalse) {
 
 TEST(ResultTests, TimeoutErrorFalse) {
   // GIVEN Timeout error
-  const auto error = monad::Timeout();
+  const auto error = fp::Timeout();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -76,7 +76,7 @@ TEST(ResultTests, TimeoutErrorFalse) {
 
 TEST(ResultTests, NotFoundErrorFalse) {
   // GIVEN NotFound error
-  const auto error = monad::NotFound();
+  const auto error = fp::NotFound();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -85,7 +85,7 @@ TEST(ResultTests, NotFoundErrorFalse) {
 
 TEST(ResultTests, AlreadyExistsErrorFalse) {
   // GIVEN AlreadyExists error
-  const auto error = monad::AlreadyExists();
+  const auto error = fp::AlreadyExists();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -94,7 +94,7 @@ TEST(ResultTests, AlreadyExistsErrorFalse) {
 
 TEST(ResultTests, PermissionDeniedErrorFalse) {
   // GIVEN PermissionDenied error
-  const auto error = monad::PermissionDenied();
+  const auto error = fp::PermissionDenied();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -103,7 +103,7 @@ TEST(ResultTests, PermissionDeniedErrorFalse) {
 
 TEST(ResultTests, ResourceExhaustedErrorFalse) {
   // GIVEN ResourceExhausted error
-  const auto error = monad::ResourceExhausted();
+  const auto error = fp::ResourceExhausted();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -112,7 +112,7 @@ TEST(ResultTests, ResourceExhaustedErrorFalse) {
 
 TEST(ResultTests, FailedPreconditionErrorFalse) {
   // GIVEN FailedPrecondition error
-  const auto error = monad::FailedPrecondition();
+  const auto error = fp::FailedPrecondition();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -121,7 +121,7 @@ TEST(ResultTests, FailedPreconditionErrorFalse) {
 
 TEST(ResultTests, AbortedErrorFalse) {
   // GIVEN Aborted error
-  const auto error = monad::Aborted();
+  const auto error = fp::Aborted();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -130,7 +130,7 @@ TEST(ResultTests, AbortedErrorFalse) {
 
 TEST(ResultTests, OutOfRangeErrorFalse) {
   // GIVEN OutOfRange error
-  const auto error = monad::OutOfRange();
+  const auto error = fp::OutOfRange();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -139,7 +139,7 @@ TEST(ResultTests, OutOfRangeErrorFalse) {
 
 TEST(ResultTests, UnimplementedErrorFalse) {
   // GIVEN Unimplemented error
-  const auto error = monad::Unimplemented();
+  const auto error = fp::Unimplemented();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -148,7 +148,7 @@ TEST(ResultTests, UnimplementedErrorFalse) {
 
 TEST(ResultTests, InternalErrorFalse) {
   // GIVEN Internal error
-  const auto error = monad::Internal();
+  const auto error = fp::Internal();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -157,7 +157,7 @@ TEST(ResultTests, InternalErrorFalse) {
 
 TEST(ResultTests, UnavailableErrorFalse) {
   // GIVEN Unavailable error
-  const auto error = monad::Unavailable();
+  const auto error = fp::Unavailable();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -166,7 +166,7 @@ TEST(ResultTests, UnavailableErrorFalse) {
 
 TEST(ResultTests, DataLossErrorFalse) {
   // GIVEN DataLoss error
-  const auto error = monad::DataLoss();
+  const auto error = fp::DataLoss();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -175,7 +175,7 @@ TEST(ResultTests, DataLossErrorFalse) {
 
 TEST(ResultTests, UnauthenticatedErrorFalse) {
   // GIVEN Unauthenticated error
-  const auto error = monad::Unauthenticated();
+  const auto error = fp::Unauthenticated();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -184,7 +184,7 @@ TEST(ResultTests, UnauthenticatedErrorFalse) {
 
 TEST(ResultTests, ExceptionErrorFalse) {
   // GIVEN Exception error
-  const auto error = monad::Exception();
+  const auto error = fp::Exception();
 
   // WHEN we cast to bool
   // THEN we expect it to be false
@@ -193,8 +193,8 @@ TEST(ResultTests, ExceptionErrorFalse) {
 
 TEST(ResultTests, ErrorEqualityTrue) {
   // Given two different Ok Errors
-  const auto first_error = monad::Ok();
-  const auto second_error = monad::Ok();
+  const auto first_error = fp::Ok();
+  const auto second_error = fp::Ok();
 
   // WHEN we test their equality
   // THEN we expect it to be true
@@ -204,8 +204,8 @@ TEST(ResultTests, ErrorEqualityTrue) {
 
 TEST(ResultTests, ErrorEqualityCodeFalse) {
   // Given two different errors with different codes
-  const auto first_error = monad::Ok();
-  const auto second_error = monad::Unknown();
+  const auto first_error = fp::Ok();
+  const auto second_error = fp::Unknown();
 
   // WHEN we test their equality
   // THEN we expect it to be false
@@ -215,8 +215,8 @@ TEST(ResultTests, ErrorEqualityCodeFalse) {
 
 TEST(ResultTests, ErrorEqualityWhatFalse) {
   // Given two different errors with different strings
-  const auto first_error = monad::Timeout("foo");
-  const auto second_error = monad::Timeout("bar");
+  const auto first_error = fp::Timeout("foo");
+  const auto second_error = fp::Timeout("bar");
 
   // WHEN we test their equality
   // THEN we expect it to be false
@@ -226,7 +226,7 @@ TEST(ResultTests, ErrorEqualityWhatFalse) {
 
 TEST(ResultTests, FormatErrorNoThrow) {
   // GIVEN a Error
-  const auto error = monad::Exception();
+  const auto error = fp::Exception();
 
   // WHEN we call fmt::format on it
   // THEN we expect it not to throw
@@ -235,7 +235,7 @@ TEST(ResultTests, FormatErrorNoThrow) {
 
 TEST(ResultTests, FormatResultValueNoThrow) {
   // GIVEN a Result<int> with a value
-  const auto result = monad::Result<int>{4};
+  const auto result = fp::Result<int>{4};
 
   // WHEN we call fmt::format on it
   // THEN we expect it not to throw
@@ -244,8 +244,7 @@ TEST(ResultTests, FormatResultValueNoThrow) {
 
 TEST(ResultTests, FormatResultErrorNoThrow) {
   // GIVEN a Result<int> with an error
-  const auto result =
-      monad::Result<int>{tl::make_unexpected(monad::DataLoss())};
+  const auto result = fp::Result<int>{tl::make_unexpected(fp::DataLoss())};
 
   // WHEN we call fmt::format on it
   // THEN we expect it not to throw
@@ -255,30 +254,30 @@ TEST(ResultTests, FormatResultErrorNoThrow) {
 TEST(ResultTests, StringToViewNoThrow) {
   // GIVEN each type of error
   const auto each_type_of_error =
-      ranges::views::iota(static_cast<int>(monad::ErrorCode::OK),
-                          static_cast<int>(monad::ErrorCode::__END)) |
+      ranges::views::iota(static_cast<int>(fp::ErrorCode::OK),
+                          static_cast<int>(fp::ErrorCode::__END)) |
       ranges::views::transform(
-          [](int i) { return static_cast<monad::ErrorCode>(i); }) |
+          [](int i) { return static_cast<fp::ErrorCode>(i); }) |
       ranges::to<std::vector>();
 
   // WHEN we call toStringView with each type of Error
   // THEN we expect it doesn't throw
   for (const auto& error : each_type_of_error) {
-    EXPECT_NO_THROW(const auto _ = monad::toStringView(error));
+    EXPECT_NO_THROW(const auto _ = fp::toStringView(error));
   }
 }
 
 TEST(ResultTests, MaybeError) {
   // GIVEN two Result<T> values
-  const monad::Result<double> a = 6.5;
-  const monad::Result<int> b = tl::make_unexpected(monad::Unknown());
+  const fp::Result<double> a = 6.5;
+  const fp::Result<int> b = tl::make_unexpected(fp::Unknown());
 
   // WHEN we call maybe_error on those results
-  const auto error = monad::maybe_error(a, b);
+  const auto error = fp::maybe_error(a, b);
 
   // THEN we expect it to have the Unknown error
   EXPECT_TRUE(error);
-  EXPECT_EQ(error.value().code, monad::ErrorCode::UNKNOWN);
+  EXPECT_EQ(error.value().code, fp::ErrorCode::UNKNOWN);
 }
 
 int main(int argc, char** argv) {

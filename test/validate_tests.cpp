@@ -30,12 +30,12 @@
 #include <functional>
 #include <optional>
 
+#include "fp/all.hpp"
 #include "gtest/gtest.h"
-#include "monad/all.hpp"
 
 TEST(ValidateTests, ValidateRangeFromIntTrue) {
   // GIVEN validation of the range [-10, inf, -]
-  const auto test = monad::validate_range<int>{.from = -10};
+  const auto test = fp::validate_range<int>{.from = -10};
 
   // WHEN we we validate the value 14
   const auto result = test(14);
@@ -46,7 +46,7 @@ TEST(ValidateTests, ValidateRangeFromIntTrue) {
 
 TEST(ValidateTests, ValidateRangeFromIntFalse) {
   // GIVEN validation of the range [-10, inf, -]
-  const auto test = monad::validate_range<int>{.from = -10};
+  const auto test = fp::validate_range<int>{.from = -10};
 
   // WHEN we we validate the value -100
   const auto result = test(-100);
@@ -57,18 +57,18 @@ TEST(ValidateTests, ValidateRangeFromIntFalse) {
 
 TEST(ValidateTests, ValidateRangeFalseIsOutOfRange) {
   // GIVEN validation of the range [-10, inf, -]
-  const auto test = monad::validate_range<int>{.from = -10};
+  const auto test = fp::validate_range<int>{.from = -10};
 
   // WHEN we we validate the value -100
   const auto result = test(-100);
 
   // THEN we expect the error code to be OutOfRange
-  EXPECT_EQ(result.error().code, monad::ErrorCode::OUT_OF_RANGE);
+  EXPECT_EQ(result.error().code, fp::ErrorCode::OUT_OF_RANGE);
 }
 
 TEST(ValidateTests, ValidateRangeToIntFalse) {
   // GIVEN validation of the range [-inf, 4, -]
-  const auto test = monad::validate_range<int>{.to = 4};
+  const auto test = fp::validate_range<int>{.to = 4};
 
   // WHEN we we validate the value 5
   const auto result = test(5);
@@ -79,7 +79,7 @@ TEST(ValidateTests, ValidateRangeToIntFalse) {
 
 TEST(ValidateTests, ValidateRangeStepInt) {
   // GIVEN validation of the range [0, inf, 3]
-  const auto test = monad::validate_range<int>{.from = 0, .step = 3};
+  const auto test = fp::validate_range<int>{.from = 0, .step = 3};
 
   // WHEN we we validate the value 14
   const auto result = test(14);
@@ -90,7 +90,7 @@ TEST(ValidateTests, ValidateRangeStepInt) {
 
 TEST(ValidateTests, ValidateRangeToDoubleTrue) {
   // GIVEN validation of the range [-inf, inf, 2]
-  const auto test = monad::validate_range<double>{.step = 2};
+  const auto test = fp::validate_range<double>{.step = 2};
 
   // WHEN we we validate the value 4
   const auto result = test(4);
@@ -101,7 +101,7 @@ TEST(ValidateTests, ValidateRangeToDoubleTrue) {
 
 TEST(ValidateTests, ValidateRangeToDoubleFalse) {
   // GIVEN validation of the range [-inf, inf, 2]
-  const auto test = monad::validate_range<double>{.step = 2};
+  const auto test = fp::validate_range<double>{.step = 2};
 
   // WHEN we we validate the value 5
   const auto result = test(5);
@@ -116,7 +116,7 @@ TEST(ValidateTests, ValidateInTrue) {
   const auto valid_values = std::set<std::string>{"a", "b", "c"};
 
   // WHEN we we validate with in
-  const auto result = monad::validate_in(valid_values, value);
+  const auto result = fp::validate_in(valid_values, value);
 
   // THEN we expect it be true
   EXPECT_TRUE(result) << fmt::format("{}", result);
@@ -128,7 +128,7 @@ TEST(ValidateTests, ValidateInFalse) {
   const auto valid_values = std::set<std::string>{"a", "b", "c"};
 
   // WHEN we we validate with in
-  const auto result = monad::validate_in(valid_values, value);
+  const auto result = fp::validate_in(valid_values, value);
 
   // THEN we expect it be false
   EXPECT_FALSE(result) << fmt::format("{}", result);
@@ -136,11 +136,11 @@ TEST(ValidateTests, ValidateInFalse) {
 
 TEST(ValidateTests, PrependNameNoThrow) {
   // GIVEN a error value
-  const auto error = monad::DataLoss("something went wrong");
+  const auto error = fp::DataLoss("something went wrong");
 
   // WHEN we call make_named
   // THEN we expect it to not throw
-  EXPECT_NO_THROW(const auto _ = monad::make_named(error, "foo"))
+  EXPECT_NO_THROW(const auto _ = fp::make_named(error, "foo"))
       << fmt::format("{}", error);
 }
 

@@ -30,9 +30,9 @@
 
 #include <optional>
 
-#include "monad/_external/expected.hpp"
+#include "fp/_external/expected.hpp"
 
-namespace monad {
+namespace fp {
 
 /**
  * @brief      Makes an optional<T> from a T value.
@@ -148,7 +148,7 @@ constexpr auto mcompose(T t, G g, Types... vars) {
   return mcompose(exp, vars...);
 }
 
-}  // namespace monad
+}  // namespace fp
 
 /**
  * @brief      Overload of the | operator as bind
@@ -163,7 +163,7 @@ constexpr auto mcompose(T t, G g, Types... vars) {
  */
 template <typename T, typename F>
 constexpr auto operator|(const std::optional<T>& opt, F f) {
-  return monad::mbind(opt, f);
+  return fp::mbind(opt, f);
 }
 
 /**
@@ -182,5 +182,5 @@ constexpr auto operator|(const std::optional<T>& opt, F f) {
 template <typename T, typename E, typename F,
           typename Ret = typename std::result_of<F(T)>::type>
 constexpr Ret operator|(const tl::expected<T, E>& exp, F f) {
-  return monad::mbind(exp, f);
+  return fp::mbind(exp, f);
 }

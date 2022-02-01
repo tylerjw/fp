@@ -26,11 +26,11 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <monad/all.hpp>
+#include <fp/all.hpp>
 
 int main() {
-  const auto f = monad::NoDiscard{[] {
-    return monad::Error{monad::ErrorCode::UNKNOWN, "yikes!"};
+  const auto f = fp::NoDiscard{[] {
+    return fp::Error{fp::ErrorCode::UNKNOWN, "yikes!"};
   }};
   fmt::print("{}\n", f());
   // [Error: [Unknown] yikes!]

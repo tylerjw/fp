@@ -35,8 +35,8 @@
 
 #include <range/v3/all.hpp>
 
-#include "monad/_external/expected.hpp"
-#include "monad/mbind.hpp"
-#include "monad/no_discard.hpp"
-#include "monad/result.hpp"
-#include "monad/validate.hpp"
+#include "fp/_external/expected.hpp"
+#include "fp/mbind.hpp"
+#include "fp/no_discard.hpp"
+#include "fp/result.hpp"
+#include "fp/validate.hpp"

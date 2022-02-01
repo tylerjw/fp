@@ -26,14 +26,14 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include <monad/all.hpp>
+#include <fp/all.hpp>
 #include <string>
 #include <vector>
 
 int main() {
   const auto day = "monday";
   const auto weekends = std::vector<std::string>{"saturday", "sunday"};
-  const auto result = monad::validate_in(weekends, day);
+  const auto result = fp::validate_in(weekends, day);
   fmt::print("Is \'{}\' in {}?\n{}\n", day, weekends, result);
 
   // Output:
