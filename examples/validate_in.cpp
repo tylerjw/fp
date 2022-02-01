@@ -30,12 +30,10 @@
 #include <string>
 #include <vector>
 
-using namespace monad;
-
 int main() {
   const auto day = "monday";
   const auto weekends = std::vector<std::string>{"saturday", "sunday"};
-  const auto result = validate::in(weekends, day);
+  const auto result = monad::validate_in(weekends, day);
   fmt::print("Is \'{}\' in {}?\n{}\n", day, weekends, result);
 
   // Output:

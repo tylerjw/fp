@@ -34,9 +34,6 @@
 
 namespace monad {
 
-using tl::expected;
-using tl::make_unexpected;
-
 /**
  * @brief      Makes an optional<T> from a T value.
  *
@@ -73,25 +70,9 @@ constexpr auto mbind(const std::optional<T>& opt, F f)
 }
 
 /**
- * @brief      Overload of the | operator as bind
+ * @brief      Monad tl::expected<T,E>
  *
- * @param[in]  opt   The input optional
- * @param[in]  f     The function
- *
- * @tparam     T     The input type
- * @tparam     F     The function
- *
- * @return     Return type of f
- */
-template <typename T, typename F>
-constexpr auto operator|(const std::optional<T>& opt, F f) {
-  return mbind(opt, f);
-}
-
-/**
- * @brief      Monad expected<T,E>
- *
- * @param[in]  exp   The expected<T,E> input
+ * @param[in]  exp   The tl::expected<T,E> input
  * @param[in]  f     The function to apply
  *
  * @tparam     T     The type for the input expected
@@ -103,35 +84,16 @@ constexpr auto operator|(const std::optional<T>& opt, F f) {
  */
 template <typename T, typename E, typename F,
           typename Ret = typename std::result_of<F(T)>::type>
-constexpr Ret mbind(const expected<T, E>& exp, F f) {
+constexpr Ret mbind(const tl::expected<T, E>& exp, F f) {
   if (exp) {
     return f(exp.value());
   }
-  return make_unexpected(exp.error());
-}
-
-/**
- * @brief      Overload of the | operator as bind
- *
- * @param[in]  exp   The input expected<T,E> value
- * @param[in]  f     The function to apply
- *
- * @tparam     T     The type for the input expected
- * @tparam     E     The error type
- * @tparam     F     The function
- * @tparam     Ret   The return type of the function
- *
- * @return     The return type of the function
- */
-template <typename T, typename E, typename F,
-          typename Ret = typename std::result_of<F(T)>::type>
-constexpr Ret operator|(const expected<T, E>& exp, F f) {
-  return mbind(exp, f);
+  return tl::make_unexpected(exp.error());
 }
 
 /**
  * @brief      Monadic try, used to lift a function that throws an
- * exception one that returns an expected<T, std::exception_ptr>
+ * exception one that returns an tl::expected<T, std::exception_ptr>
  *
  * @param[in]  f     The function to call
  *
@@ -142,12 +104,12 @@ constexpr Ret operator|(const expected<T, E>& exp, F f) {
  * @return     The return value of the function
  */
 template <typename F, typename Ret = typename std::result_of<F()>::type,
-          typename Exp = expected<Ret, std::exception_ptr>>
+          typename Exp = tl::expected<Ret, std::exception_ptr>>
 constexpr Exp mtry(F f) {
   try {
     return Exp{f()};
   } catch (...) {
-    return make_unexpected(std::current_exception());
+    return tl::make_unexpected(std::current_exception());
   }
 }
 
@@ -187,3 +149,38 @@ constexpr auto mcompose(T t, G g, Types... vars) {
 }
 
 }  // namespace monad
+
+/**
+ * @brief      Overload of the | operator as bind
+ *
+ * @param[in]  opt   The input optional
+ * @param[in]  f     The function
+ *
+ * @tparam     T     The input type
+ * @tparam     F     The function
+ *
+ * @return     Return type of f
+ */
+template <typename T, typename F>
+constexpr auto operator|(const std::optional<T>& opt, F f) {
+  return monad::mbind(opt, f);
+}
+
+/**
+ * @brief      Overload of the | operator as bind
+ *
+ * @param[in]  exp   The input tl::expected<T,E> value
+ * @param[in]  f     The function to apply
+ *
+ * @tparam     T     The type for the input expected
+ * @tparam     E     The error type
+ * @tparam     F     The function
+ * @tparam     Ret   The return type of the function
+ *
+ * @return     The return type of the function
+ */
+template <typename T, typename E, typename F,
+          typename Ret = typename std::result_of<F(T)>::type>
+constexpr Ret operator|(const tl::expected<T, E>& exp, F f) {
+  return monad::mbind(exp, f);
+}

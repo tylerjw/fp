@@ -28,30 +28,30 @@
 
 #include <monad/all.hpp>
 
-using namespace monad;
 namespace views = ::ranges::views;
 
-Result<double> divide_4_by(double x) {
+monad::Result<double> divide_4_by(double x) {
   if (x == 0.0) {
-    return make_unexpected(InvalidArgument(fmt::format("divide by 0")));
+    return tl::make_unexpected(
+        monad::InvalidArgument(fmt::format("divide by 0")));
   }
   return 4.0 / x;
 }
 
-Result<double> safe_sqrt(double x) {
+monad::Result<double> safe_sqrt(double x) {
   if (x < 0) {
-    return make_unexpected(InvalidArgument(
+    return tl::make_unexpected(monad::InvalidArgument(
         fmt::format("sqrt of value < 0.0 is undefined: {}", x)));
   }
 
   return sqrt(x);
 }
 
-Result<double> do_math(double x) {
-  return make_result(x).and_then(divide_4_by).and_then(safe_sqrt);
+monad::Result<double> do_math(double x) {
+  return monad::make_result(x).and_then(divide_4_by).and_then(safe_sqrt);
 }
 
-void print_errors(Result<double> result) {
+void print_errors(monad::Result<double> result) {
   if (!result.has_value()) {
     fmt::print("{}\n", result.error());
   }

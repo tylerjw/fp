@@ -28,27 +28,27 @@
 
 #include <monad/all.hpp>
 
-using namespace monad;
 namespace views = ::ranges::views;
 
-Result<double> divide_4_by(double x) {
+monad::Result<double> divide_4_by(double x) {
   if (x == 0.0) {
-    return make_unexpected(InvalidArgument(fmt::format("divide by 0")));
+    return tl::make_unexpected(
+        monad::InvalidArgument(fmt::format("divide by 0")));
   }
   return 4.0 / x;
 }
 
-Result<double> f1(double x) { return divide_4_by(x); }
-Result<double> f2(double x) { return divide_4_by(x); }
-Result<double> f3(double x) { return divide_4_by(x); }
-Result<double> f4(double x) { return divide_4_by(x); }
+monad::Result<double> f1(double x) { return divide_4_by(x); }
+monad::Result<double> f2(double x) { return divide_4_by(x); }
+monad::Result<double> f3(double x) { return divide_4_by(x); }
+monad::Result<double> f4(double x) { return divide_4_by(x); }
 
-Result<double> do_work() {
-  auto const a = make_result(2.4) | f1 | f2;
-  auto const b = make_result(0.0) | f3 | f4;
+monad::Result<double> do_work() {
+  auto const a = monad::make_result(2.4) | f1 | f2;
+  auto const b = monad::make_result(0.0) | f3 | f4;
 
-  if (auto const error = maybe_error(a, b); error) {
-    return make_unexpected(*error);
+  if (auto const error = monad::maybe_error(a, b); error) {
+    return tl::make_unexpected(*error);
   }
 
   return *a + *b;
