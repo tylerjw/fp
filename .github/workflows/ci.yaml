@@ -70,7 +70,7 @@ jobs:
       - name: Push result to Testspace server
         if: always()
         run: |
-          testspace "[ ${{ matrix.env.NAME }} ]${{ env.BASEDIR }}/target_ws/**/test_results/**/*.xml"
+          testspace "[ ${{ matrix.env.NAME }} ]${{ env.BASEDIR }}/target_ws/**/test_results/**/*.xml" --link=codecov
       - name: Upload test artifacts (on failure)
         uses: actions/upload-artifact@v2
         if: failure() && (steps.ici.outputs.run_target_test || steps.ici.outputs.target_test_results)
