@@ -38,7 +38,7 @@
 
 #include "monad/result.hpp"
 
-namespace monad::validate {
+namespace monad {
 
 /**
  * @brief      Validate a range
@@ -46,10 +46,10 @@ namespace monad::validate {
  * @tparam     T     The type of value
  *
  * @example    validate_range.cpp
- *             This is an example of how to use validate::range
+ *             This is an example of how to use range
  */
 template <typename T>
-struct range {
+struct validate_range {
   T from = std::numeric_limits<T>::min();
   T to = std::numeric_limits<T>::max();
   std::optional<T> step = std::nullopt;
@@ -57,7 +57,7 @@ struct range {
 
   constexpr Result<T> operator()(T value) const {
     if (value < from || value > to) {
-      return make_unexpected(OutOfRange(
+      return tl::make_unexpected(OutOfRange(
           fmt::format("{} is outside of the range [{}, {}]", value, from, to)));
     }
 
@@ -67,7 +67,7 @@ struct range {
       const double distance = fabs(ratio - round(ratio));
 
       if (distance > step_threshold) {
-        return make_unexpected(OutOfRange(fmt::format(
+        return tl::make_unexpected(OutOfRange(fmt::format(
             "{} is {} away from the nearest valid step", value, distance)));
       }
     }
@@ -88,14 +88,14 @@ struct range {
  * @return     OutOfRange error if value is not in valid_values
  *
  * @example    validate_in.cpp
- *             This is an example of how to use validate::in
+ *             This is an example of how to use in
  */
 template <typename Rng, typename T>
-constexpr Result<T> in(const Rng& valid_values, const T& value) {
+constexpr Result<T> validate_in(const Rng& valid_values, const T& value) {
   if (ranges::contains(valid_values, value)) {
     return value;
   }
-  return make_unexpected(
+  return tl::make_unexpected(
       OutOfRange(fmt::format("{} is not in {}", value, valid_values)));
   ;
 }
@@ -113,4 +113,4 @@ const auto make_named = [](const Error& error, const std::string& name) {
                .what = fmt::format("{}: {}", name, error.what)};
 };
 
-}  // namespace monad::validate
+}  // namespace monad

@@ -28,33 +28,36 @@
 
 #include <monad/all.hpp>
 
-using namespace monad;
-
 void validate_int_step() {
   const auto value = 14;
-  const auto result = validate::range<int>{.from = 0, .step = 3}(value);
+  const auto result = monad::validate_range<int>{.from = 0, .step = 3}(value);
   if (!result) {
-    fmt::print("{} failed validate::range with result: {}\n", value, result);
+    fmt::print("{} failed monad::validate_range with result: {}\n", value,
+               result);
   } else {
-    fmt::print("{} passed validate::range with result: {}\n", value, result);
+    fmt::print("{} passed monad::validate_range with result: {}\n", value,
+               result);
   }
 }
 
 void validate_double() {
   const auto value = -2.1;
-  const auto result = validate::range<double>{.from = -15, .to = 23}(value);
+  const auto result =
+      monad::validate_range<double>{.from = -15, .to = 23}(value);
   if (!result) {
-    fmt::print("{} failed validate::range with result: {}\n", value, result);
+    fmt::print("{} failed monad::validate_range with result: {}\n", value,
+               result);
   } else {
-    fmt::print("{} passed validate::range with result: {}\n", value, result);
+    fmt::print("{} passed monad::validate_range with result: {}\n", value,
+               result);
   }
 }
 
 int main() {
   validate_int_step();
-  // 14 failed validate::range with result: [Result<T>: [Error: [OutOfRange] 14
-  // is 0.33333333333333304 away from the nearest valid step]]
+  // 14 failed monad::validate_range with result: [Result<T>: [Error:
+  //   [OutOfRange] 14 is 0.33333333333333304 away from the nearest valid step]]
 
   validate_double();
-  // -2.1 passed validate::range with result: [Result<T>: value=-2.1]
+  // -2.1 passed monad::validate_range with result: [Result<T>: value=-2.1]
 }

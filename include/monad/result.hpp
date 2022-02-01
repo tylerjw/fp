@@ -41,10 +41,6 @@
 
 namespace monad {
 
-using tl::expected;
-using tl::make_unexpected;
-using tl::unexpected;
-
 /**
  * @brief      Enum for ErrorCodes inspired by absl::StatusCode
  */
@@ -195,7 +191,7 @@ constexpr auto Exception = [](const std::string& what = "") {
  * @example    result.cpp
  */
 template <typename T>
-using Result = expected<T, Error>;
+using Result = tl::expected<T, Error>;
 
 /**
  * @brief      Makes a Result<T> from a T value
@@ -220,21 +216,22 @@ constexpr Result<T> make_result(T value) {
  * @return if the expected has an error
  */
 template <typename T, typename E>
-constexpr bool has_error(const expected<T, E>& exp) {
+constexpr bool has_error(const tl::expected<T, E>& exp) {
   return !exp;
 }
 
 /**
  * @brief Tests if any of the expected args passed in has an error.
  *
- * @param   The expected<T, E> variables.  All have to use the same error type.
+ * @param   The tl::expected<T, E> variables.  All have to use the same error
+ * type.
  * @tparam  E The error type
- * @tparam  Args The value types for the expected<T, E> args
+ * @tparam  Args The value types for the tl::expected<T, E> args
  * @return  The first error found or nothing
  * @example maybe_error.cpp
  */
 template <typename E, typename... Args>
-constexpr std::optional<E> maybe_error(expected<Args, E>... args) {
+constexpr std::optional<E> maybe_error(tl::expected<Args, E>... args) {
   auto maybe = std::optional<E>{std::nullopt};
   (
       [&](auto& exp) {
