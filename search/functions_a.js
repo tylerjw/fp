@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nodiscard_345',['NoDiscard',['../structmonad_1_1NoDiscard.html#aeb1dcf5fee902b1e6a609c1c24beb5a3',1,'monad::NoDiscard']]]
+  ['nodiscard_345',['NoDiscard',['../structfp_1_1NoDiscard.html#aa9f26868232702d4c9dd38ef05e1c1c1',1,'fp::NoDiscard']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>monad: include/monad/no_discard.hpp Source File</title>
+<title>fp: include/fp/no_discard.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">monad
+   <div id="projectname">fp
    </div>
    <div id="projectbrief">FP (Functional Programming) extensions for C++</div>
   </td>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_e06f317e197b11f262881a927ceb2703.html">monad</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7f2a512d4d3516f6bcf982bc009bc67b.html">fp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,26 +100,26 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemonad.html">monad</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacefp.html">fp</a> {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structmonad_1_1NoDiscard.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmonad_1_1NoDiscard.html">NoDiscard</a> {</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f">   42</a></span>&#160;  F <a class="code" href="structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f">f_</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structmonad_1_1NoDiscard.html#aeb1dcf5fee902b1e6a609c1c24beb5a3">   43</a></span>&#160;  <a class="code" href="structmonad_1_1NoDiscard.html#aeb1dcf5fee902b1e6a609c1c24beb5a3">NoDiscard</a>(F <span class="keyword">const</span>&amp; f) : <a class="code" href="structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f">f_</a>(f) {}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structfp_1_1NoDiscard.html">   41</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structfp_1_1NoDiscard.html">NoDiscard</a> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039">   42</a></span>&#160;  F <a class="code" href="structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039">f_</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structfp_1_1NoDiscard.html#aa9f26868232702d4c9dd38ef05e1c1c1">   43</a></span>&#160;  <a class="code" href="structfp_1_1NoDiscard.html#aa9f26868232702d4c9dd38ef05e1c1c1">NoDiscard</a>(F <span class="keyword">const</span>&amp; f) : <a class="code" href="structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039">f_</a>(f) {}</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span>... T&gt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structmonad_1_1NoDiscard.html#ad0f580f0f15848bae7054800392f3207">   45</a></span>&#160;  [[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="structmonad_1_1NoDiscard.html#ad0f580f0f15848bae7054800392f3207">operator()</a>(T&amp;&amp;... t) <span class="keyword">const</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      noexcept(noexcept(<a class="code" href="structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f">f_</a>(std::forward&lt;T&gt;(t)...))) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f">f_</a>(std::forward&lt;T&gt;(t)...);</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structfp_1_1NoDiscard.html#a7d42ba2a4e8f38f3a4a4f588829ed314">   45</a></span>&#160;  [[nodiscard]] constexpr <span class="keyword">auto</span> <a class="code" href="structfp_1_1NoDiscard.html#a7d42ba2a4e8f38f3a4a4f588829ed314">operator()</a>(T&amp;&amp;... t) <span class="keyword">const</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      noexcept(noexcept(<a class="code" href="structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039">f_</a>(std::forward&lt;T&gt;(t)...))) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039">f_</a>(std::forward&lt;T&gt;(t)...);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}  <span class="comment">// namespace monad</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}  <span class="comment">// namespace fp</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructmonad_1_1NoDiscard_html"><div class="ttname"><a href="structmonad_1_1NoDiscard.html">monad::NoDiscard</a></div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00041">no_discard.hpp:41</a></div></div>
-<div class="ttc" id="astructmonad_1_1NoDiscard_html_a3b55407a9699e21cc91b6bba4d371e8f"><div class="ttname"><a href="structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f">monad::NoDiscard::f_</a></div><div class="ttdeci">F f_</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00042">no_discard.hpp:42</a></div></div>
-<div class="ttc" id="astructmonad_1_1NoDiscard_html_aeb1dcf5fee902b1e6a609c1c24beb5a3"><div class="ttname"><a href="structmonad_1_1NoDiscard.html#aeb1dcf5fee902b1e6a609c1c24beb5a3">monad::NoDiscard::NoDiscard</a></div><div class="ttdeci">NoDiscard(F const &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00043">no_discard.hpp:43</a></div></div>
-<div class="ttc" id="astructmonad_1_1NoDiscard_html_ad0f580f0f15848bae7054800392f3207"><div class="ttname"><a href="structmonad_1_1NoDiscard.html#ad0f580f0f15848bae7054800392f3207">monad::NoDiscard::operator()</a></div><div class="ttdeci">constexpr auto operator()(T &amp;&amp;... t) const noexcept(noexcept(f_(std::forward&lt; T &gt;(t)...)))</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00045">no_discard.hpp:45</a></div></div>
-<div class="ttc" id="anamespacemonad_html"><div class="ttname"><a href="namespacemonad.html">monad</a></div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00035">mbind.hpp:35</a></div></div>
+<div class="ttc" id="astructfp_1_1NoDiscard_html"><div class="ttname"><a href="structfp_1_1NoDiscard.html">fp::NoDiscard</a></div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00041">no_discard.hpp:41</a></div></div>
+<div class="ttc" id="astructfp_1_1NoDiscard_html_a7d42ba2a4e8f38f3a4a4f588829ed314"><div class="ttname"><a href="structfp_1_1NoDiscard.html#a7d42ba2a4e8f38f3a4a4f588829ed314">fp::NoDiscard::operator()</a></div><div class="ttdeci">constexpr auto operator()(T &amp;&amp;... t) const noexcept(noexcept(f_(std::forward&lt; T &gt;(t)...)))</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00045">no_discard.hpp:45</a></div></div>
+<div class="ttc" id="astructfp_1_1NoDiscard_html_aa9f26868232702d4c9dd38ef05e1c1c1"><div class="ttname"><a href="structfp_1_1NoDiscard.html#aa9f26868232702d4c9dd38ef05e1c1c1">fp::NoDiscard::NoDiscard</a></div><div class="ttdeci">NoDiscard(F const &amp;f)</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00043">no_discard.hpp:43</a></div></div>
+<div class="ttc" id="astructfp_1_1NoDiscard_html_a2bf286250bc286bbf73544ac669ef039"><div class="ttname"><a href="structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039">fp::NoDiscard::f_</a></div><div class="ttdeci">F f_</div><div class="ttdef"><b>Definition:</b> <a href="no__discard_8hpp_source.html#l00042">no_discard.hpp:42</a></div></div>
+<div class="ttc" id="anamespacefp_html"><div class="ttname"><a href="namespacefp.html">fp</a></div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00035">mbind.hpp:35</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

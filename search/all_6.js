@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['f1_76',['f1',['../maybe__error_8cpp.html#ac121dd28850d1ba227d1783ca3bfa48b',1,'maybe_error.cpp']]],
-  ['f2_77',['f2',['../maybe__error_8cpp.html#a64943429afd7a4127fbcc4ee375acde7',1,'maybe_error.cpp']]],
-  ['f3_78',['f3',['../maybe__error_8cpp.html#ac81788da862d5ef692a852d3d4d92a3c',1,'maybe_error.cpp']]],
-  ['f4_79',['f4',['../maybe__error_8cpp.html#a29b7e2b63570a0ada92914ca482e93fd',1,'maybe_error.cpp']]],
-  ['f_5f_80',['f_',['../structmonad_1_1NoDiscard.html#a3b55407a9699e21cc91b6bba4d371e8f',1,'monad::NoDiscard']]],
-  ['failed_5fprecondition_81',['FAILED_PRECONDITION',['../namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1acd586de98c3bf7bd95fb4be2bb826431',1,'monad']]],
-  ['failedprecondition_82',['FailedPrecondition',['../namespacemonad.html#a8276a7f480454ce2ab2ad43aeeed02a1',1,'monad']]],
+  ['f1_76',['f1',['../maybe__error_8cpp.html#a623443e03f8660ff9da4772cfa46257d',1,'maybe_error.cpp']]],
+  ['f2_77',['f2',['../maybe__error_8cpp.html#a783c8d0ce92ecd08b6e18c71b94028f9',1,'maybe_error.cpp']]],
+  ['f3_78',['f3',['../maybe__error_8cpp.html#a6b006588133f6e31670b5e749563cce2',1,'maybe_error.cpp']]],
+  ['f4_79',['f4',['../maybe__error_8cpp.html#a8fd98a1a9f226ada006d96058ad5af89',1,'maybe_error.cpp']]],
+  ['f_5f_80',['f_',['../structfp_1_1NoDiscard.html#a2bf286250bc286bbf73544ac669ef039',1,'fp::NoDiscard']]],
+  ['failed_5fprecondition_81',['FAILED_PRECONDITION',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccacd586de98c3bf7bd95fb4be2bb826431',1,'fp']]],
+  ['failedprecondition_82',['FailedPrecondition',['../namespacefp.html#a2daf38add10b9c7eae0142df6ee63d04',1,'fp']]],
   ['fmt_83',['fmt',['../namespacefmt.html',1,'']]],
-  ['format_84',['format',['../structfmt_1_1formatter_3_01monad_1_1Error_01_4.html#a3af52d8c44b8267b54900defcca3b4c8',1,'fmt::formatter&lt; monad::Error &gt;::format()'],['../structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#ace092645ebf7eddd7e3537bc547a7388',1,'fmt::formatter&lt; monad::Result&lt; T &gt; &gt;::format()']]],
-  ['formatter_3c_20monad_3a_3aerror_20_3e_85',['formatter&lt; monad::Error &gt;',['../structfmt_1_1formatter_3_01monad_1_1Error_01_4.html',1,'fmt']]],
-  ['formatter_3c_20monad_3a_3aresult_3c_20t_20_3e_20_3e_86',['formatter&lt; monad::Result&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html',1,'fmt']]],
-  ['from_87',['from',['../structmonad_1_1validate__range.html#ad6cbf797075ec6db9f265f550b3a563f',1,'monad::validate_range']]]
+  ['format_84',['format',['../structfmt_1_1formatter_3_01fp_1_1Error_01_4.html#a9ce0bd025d08c0e3acb10be903510ffc',1,'fmt::formatter&lt; fp::Error &gt;::format()'],['../structfmt_1_1formatter_3_01fp_1_1Result_3_01T_01_4_01_4.html#a0fbc88ba332cfbdaef36e3b423526340',1,'fmt::formatter&lt; fp::Result&lt; T &gt; &gt;::format()']]],
+  ['formatter_3c_20fp_3a_3aerror_20_3e_85',['formatter&lt; fp::Error &gt;',['../structfmt_1_1formatter_3_01fp_1_1Error_01_4.html',1,'fmt']]],
+  ['formatter_3c_20fp_3a_3aresult_3c_20t_20_3e_20_3e_86',['formatter&lt; fp::Result&lt; T &gt; &gt;',['../structfmt_1_1formatter_3_01fp_1_1Result_3_01T_01_4_01_4.html',1,'fmt']]],
+  ['fp_87',['fp',['../namespacefp.html',1,'']]],
+  ['from_88',['from',['../structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce',1,'fp::validate_range']]],
+  ['fp_89',['fp',['../index.html',1,'']]]
 ];

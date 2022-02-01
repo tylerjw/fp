@@ -1,5 +1,5 @@
-<map id="include/monad/all.hpp" name="include/monad/all.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="433,5,600,32"/>
+<map id="include/fp/all.hpp" name="include/fp/all.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="449,5,584,32"/>
 <area shape="rect" id="node2" href="$maybe__error_8cpp.html" title=" " alt="" coords="5,80,204,107"/>
 <area shape="rect" id="node3" href="$no__discard_8cpp.html" title=" " alt="" coords="229,80,415,107"/>
 <area shape="rect" id="node4" href="$result_8cpp.html" title=" " alt="" coords="439,80,594,107"/>

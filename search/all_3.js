@@ -1,11 +1,11 @@
 var searchData=
 [
   ['can_5fswap_10',['can_swap',['../namespacetl_1_1detail_1_1swap__adl__tests.html#a54d2a933983aeb9332b1eeb5c0d3f210',1,'tl::detail::swap_adl_tests::can_swap(...) noexcept(false)'],['../namespacetl_1_1detail_1_1swap__adl__tests.html#a1a682bf661dae9aa6e4d98289c1996d7',1,'tl::detail::swap_adl_tests::can_swap(int) noexcept(noexcept(swap(std::declval&lt; T &amp; &gt;(), std::declval&lt; U &amp; &gt;())))']]],
-  ['canceled_11',['Canceled',['../namespacemonad.html#a0d121e02e6ee0353ff57db8632be572a',1,'monad']]],
-  ['cancelled_12',['CANCELLED',['../namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1a9f935beb31030ad0d4d26126c0f39bf2',1,'monad']]],
-  ['cmake_5fminimum_5frequired_13',['cmake_minimum_required',['../CMakeLists_8txt.html#a7bb786bce3be30b1de4c12fb24700e7b',1,'CMakeLists.txt']]],
+  ['canceled_11',['Canceled',['../namespacefp.html#a36be79f20929cf751b8c56242b198b37',1,'fp']]],
+  ['cancelled_12',['CANCELLED',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca9f935beb31030ad0d4d26126c0f39bf2',1,'fp']]],
+  ['cmake_5fminimum_5frequired_13',['cmake_minimum_required',['../CMakeLists_8txt.html#a3bc45be9b50078b18bb2e36b8840c123',1,'CMakeLists.txt']]],
   ['cmakelists_2etxt_14',['CMakeLists.txt',['../CMakeLists_8txt.html',1,'(Global Namespace)'],['../examples_2CMakeLists_8txt.html',1,'(Global Namespace)']]],
-  ['code_15',['code',['../structmonad_1_1Error.html#afc6aa391beb33465c6a9fc72781d6faf',1,'monad::Error']]],
+  ['code_15',['code',['../structfp_1_1Error.html#adfd2685ec5db4a88a26bc89fb3ac3716',1,'fp::Error']]],
   ['conditional_5ft_16',['conditional_t',['../namespacetl_1_1detail.html#a54d4d0f7a7939cab46ab28d876a5d382',1,'tl::detail']]],
   ['conjunction_17',['conjunction',['../structtl_1_1detail_1_1conjunction.html',1,'tl::detail']]],
   ['conjunction_3c_20b_20_3e_18',['conjunction&lt; B &gt;',['../structtl_1_1detail_1_1conjunction_3_01B_01_4.html',1,'tl::detail']]],

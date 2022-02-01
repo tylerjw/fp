@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>monad: include/monad/mbind.hpp File Reference</title>
+<title>fp: include/fp/mbind.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">monad
+   <div id="projectname">fp
    </div>
    <div id="projectbrief">FP (Functional Programming) extensions for C++</div>
   </td>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_e06f317e197b11f262881a927ceb2703.html">monad</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_7f2a512d4d3516f6bcf982bc009bc67b.html">fp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,15 +74,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
-<code>#include &quot;<a class="el" href="expected_8hpp_source.html">monad/_external/expected.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="expected_8hpp_source.html">fp/_external/expected.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mbind.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="mbind_8hpp__incl.png" border="0" usemap="#include_2monad_2mbind_8hpp" alt=""/></div>
-<map name="include_2monad_2mbind_8hpp" id="include_2monad_2mbind_8hpp">
-<area shape="rect" title=" " alt="" coords="35,5,225,32"/>
-<area shape="rect" title=" " alt="" coords="6,80,81,107"/>
-<area shape="rect" href="expected_8hpp.html" title=" " alt="" coords="105,80,329,107"/>
+<div class="center"><img src="mbind_8hpp__incl.png" border="0" usemap="#include_2fp_2mbind_8hpp" alt=""/></div>
+<map name="include_2fp_2mbind_8hpp" id="include_2fp_2mbind_8hpp">
+<area shape="rect" title=" " alt="" coords="57,5,216,32"/>
+<area shape="rect" title=" " alt="" coords="21,80,95,107"/>
+<area shape="rect" href="expected_8hpp.html" title=" " alt="" coords="119,80,311,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,92,181"/>
 <area shape="rect" title=" " alt="" coords="116,155,203,181"/>
 <area shape="rect" title=" " alt="" coords="227,155,319,181"/>
@@ -92,10 +92,10 @@ Include dependency graph for mbind.hpp:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="mbind_8hpp__dep__incl.png" border="0" usemap="#include_2monad_2mbind_8hppdep" alt=""/></div>
-<map name="include_2monad_2mbind_8hppdep" id="include_2monad_2mbind_8hppdep">
-<area shape="rect" title=" " alt="" coords="421,5,612,32"/>
-<area shape="rect" href="all_8hpp.html" title=" " alt="" coords="433,80,600,107"/>
+<div class="center"><img src="mbind_8hpp__dep__incl.png" border="0" usemap="#include_2fp_2mbind_8hppdep" alt=""/></div>
+<map name="include_2fp_2mbind_8hppdep" id="include_2fp_2mbind_8hppdep">
+<area shape="rect" title=" " alt="" coords="437,5,596,32"/>
+<area shape="rect" href="all_8hpp.html" title=" " alt="" coords="449,80,584,107"/>
 <area shape="rect" href="maybe__error_8cpp.html" title=" " alt="" coords="5,155,204,181"/>
 <area shape="rect" href="no__discard_8cpp.html" title=" " alt="" coords="229,155,415,181"/>
 <area shape="rect" href="result_8cpp.html" title=" " alt="" coords="439,155,594,181"/>
@@ -108,35 +108,35 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacemonad"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemonad.html">monad</a></td></tr>
+<tr class="memitem:namespacefp"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefp.html">fp</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a84f64fd36259f2dc61d72d54cd43fba8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a84f64fd36259f2dc61d72d54cd43fba8"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a84f64fd36259f2dc61d72d54cd43fba8">monad::make_opt</a> (T value)</td></tr>
-<tr class="memdesc:a84f64fd36259f2dc61d72d54cd43fba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes an optional&lt;T&gt; from a T value.  <a href="namespacemonad.html#a84f64fd36259f2dc61d72d54cd43fba8">More...</a><br /></td></tr>
-<tr class="separator:a84f64fd36259f2dc61d72d54cd43fba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
-<tr class="memitem:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821">monad::mbind</a> (const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</td></tr>
-<tr class="memdesc:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad optional bind.  <a href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821">More...</a><br /></td></tr>
-<tr class="separator:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35686d2e335e1ca0fed8fb073a2b2736"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
-<tr class="memitem:a35686d2e335e1ca0fed8fb073a2b2736"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a35686d2e335e1ca0fed8fb073a2b2736">monad::mbind</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
-<tr class="memdesc:a35686d2e335e1ca0fed8fb073a2b2736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad tl::expected&lt;T,E&gt;  <a href="namespacemonad.html#a35686d2e335e1ca0fed8fb073a2b2736">More...</a><br /></td></tr>
-<tr class="separator:a35686d2e335e1ca0fed8fb073a2b2736"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de441ad9b10b82ba603801541e2c10f"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
-<tr class="memitem:a4de441ad9b10b82ba603801541e2c10f"><td class="memTemplItemLeft" align="right" valign="top">constexpr Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a4de441ad9b10b82ba603801541e2c10f">monad::mtry</a> (F f)</td></tr>
-<tr class="memdesc:a4de441ad9b10b82ba603801541e2c10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacemonad.html#a4de441ad9b10b82ba603801541e2c10f">More...</a><br /></td></tr>
-<tr class="separator:a4de441ad9b10b82ba603801541e2c10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a684234147360094386a2b69aab55af17"><td class="memTemplParams" colspan="2">template&lt;typename F , typename G &gt; </td></tr>
-<tr class="memitem:a684234147360094386a2b69aab55af17"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a684234147360094386a2b69aab55af17">monad::mcompose</a> (F f, G g)</td></tr>
-<tr class="memdesc:a684234147360094386a2b69aab55af17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic compose two monad functions.  <a href="namespacemonad.html#a684234147360094386a2b69aab55af17">More...</a><br /></td></tr>
-<tr class="separator:a684234147360094386a2b69aab55af17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a924e05052d20e73ee6de32492644a631"><td class="memTemplParams" colspan="2">template&lt;typename T , typename G , typename... Types&gt; </td></tr>
-<tr class="memitem:a924e05052d20e73ee6de32492644a631"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a924e05052d20e73ee6de32492644a631">monad::mcompose</a> (T t, G g, Types... vars)</td></tr>
-<tr class="memdesc:a924e05052d20e73ee6de32492644a631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variadic mcompose.  <a href="namespacemonad.html#a924e05052d20e73ee6de32492644a631">More...</a><br /></td></tr>
-<tr class="separator:a924e05052d20e73ee6de32492644a631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab150aaacb5c0e80260d14b8a11d0b1bf"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab150aaacb5c0e80260d14b8a11d0b1bf"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#ab150aaacb5c0e80260d14b8a11d0b1bf">fp::make_opt</a> (T value)</td></tr>
+<tr class="memdesc:ab150aaacb5c0e80260d14b8a11d0b1bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes an optional&lt;T&gt; from a T value.  <a href="namespacefp.html#ab150aaacb5c0e80260d14b8a11d0b1bf">More...</a><br /></td></tr>
+<tr class="separator:ab150aaacb5c0e80260d14b8a11d0b1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbeecf9dbdf9b3c9e6bfaab97c06fc97"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
+<tr class="memitem:afbeecf9dbdf9b3c9e6bfaab97c06fc97"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a> (const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</td></tr>
+<tr class="memdesc:afbeecf9dbdf9b3c9e6bfaab97c06fc97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad optional bind.  <a href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">More...</a><br /></td></tr>
+<tr class="separator:afbeecf9dbdf9b3c9e6bfaab97c06fc97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0568325d21fdaf20a43afa26b1205189"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
+<tr class="memitem:a0568325d21fdaf20a43afa26b1205189"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a0568325d21fdaf20a43afa26b1205189">fp::mbind</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
+<tr class="memdesc:a0568325d21fdaf20a43afa26b1205189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad tl::expected&lt;T,E&gt;  <a href="namespacefp.html#a0568325d21fdaf20a43afa26b1205189">More...</a><br /></td></tr>
+<tr class="separator:a0568325d21fdaf20a43afa26b1205189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5aa358134ba4276638cc13438f1a74"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
+<tr class="memitem:a9f5aa358134ba4276638cc13438f1a74"><td class="memTemplItemLeft" align="right" valign="top">constexpr Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">fp::mtry</a> (F f)</td></tr>
+<tr class="memdesc:a9f5aa358134ba4276638cc13438f1a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">More...</a><br /></td></tr>
+<tr class="separator:a9f5aa358134ba4276638cc13438f1a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memTemplParams" colspan="2">template&lt;typename F , typename G &gt; </td></tr>
+<tr class="memitem:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a> (F f, G g)</td></tr>
+<tr class="memdesc:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic compose two monad functions.  <a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">More...</a><br /></td></tr>
+<tr class="separator:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dec9dac95def1910da37991cbc6a70b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename G , typename... Types&gt; </td></tr>
+<tr class="memitem:a5dec9dac95def1910da37991cbc6a70b"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a5dec9dac95def1910da37991cbc6a70b">fp::mcompose</a> (T t, G g, Types... vars)</td></tr>
+<tr class="memdesc:a5dec9dac95def1910da37991cbc6a70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variadic mcompose.  <a href="namespacefp.html#a5dec9dac95def1910da37991cbc6a70b">More...</a><br /></td></tr>
+<tr class="separator:a5dec9dac95def1910da37991cbc6a70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
 <tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a> (const std::optional&lt; T &gt; &amp;opt, F f)</td></tr>
 <tr class="memdesc:abd8b70189113e335e72d993e2596371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">More...</a><br /></td></tr>
@@ -207,7 +207,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph.png" border="0" usemap="#mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" alt=""/></div>
 <map name="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" id="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph">
 <area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
-<area shape="rect" href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821" title="Monad optional bind." alt="" coords="135,5,251,32"/>
+<area shape="rect" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97" title="Monad optional bind." alt="" coords="135,5,219,32"/>
 </map>
 </div>
 
@@ -275,7 +275,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph.png" border="0" usemap="#mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" alt=""/></div>
 <map name="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" id="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph">
 <area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
-<area shape="rect" href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821" title="Monad optional bind." alt="" coords="135,5,251,32"/>
+<area shape="rect" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97" title="Monad optional bind." alt="" coords="135,5,219,32"/>
 </map>
 </div>
 

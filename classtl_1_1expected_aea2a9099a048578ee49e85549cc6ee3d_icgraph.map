@@ -1,9 +1,9 @@
 <map id="tl::expected::error" name="tl::expected::error">
 <area shape="rect" id="node1" title=" " alt="" coords="343,122,481,149"/>
-<area shape="rect" id="node2" href="$structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#ace092645ebf7eddd7e3537bc547a7388" title=" " alt="" coords="113,5,289,47"/>
+<area shape="rect" id="node2" href="$structfmt_1_1formatter_3_01fp_1_1Result_3_01T_01_4_01_4.html#a0fbc88ba332cfbdaef36e3b423526340" title=" " alt="" coords="113,5,289,47"/>
 <area shape="rect" id="node3" href="$namespacetl_1_1detail.html#a326623053a71b66be4acc622c501e1a2" title=" " alt="" coords="108,71,295,98"/>
-<area shape="rect" id="node4" href="$namespacemonad.html#a35686d2e335e1ca0fed8fb073a2b2736" title="Monad tl::expected&lt;T,E&gt;" alt="" coords="143,122,259,149"/>
+<area shape="rect" id="node4" href="$namespacefp.html#a0568325d21fdaf20a43afa26b1205189" title="Monad tl::expected&lt;T,E&gt;" alt="" coords="159,122,243,149"/>
 <area shape="rect" id="node5" href="$namespacetl_1_1detail.html#ad688c4ed095aa2480add03ab841e4e7f" title=" " alt="" coords="118,173,285,199"/>
-<area shape="rect" id="node6" href="$result_8cpp.html#a3b0c02ae60a3f8537b7271782763b758" title=" " alt="" coords="153,223,250,250"/>
+<area shape="rect" id="node6" href="$result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8" title=" " alt="" coords="153,223,250,250"/>
 <area shape="rect" id="node7" href="$result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,223,60,250"/>
 </map>

@@ -1,8 +1,0 @@
-<map id="monad::mbind" name="monad::mbind">
-<area shape="rect" id="node1" title="Monad tl::expected&lt;T,E&gt;" alt="" coords="5,56,121,83"/>
-<area shape="rect" id="node2" href="$classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d" title=" " alt="" coords="179,5,318,32"/>
-<area shape="rect" id="node3" href="$namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="169,56,328,83"/>
-<area shape="rect" id="node4" href="$classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3" title=" " alt="" coords="177,107,320,133"/>
-<area shape="rect" id="node5" href="$classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513" title=" " alt="" coords="385,81,559,108"/>
-<area shape="rect" id="node6" href="$namespacetl_1_1detail.html#aa5e6dc2362309394a354a099490713ea" title=" " alt="" coords="376,132,568,159"/>
-</map>

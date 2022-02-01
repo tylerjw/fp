@@ -1,7 +1,7 @@
-<map id="include/monad/mbind.hpp" name="include/monad/mbind.hpp">
-<area shape="rect" id="node1" title=" " alt="" coords="35,5,225,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="6,80,81,107"/>
-<area shape="rect" id="node3" href="$expected_8hpp.html" title=" " alt="" coords="105,80,329,107"/>
+<map id="include/fp/mbind.hpp" name="include/fp/mbind.hpp">
+<area shape="rect" id="node1" title=" " alt="" coords="57,5,216,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="21,80,95,107"/>
+<area shape="rect" id="node3" href="$expected_8hpp.html" title=" " alt="" coords="119,80,311,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="5,155,92,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="116,155,203,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="227,155,319,181"/>

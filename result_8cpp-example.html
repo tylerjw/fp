@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>monad: result.cpp</title>
+<title>fp: result.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">monad
+   <div id="projectname">fp
    </div>
    <div id="projectbrief">FP (Functional Programming) extensions for C++</div>
   </td>
@@ -95,32 +95,31 @@ $(function() {
 <div class="line"><span class="comment">// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE</span></div>
 <div class="line"><span class="comment">// POSSIBILITY OF SUCH DAMAGE.</span></div>
 <div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">monad/all.hpp</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">fp/all.hpp</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>views = ::ranges::views;</div>
 <div class="line"> </div>
-<div class="line"><a name="_a0"></a><a class="code" href="classtl_1_1expected.html">monad::Result&lt;double&gt;</a> <a name="a1"></a><a class="code" href="result_8cpp.html#a57fbff54d670189e2a804d204aba4107">divide_4_by</a>(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a name="_a0"></a><a class="code" href="classtl_1_1expected.html">fp::Result&lt;double&gt;</a> <a name="a1"></a><a class="code" href="result_8cpp.html#a540e6eff1e93f4e1575a63eb611b3d01">divide_4_by</a>(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x == 0.0) {</div>
-<div class="line">    <span class="keywordflow">return</span> <a name="a2"></a><a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a>(</div>
-<div class="line">        <a name="a3"></a><a class="code" href="namespacemonad.html#a4a613b837d0336c527210d9b5d66bae5">monad::InvalidArgument</a>(fmt::format(<span class="stringliteral">&quot;divide by 0&quot;</span>)));</div>
+<div class="line">    <span class="keywordflow">return</span> <a name="a2"></a><a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a>(<a name="a3"></a><a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(fmt::format(<span class="stringliteral">&quot;divide by 0&quot;</span>)));</div>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">return</span> 4.0 / x;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classtl_1_1expected.html">monad::Result&lt;double&gt;</a> <a name="a4"></a><a class="code" href="result_8cpp.html#a6291b5407256f087bbc5ef9ee736b1c3">safe_sqrt</a>(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a class="code" href="classtl_1_1expected.html">fp::Result&lt;double&gt;</a> <a name="a4"></a><a class="code" href="result_8cpp.html#a8a27c9aa237d8792421936943a3e90e3">safe_sqrt</a>(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x &lt; 0) {</div>
-<div class="line">    <span class="keywordflow">return</span> <a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a>(<a class="code" href="namespacemonad.html#a4a613b837d0336c527210d9b5d66bae5">monad::InvalidArgument</a>(</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a>(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(</div>
 <div class="line">        fmt::format(<span class="stringliteral">&quot;sqrt of value &lt; 0.0 is undefined: {}&quot;</span>, x)));</div>
 <div class="line">  }</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">return</span> sqrt(x);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="classtl_1_1expected.html">monad::Result&lt;double&gt;</a> <a name="a5"></a><a class="code" href="result_8cpp.html#a1852697c1ca4da438365ab445e0525f0">do_math</a>(<span class="keywordtype">double</span> x) {</div>
-<div class="line">  <span class="keywordflow">return</span> <a name="a6"></a><a class="code" href="namespacemonad.html#a40ae70f040fdee0432cb429671da5d95">monad::make_result</a>(x).and_then(<a class="code" href="result_8cpp.html#a57fbff54d670189e2a804d204aba4107">divide_4_by</a>).and_then(<a class="code" href="result_8cpp.html#a6291b5407256f087bbc5ef9ee736b1c3">safe_sqrt</a>);</div>
+<div class="line"><a class="code" href="classtl_1_1expected.html">fp::Result&lt;double&gt;</a> <a name="a5"></a><a class="code" href="result_8cpp.html#a59232b6fdc2d41566b78c7d8b86ab4ea">do_math</a>(<span class="keywordtype">double</span> x) {</div>
+<div class="line">  <span class="keywordflow">return</span> <a name="a6"></a><a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(x).and_then(<a class="code" href="result_8cpp.html#a540e6eff1e93f4e1575a63eb611b3d01">divide_4_by</a>).and_then(<a class="code" href="result_8cpp.html#a8a27c9aa237d8792421936943a3e90e3">safe_sqrt</a>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> <a name="a7"></a><a class="code" href="result_8cpp.html#a3b0c02ae60a3f8537b7271782763b758">print_errors</a>(<a class="code" href="classtl_1_1expected.html">monad::Result&lt;double&gt;</a> result) {</div>
+<div class="line"><span class="keywordtype">void</span> <a name="a7"></a><a class="code" href="result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8">print_errors</a>(<a class="code" href="classtl_1_1expected.html">fp::Result&lt;double&gt;</a> result) {</div>
 <div class="line">  <span class="keywordflow">if</span> (!result.<a name="a8"></a><a class="code" href="classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513">has_value</a>()) {</div>
 <div class="line">    fmt::print(<span class="stringliteral">&quot;{}\n&quot;</span>, result.<a name="a9"></a><a class="code" href="classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d">error</a>());</div>
 <div class="line">  }</div>
@@ -131,8 +130,8 @@ $(function() {
 <div class="line">                 views::transform([](<span class="keyword">const</span> <span class="keywordtype">int</span>&amp; x) { <span class="keywordflow">return</span> x * 0.2; }) |</div>
 <div class="line">                 ranges::to&lt;std::vector&gt;();</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> y =</div>
-<div class="line">      x | views::transform(<a class="code" href="result_8cpp.html#a1852697c1ca4da438365ab445e0525f0">do_math</a>) | views::filter([](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; result) {</div>
-<div class="line">        <a class="code" href="result_8cpp.html#a3b0c02ae60a3f8537b7271782763b758">print_errors</a>(result);</div>
+<div class="line">      x | views::transform(<a class="code" href="result_8cpp.html#a59232b6fdc2d41566b78c7d8b86ab4ea">do_math</a>) | views::filter([](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; result) {</div>
+<div class="line">        <a class="code" href="result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8">print_errors</a>(result);</div>
 <div class="line">        <span class="keywordflow">return</span> result.<a class="code" href="classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513">has_value</a>();</div>
 <div class="line">      }) |</div>
 <div class="line">      views::transform([](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; result) { <span class="keywordflow">return</span> result.<a name="a11"></a><a class="code" href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3">value</a>(); }) |</div>
@@ -161,16 +160,16 @@ $(function() {
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="anamespacemonad_html_a4a613b837d0336c527210d9b5d66bae5"><div class="ttname"><a href="namespacemonad.html#a4a613b837d0336c527210d9b5d66bae5">monad::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00092">result.hpp:92</a></div></div>
-<div class="ttc" id="anamespacemonad_html_a40ae70f040fdee0432cb429671da5d95"><div class="ttname"><a href="namespacemonad.html#a40ae70f040fdee0432cb429671da5d95">monad::make_result</a></div><div class="ttdeci">constexpr Result&lt; T &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00206">result.hpp:206</a></div></div>
-<div class="ttc" id="aresult_8cpp_html_a57fbff54d670189e2a804d204aba4107"><div class="ttname"><a href="result_8cpp.html#a57fbff54d670189e2a804d204aba4107">divide_4_by</a></div><div class="ttdeci">monad::Result&lt; double &gt; divide_4_by(double x)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00033">result.cpp:33</a></div></div>
+<div class="ttc" id="aresult_8cpp_html_acaa8affbfe8428571f9f51f8ebd584c8"><div class="ttname"><a href="result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8">print_errors</a></div><div class="ttdeci">void print_errors(fp::Result&lt; double &gt; result)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00053">result.cpp:53</a></div></div>
+<div class="ttc" id="aresult_8cpp_html_a540e6eff1e93f4e1575a63eb611b3d01"><div class="ttname"><a href="result_8cpp.html#a540e6eff1e93f4e1575a63eb611b3d01">divide_4_by</a></div><div class="ttdeci">fp::Result&lt; double &gt; divide_4_by(double x)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00033">result.cpp:33</a></div></div>
 <div class="ttc" id="anamespacetl_html_a01de1a0282a693451af969f35e88bcf9"><div class="ttname"><a href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a></div><div class="ttdeci">unexpected&lt; typename std::decay&lt; E &gt;::type &gt; make_unexpected(E &amp;&amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l00178">expected.hpp:178</a></div></div>
-<div class="ttc" id="aresult_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00060">result.cpp:60</a></div></div>
-<div class="ttc" id="aresult_8cpp_html_a6291b5407256f087bbc5ef9ee736b1c3"><div class="ttname"><a href="result_8cpp.html#a6291b5407256f087bbc5ef9ee736b1c3">safe_sqrt</a></div><div class="ttdeci">monad::Result&lt; double &gt; safe_sqrt(double x)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00041">result.cpp:41</a></div></div>
-<div class="ttc" id="aresult_8cpp_html_a3b0c02ae60a3f8537b7271782763b758"><div class="ttname"><a href="result_8cpp.html#a3b0c02ae60a3f8537b7271782763b758">print_errors</a></div><div class="ttdeci">void print_errors(monad::Result&lt; double &gt; result)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00054">result.cpp:54</a></div></div>
+<div class="ttc" id="aresult_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00059">result.cpp:59</a></div></div>
+<div class="ttc" id="aresult_8cpp_html_a8a27c9aa237d8792421936943a3e90e3"><div class="ttname"><a href="result_8cpp.html#a8a27c9aa237d8792421936943a3e90e3">safe_sqrt</a></div><div class="ttdeci">fp::Result&lt; double &gt; safe_sqrt(double x)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00040">result.cpp:40</a></div></div>
+<div class="ttc" id="anamespacefp_html_ab858d18687924bd9947f25d5de916edb"><div class="ttname"><a href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00206">result.hpp:206</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html_a0f173ccbdbb2df23a3a1e80320a335c3"><div class="ttname"><a href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3">tl::expected::value</a></div><div class="ttdeci">const TL_EXPECTED_11_CONSTEXPR U &amp; value() const &amp;</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01957">expected.hpp:1957</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html_aea2a9099a048578ee49e85549cc6ee3d"><div class="ttname"><a href="classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d">tl::expected::error</a></div><div class="ttdeci">constexpr const E &amp; error() const &amp;</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01984">expected.hpp:1984</a></div></div>
-<div class="ttc" id="aresult_8cpp_html_a1852697c1ca4da438365ab445e0525f0"><div class="ttname"><a href="result_8cpp.html#a1852697c1ca4da438365ab445e0525f0">do_math</a></div><div class="ttdeci">monad::Result&lt; double &gt; do_math(double x)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00050">result.cpp:50</a></div></div>
+<div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00092">result.hpp:92</a></div></div>
+<div class="ttc" id="aresult_8cpp_html_a59232b6fdc2d41566b78c7d8b86ab4ea"><div class="ttname"><a href="result_8cpp.html#a59232b6fdc2d41566b78c7d8b86ab4ea">do_math</a></div><div class="ttdeci">fp::Result&lt; double &gt; do_math(double x)</div><div class="ttdef"><b>Definition:</b> <a href="result_8cpp_source.html#l00049">result.cpp:49</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html"><div class="ttname"><a href="classtl_1_1expected.html">tl::expected</a></div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l00121">expected.hpp:121</a></div></div>
 <div class="ttc" id="aall_8hpp_html"><div class="ttname"><a href="all_8hpp.html">all.hpp</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html_a557dd5bdabe9535165a11fc2123ac513"><div class="ttname"><a href="classtl_1_1expected.html#a557dd5bdabe9535165a11fc2123ac513">tl::expected::has_value</a></div><div class="ttdeci">constexpr bool has_value() const noexcept</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01952">expected.hpp:1952</a></div></div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>monad: monad</title>
+<title>fp: fp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">monad
+   <div id="projectname">fp
    </div>
    <div id="projectbrief">FP (Functional Programming) extensions for C++</div>
   </td>
@@ -63,21 +63,21 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">monad </div>  </div>
+<div class="title">fp </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>FP (Functional Programming) extensions for C++</p>
-<p><a href="https://github.com/tylerjw/monad/actions/workflows/ci.yaml?query=branch%3Amain"><object type="image/svg+xml" data="https://github.com/tylerjw/monad/actions/workflows/ci.yaml/badge.svg?branch=main" style="pointer-events: none;">CI</object></a> <a href="https://github.com/tylerjw/monad/actions/workflows/doxygen.yaml?query=branch%3Amain"><object type="image/svg+xml" data="https://github.com/tylerjw/monad/actions/workflows/doxygen.yaml/badge.svg?branch=main" style="pointer-events: none;">Doxygen</object></a> <a href="https://tylerjw.testspace.com/spaces/162241?utm_campaign=badge&amp;utm_medium=referral&amp;utm_source=test" title="Test Cases"><img src="https://tylerjw.testspace.com/spaces/162241/badge?token=942f36be0e57d277368e06dd911d23098a89be84" alt="Space Metric" class="inline"/></a> <a href="https://codecov.io/gh/tylerjw/monad"><object type="image/svg+xml" data="https://codecov.io/gh/tylerjw/monad/branch/main/graph/badge.svg?token=W7uHKcY0ly" style="pointer-events: none;">Code Coverage</object></a> <a href="https://github.com/tylerjw/monad/blob/main/LICENSE"><img src="https://img.shields.io/github/license/tylerjw/monad" alt="license" class="inline"/></a></p>
+<p><a href="https://github.com/tylerjw/fp/actions/workflows/ci.yaml?query=branch%3Amain"><object type="image/svg+xml" data="https://github.com/tylerjw/fp/actions/workflows/ci.yaml/badge.svg?branch=main" style="pointer-events: none;">CI</object></a> <a href="https://github.com/tylerjw/fp/actions/workflows/doxygen.yaml?query=branch%3Amain"><object type="image/svg+xml" data="https://github.com/tylerjw/fp/actions/workflows/doxygen.yaml/badge.svg?branch=main" style="pointer-events: none;">Doxygen</object></a> <a href="https://tylerjw.testspace.com/spaces/162241?utm_campaign=badge&amp;utm_medium=referral&amp;utm_source=test" title="Test Cases"><img src="https://tylerjw.testspace.com/spaces/162241/badge?token=942f36be0e57d277368e06dd911d23098a89be84" alt="Space Metric" class="inline"/></a> <a href="https://codecov.io/gh/tylerjw/fp"><object type="image/svg+xml" data="https://codecov.io/gh/tylerjw/fp/branch/main/graph/badge.svg?token=W7uHKcY0ly" style="pointer-events: none;">Code Coverage</object></a> <a href="https://github.com/tylerjw/fp/blob/main/LICENSE"><img src="https://img.shields.io/github/license/tylerjw/fp" alt="license" class="inline"/></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Getting started</h1>
-<p><b>package.xml</b> </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">depend</span>&gt;<span class="keyword">monad</span>&lt;/<span class="keywordtype">depend</span>&gt;</div>
-</div><!-- fragment --><p><b>CMakeLists.txt</b> </p><div class="fragment"><div class="line">find_package(monad REQUIRED)</div>
+<p><b>package.xml</b> </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">depend</span>&gt;<span class="keyword">fp</span>&lt;/<span class="keywordtype">depend</span>&gt;</div>
+</div><!-- fragment --><p><b>CMakeLists.txt</b> </p><div class="fragment"><div class="line">find_package(fp REQUIRED)</div>
 <div class="line"> </div>
 <div class="line">target_link_libraries(your_library</div>
-<div class="line">  monad::monad</div>
+<div class="line">  fp::fp</div>
 <div class="line">)</div>
-</div><!-- fragment --><p><b>include in source</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">monad/all.hpp</a>&gt;</span></div>
-</div><!-- fragment --><p>For more info see the <a href="https://tylerjw.github.io/monad/">:memo: Detailed Documentation</a></p>
+</div><!-- fragment --><p><b>include in source</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">fp/all.hpp</a>&gt;</span></div>
+</div><!-- fragment --><p>For more info see the <a href="https://tylerjw.github.io/fp/">:memo: Detailed Documentation</a></p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Vendored libraries</h1>
 <ul>
@@ -85,7 +85,7 @@ Vendored libraries</h1>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Interface Dependencies</h1>
-<p>These dependencies are added to the cmake INTERFACE library <code>monad</code>.</p>
+<p>These dependencies are added to the cmake INTERFACE library <code>fp</code>.</p>
 <ul>
 <li><a href="https://fmt.dev/latest/index.html">fmtlib: A modern formatting library</a></li>
 <li><a href="https://ericniebler.github.io/range-v3/">range-v3: Range library, basis for C++20's std::ranges</a></li>

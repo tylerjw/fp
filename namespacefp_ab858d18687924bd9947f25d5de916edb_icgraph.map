@@ -1,0 +1,7 @@
+<map id="fp::make_result" name="fp::make_result">
+<area shape="rect" id="node1" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="235,31,357,57"/>
+<area shape="rect" id="node2" href="$result_8cpp.html#a59232b6fdc2d41566b78c7d8b86ab4ea" title=" " alt="" coords="108,5,187,32"/>
+<area shape="rect" id="node4" href="$maybe__error_8cpp.html#afce0b68664ea5a6a6347dde5777a55eb" title=" " alt="" coords="109,56,186,83"/>
+<area shape="rect" id="node3" href="$result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node5" href="$maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+</map>

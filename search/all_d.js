@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['parse_160',['parse',['../structfmt_1_1formatter_3_01monad_1_1Error_01_4.html#ac555ad6d8cd83784875db78345190c18',1,'fmt::formatter&lt; monad::Error &gt;::parse()'],['../structfmt_1_1formatter_3_01monad_1_1Result_3_01T_01_4_01_4.html#a2565bf18c6290a1cd0f9a7fc4ab1a625',1,'fmt::formatter&lt; monad::Result&lt; T &gt; &gt;::parse()']]],
-  ['permission_5fdenined_161',['PERMISSION_DENINED',['../namespacemonad.html#ab27b5c808c2422088ba5a5aedc82eef1af819039636add117ded2bb0613cac106',1,'monad']]],
-  ['permissiondenied_162',['PermissionDenied',['../namespacemonad.html#aaeaeeebb603dd502e8c095de15d2726f',1,'monad']]],
-  ['print_5ferrors_163',['print_errors',['../result_8cpp.html#a3b0c02ae60a3f8537b7271782763b758',1,'result.cpp']]]
+  ['parse_160',['parse',['../structfmt_1_1formatter_3_01fp_1_1Error_01_4.html#ad70bbff82a8134085b0199782f0f23b5',1,'fmt::formatter&lt; fp::Error &gt;::parse()'],['../structfmt_1_1formatter_3_01fp_1_1Result_3_01T_01_4_01_4.html#a064100071ff776d6ffb6b093c0f05275',1,'fmt::formatter&lt; fp::Result&lt; T &gt; &gt;::parse()']]],
+  ['permission_5fdenined_161',['PERMISSION_DENINED',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccaf819039636add117ded2bb0613cac106',1,'fp']]],
+  ['permissiondenied_162',['PermissionDenied',['../namespacefp.html#ac4a66b14097b5f9257f8e9f485770c28',1,'fp']]],
+  ['print_5ferrors_163',['print_errors',['../result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8',1,'result.cpp']]]
 ];
