@@ -121,21 +121,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821">monad::mbind</a> (const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</td></tr>
 <tr class="memdesc:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad optional bind.  <a href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821">More...</a><br /></td></tr>
 <tr class="separator:ad6c2e04ba67fc3c6269f2d6f35fb4821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b767655606ae060e1a7b2a4a9c791ae"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
-<tr class="memitem:a8b767655606ae060e1a7b2a4a9c791ae"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a8b767655606ae060e1a7b2a4a9c791ae">monad::operator|</a> (const std::optional&lt; T &gt; &amp;opt, F f)</td></tr>
-<tr class="memdesc:a8b767655606ae060e1a7b2a4a9c791ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="namespacemonad.html#a8b767655606ae060e1a7b2a4a9c791ae">More...</a><br /></td></tr>
-<tr class="separator:a8b767655606ae060e1a7b2a4a9c791ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d07086d3dda179f75f8c1bb02434db1"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
-<tr class="memitem:a3d07086d3dda179f75f8c1bb02434db1"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a3d07086d3dda179f75f8c1bb02434db1">monad::mbind</a> (const expected&lt; T, E &gt; &amp;exp, F f)</td></tr>
-<tr class="memdesc:a3d07086d3dda179f75f8c1bb02434db1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad expected&lt;T,E&gt;  <a href="namespacemonad.html#a3d07086d3dda179f75f8c1bb02434db1">More...</a><br /></td></tr>
-<tr class="separator:a3d07086d3dda179f75f8c1bb02434db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa85a9951fbd02435d3c72893a8e31b5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
-<tr class="memitem:afa85a9951fbd02435d3c72893a8e31b5"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#afa85a9951fbd02435d3c72893a8e31b5">monad::operator|</a> (const expected&lt; T, E &gt; &amp;exp, F f)</td></tr>
-<tr class="memdesc:afa85a9951fbd02435d3c72893a8e31b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="namespacemonad.html#afa85a9951fbd02435d3c72893a8e31b5">More...</a><br /></td></tr>
-<tr class="separator:afa85a9951fbd02435d3c72893a8e31b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de441ad9b10b82ba603801541e2c10f"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
+<tr class="memitem:a35686d2e335e1ca0fed8fb073a2b2736"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
+<tr class="memitem:a35686d2e335e1ca0fed8fb073a2b2736"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a35686d2e335e1ca0fed8fb073a2b2736">monad::mbind</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
+<tr class="memdesc:a35686d2e335e1ca0fed8fb073a2b2736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad tl::expected&lt;T,E&gt;  <a href="namespacemonad.html#a35686d2e335e1ca0fed8fb073a2b2736">More...</a><br /></td></tr>
+<tr class="separator:a35686d2e335e1ca0fed8fb073a2b2736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de441ad9b10b82ba603801541e2c10f"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
 <tr class="memitem:a4de441ad9b10b82ba603801541e2c10f"><td class="memTemplItemLeft" align="right" valign="top">constexpr Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a4de441ad9b10b82ba603801541e2c10f">monad::mtry</a> (F f)</td></tr>
-<tr class="memdesc:a4de441ad9b10b82ba603801541e2c10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an expected&lt;T, std::exception_ptr&gt;  <a href="namespacemonad.html#a4de441ad9b10b82ba603801541e2c10f">More...</a><br /></td></tr>
+<tr class="memdesc:a4de441ad9b10b82ba603801541e2c10f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacemonad.html#a4de441ad9b10b82ba603801541e2c10f">More...</a><br /></td></tr>
 <tr class="separator:a4de441ad9b10b82ba603801541e2c10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684234147360094386a2b69aab55af17"><td class="memTemplParams" colspan="2">template&lt;typename F , typename G &gt; </td></tr>
 <tr class="memitem:a684234147360094386a2b69aab55af17"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a684234147360094386a2b69aab55af17">monad::mcompose</a> (F f, G g)</td></tr>
@@ -145,7 +137,150 @@ Functions</h2></td></tr>
 <tr class="memitem:a924e05052d20e73ee6de32492644a631"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a924e05052d20e73ee6de32492644a631">monad::mcompose</a> (T t, G g, Types... vars)</td></tr>
 <tr class="memdesc:a924e05052d20e73ee6de32492644a631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variadic mcompose.  <a href="namespacemonad.html#a924e05052d20e73ee6de32492644a631">More...</a><br /></td></tr>
 <tr class="separator:a924e05052d20e73ee6de32492644a631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
+<tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a> (const std::optional&lt; T &gt; &amp;opt, F f)</td></tr>
+<tr class="memdesc:abd8b70189113e335e72d993e2596371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">More...</a><br /></td></tr>
+<tr class="separator:abd8b70189113e335e72d993e2596371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
+<tr class="memitem:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">operator|</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
+<tr class="memdesc:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">More...</a><br /></td></tr>
+<tr class="separator:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="abd8b70189113e335e72d993e2596371a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8b70189113e335e72d993e2596371a">&#9670;&nbsp;</a></span>operator|() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto operator| </td>
+          <td>(</td>
+          <td class="paramtype">const std::optional&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>opt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of the | operator as bind. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>The input optional </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>The function</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The input type </td></tr>
+    <tr><td class="paramname">F</td><td>The function</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return type of f </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00165">165</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph.png" border="0" usemap="#mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" alt=""/></div>
+<map name="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" id="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph">
+<area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
+<area shape="rect" href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821" title="Monad optional bind." alt="" coords="135,5,251,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6ca497ee78636570bc7ca9a61a5f5c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca497ee78636570bc7ca9a61a5f5c7c">&#9670;&nbsp;</a></span>operator|() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr Ret operator| </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;&#160;</td>
+          <td class="paramname"><em>exp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload of the | operator as bind. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">exp</td><td>The input tl::expected&lt;T,E&gt; value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>The function to apply</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type for the input expected </td></tr>
+    <tr><td class="paramname">E</td><td>The error type </td></tr>
+    <tr><td class="paramname">F</td><td>The function </td></tr>
+    <tr><td class="paramname">Ret</td><td>The return type of the function</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The return type of the function </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00184">184</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph.png" border="0" usemap="#mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" alt=""/></div>
+<map name="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" id="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph">
+<area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
+<area shape="rect" href="namespacemonad.html#ad6c2e04ba67fc3c6269f2d6f35fb4821" title="Monad optional bind." alt="" coords="135,5,251,32"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

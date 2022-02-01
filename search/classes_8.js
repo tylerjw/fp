@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['range_275',['range',['../structmonad_1_1validate_1_1range.html',1,'monad::validate']]]
+  ['tag_274',['tag',['../structtl_1_1detail_1_1swap__adl__tests_1_1tag.html',1,'tl::detail::swap_adl_tests']]],
+  ['tc_275',['TC',['../structtl_1_1detail_1_1TC.html',1,'tl::detail']]]
 ];

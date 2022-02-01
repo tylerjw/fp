@@ -72,7 +72,7 @@ $(function() {
   </table>
   </dd>
 </dl>
-<p>This is an example of how to use validate::range</p>
+<p>This is an example of how to use range</p>
 <div class="fragment"><div class="line"><span class="comment">// Copyright 2022 PickNik Inc</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Redistribution and use in source and binary forms, with or without</span></div>
@@ -103,43 +103,45 @@ $(function() {
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">monad/all.hpp</a>&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">using namespace </span><a class="code" href="namespacemonad.html">monad</a>;</div>
-<div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> <a name="a0"></a><a class="code" href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a>() {</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> value = 14;</div>
-<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a name="_a1"></a><a class="code" href="structmonad_1_1validate_1_1range.html">validate::range&lt;int&gt;</a>{.<a name="a2"></a><a class="code" href="structmonad_1_1validate_1_1range.html#a917630503b5793f0a701f33689eadac5">from</a> = 0, .step = 3}(value);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a name="_a1"></a><a class="code" href="structmonad_1_1validate__range.html">monad::validate_range&lt;int&gt;</a>{.<a name="a2"></a><a class="code" href="structmonad_1_1validate__range.html#ad6cbf797075ec6db9f265f550b3a563f">from</a> = 0, .step = 3}(value);</div>
 <div class="line">  <span class="keywordflow">if</span> (!result) {</div>
-<div class="line">    fmt::print(<span class="stringliteral">&quot;{} failed validate::range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;{} failed monad::validate_range with result: {}\n&quot;</span>, value,</div>
+<div class="line">               result);</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
-<div class="line">    fmt::print(<span class="stringliteral">&quot;{} passed validate::range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;{} passed monad::validate_range with result: {}\n&quot;</span>, value,</div>
+<div class="line">               result);</div>
 <div class="line">  }</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> <a name="a3"></a><a class="code" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a>() {</div>
 <div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> value = -2.1;</div>
-<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a class="code" href="structmonad_1_1validate_1_1range.html">validate::range&lt;double&gt;</a>{.<a class="code" href="structmonad_1_1validate_1_1range.html#a917630503b5793f0a701f33689eadac5">from</a> = -15, .to = 23}(value);</div>
+<div class="line">  <span class="keyword">const</span> <span class="keyword">auto</span> result =</div>
+<div class="line">      <a class="code" href="structmonad_1_1validate__range.html">monad::validate_range&lt;double&gt;</a>{.<a class="code" href="structmonad_1_1validate__range.html#ad6cbf797075ec6db9f265f550b3a563f">from</a> = -15, .to = 23}(value);</div>
 <div class="line">  <span class="keywordflow">if</span> (!result) {</div>
-<div class="line">    fmt::print(<span class="stringliteral">&quot;{} failed validate::range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;{} failed monad::validate_range with result: {}\n&quot;</span>, value,</div>
+<div class="line">               result);</div>
 <div class="line">  } <span class="keywordflow">else</span> {</div>
-<div class="line">    fmt::print(<span class="stringliteral">&quot;{} passed validate::range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line">    fmt::print(<span class="stringliteral">&quot;{} passed monad::validate_range with result: {}\n&quot;</span>, value,</div>
+<div class="line">               result);</div>
 <div class="line">  }</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> <a name="a4"></a><a class="code" href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
 <div class="line">  <a class="code" href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a>();</div>
-<div class="line">  <span class="comment">// 14 failed validate::range with result: [Result&lt;T&gt;: [Error: [OutOfRange] 14</span></div>
-<div class="line">  <span class="comment">// is 0.33333333333333304 away from the nearest valid step]]</span></div>
+<div class="line">  <span class="comment">// 14 failed monad::validate_range with result: [Result&lt;T&gt;: [Error:</span></div>
+<div class="line">  <span class="comment">//   [OutOfRange] 14 is 0.33333333333333304 away from the nearest valid step]]</span></div>
 <div class="line"> </div>
 <div class="line">  <a class="code" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a>();</div>
-<div class="line">  <span class="comment">// -2.1 passed validate::range with result: [Result&lt;T&gt;: value=-2.1]</span></div>
+<div class="line">  <span class="comment">// -2.1 passed monad::validate_range with result: [Result&lt;T&gt;: value=-2.1]</span></div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
-<div class="ttc" id="astructmonad_1_1validate_1_1range_html_a917630503b5793f0a701f33689eadac5"><div class="ttname"><a href="structmonad_1_1validate_1_1range.html#a917630503b5793f0a701f33689eadac5">monad::validate::range::from</a></div><div class="ttdeci">T from</div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00053">validate.hpp:53</a></div></div>
-<div class="ttc" id="astructmonad_1_1validate_1_1range_html"><div class="ttname"><a href="structmonad_1_1validate_1_1range.html">monad::validate::range</a></div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00052">validate.hpp:52</a></div></div>
+<div class="ttc" id="astructmonad_1_1validate__range_html_ad6cbf797075ec6db9f265f550b3a563f"><div class="ttname"><a href="structmonad_1_1validate__range.html#ad6cbf797075ec6db9f265f550b3a563f">monad::validate_range::from</a></div><div class="ttdeci">T from</div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00053">validate.hpp:53</a></div></div>
+<div class="ttc" id="astructmonad_1_1validate__range_html"><div class="ttname"><a href="structmonad_1_1validate__range.html">monad::validate_range</a></div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00052">validate.hpp:52</a></div></div>
 <div class="ttc" id="avalidate__range_8cpp_html_a45dade0a0ed3bc9cc3945d33888a3d53"><div class="ttname"><a href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a></div><div class="ttdeci">void validate_double()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00043">validate_range.cpp:43</a></div></div>
-<div class="ttc" id="anamespacemonad_html"><div class="ttname"><a href="namespacemonad.html">monad</a></div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00035">mbind.hpp:35</a></div></div>
-<div class="ttc" id="avalidate__range_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00053">validate_range.cpp:53</a></div></div>
-<div class="ttc" id="avalidate__range_8cpp_html_a23c3f3583f3021edf5f227df3498ab01"><div class="ttname"><a href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a></div><div class="ttdeci">void validate_int_step()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00033">validate_range.cpp:33</a></div></div>
+<div class="ttc" id="avalidate__range_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00056">validate_range.cpp:56</a></div></div>
+<div class="ttc" id="avalidate__range_8cpp_html_a23c3f3583f3021edf5f227df3498ab01"><div class="ttname"><a href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a></div><div class="ttdeci">void validate_int_step()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00031">validate_range.cpp:31</a></div></div>
 <div class="ttc" id="aall_8hpp_html"><div class="ttname"><a href="all_8hpp.html">all.hpp</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

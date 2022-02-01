@@ -1,0 +1,12 @@
+<map id="do_work" name="do_work">
+<area shape="rect" id="node1" title=" " alt="" coords="5,157,83,184"/>
+<area shape="rect" id="node2" href="$maybe__error_8cpp.html#ac121dd28850d1ba227d1783ca3bfa48b" title=" " alt="" coords="191,5,229,32"/>
+<area shape="rect" id="node4" href="$namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="521,157,680,184"/>
+<area shape="rect" id="node5" href="$maybe__error_8cpp.html#a64943429afd7a4127fbcc4ee375acde7" title=" " alt="" coords="191,56,229,83"/>
+<area shape="rect" id="node6" href="$maybe__error_8cpp.html#ac81788da862d5ef692a852d3d4d92a3c" title=" " alt="" coords="191,107,229,133"/>
+<area shape="rect" id="node7" href="$maybe__error_8cpp.html#a29b7e2b63570a0ada92914ca482e93fd" title=" " alt="" coords="191,157,229,184"/>
+<area shape="rect" id="node8" href="$namespacemonad.html#a40ae70f040fdee0432cb429671da5d95" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="133,259,287,285"/>
+<area shape="rect" id="node9" href="$namespacemonad.html#a9daa63f145dc9fd909aa781950e7748a" title=" " alt="" coords="131,309,289,336"/>
+<area shape="rect" id="node3" href="$maybe__error_8cpp.html#a57fbff54d670189e2a804d204aba4107" title=" " alt="" coords="355,107,455,133"/>
+<area shape="rect" id="node10" href="$namespacemonad.html#a5bf3c2bfa228b51cd3883976af91902b" title="Filter function for testing if a result has an error." alt="" coords="337,309,473,336"/>
+</map>

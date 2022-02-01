@@ -1,6 +1,6 @@
 <map id="monad::mbind" name="monad::mbind">
 <area shape="rect" id="node1" title="Monad optional bind." alt="" coords="395,31,511,57"/>
 <area shape="rect" id="node2" href="$namespacemonad.html#a684234147360094386a2b69aab55af17" title="Monadic compose two monad functions." alt="" coords="200,5,347,32"/>
-<area shape="rect" id="node4" href="$namespacemonad.html#a8b767655606ae060e1a7b2a4a9c791ae" title="Overload of the | operator as bind." alt="" coords="206,56,341,83"/>
+<area shape="rect" id="node4" href="$mbind_8hpp.html#abd8b70189113e335e72d993e2596371a" title="Overload of the | operator as bind." alt="" coords="233,56,314,83"/>
 <area shape="rect" id="node3" href="$namespacemonad.html#a924e05052d20e73ee6de32492644a631" title="Variadic mcompose." alt="" coords="5,5,152,32"/>
 </map>

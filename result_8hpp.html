@@ -142,9 +142,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a3bd9b0f1ea08ea2d0dc6820f99df5365"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3bd9b0f1ea08ea2d0dc6820f99df5365"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a3bd9b0f1ea08ea2d0dc6820f99df5365">monad::Result</a> = expected&lt; T, Error &gt;</td></tr>
-<tr class="separator:a3bd9b0f1ea08ea2d0dc6820f99df5365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7611e39a5f5d4ded90627209d1d41a6b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7611e39a5f5d4ded90627209d1d41a6b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a7611e39a5f5d4ded90627209d1d41a6b">monad::Result</a> = <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, Error &gt;</td></tr>
+<tr class="separator:a7611e39a5f5d4ded90627209d1d41a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -186,13 +186,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a40ae70f040fdee0432cb429671da5d95"><td class="memTemplItemLeft" align="right" valign="top">constexpr Result&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a40ae70f040fdee0432cb429671da5d95">monad::make_result</a> (T value)</td></tr>
 <tr class="memdesc:a40ae70f040fdee0432cb429671da5d95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a Result&lt;T&gt; from a T value.  <a href="namespacemonad.html#a40ae70f040fdee0432cb429671da5d95">More...</a><br /></td></tr>
 <tr class="separator:a40ae70f040fdee0432cb429671da5d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c1fd211f7d0a5838c37b851aad403f6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
-<tr class="memitem:a6c1fd211f7d0a5838c37b851aad403f6"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a6c1fd211f7d0a5838c37b851aad403f6">monad::has_error</a> (const expected&lt; T, E &gt; &amp;exp)</td></tr>
-<tr class="memdesc:a6c1fd211f7d0a5838c37b851aad403f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter function for testing if a result has an error.  <a href="namespacemonad.html#a6c1fd211f7d0a5838c37b851aad403f6">More...</a><br /></td></tr>
-<tr class="separator:a6c1fd211f7d0a5838c37b851aad403f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27ce322865671781e7816b336de93149"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
-<tr class="memitem:a27ce322865671781e7816b336de93149"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a27ce322865671781e7816b336de93149">monad::maybe_error</a> (expected&lt; Args, E &gt;... args)</td></tr>
-<tr class="separator:a27ce322865671781e7816b336de93149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf3c2bfa228b51cd3883976af91902b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
+<tr class="memitem:a5bf3c2bfa228b51cd3883976af91902b"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a5bf3c2bfa228b51cd3883976af91902b">monad::has_error</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp)</td></tr>
+<tr class="memdesc:a5bf3c2bfa228b51cd3883976af91902b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter function for testing if a result has an error.  <a href="namespacemonad.html#a5bf3c2bfa228b51cd3883976af91902b">More...</a><br /></td></tr>
+<tr class="separator:a5bf3c2bfa228b51cd3883976af91902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9daa63f145dc9fd909aa781950e7748a"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
+<tr class="memitem:a9daa63f145dc9fd909aa781950e7748a"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemonad.html#a9daa63f145dc9fd909aa781950e7748a">monad::maybe_error</a> (<a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; Args, E &gt;... args)</td></tr>
+<tr class="separator:a9daa63f145dc9fd909aa781950e7748a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>

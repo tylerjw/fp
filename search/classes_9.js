@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tag_276',['tag',['../structtl_1_1detail_1_1swap__adl__tests_1_1tag.html',1,'tl::detail::swap_adl_tests']]],
-  ['tc_277',['TC',['../structtl_1_1detail_1_1TC.html',1,'tl::detail']]]
+  ['unexpect_5ft_276',['unexpect_t',['../structtl_1_1unexpect__t.html',1,'tl']]],
+  ['unexpected_277',['unexpected',['../classtl_1_1unexpected.html',1,'tl']]]
 ];
