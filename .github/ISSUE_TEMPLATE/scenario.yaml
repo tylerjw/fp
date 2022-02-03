@@ -1,0 +1,33 @@
+name: Scenario
+description: Describe a change
+title: "[Scenario]: "
+labels: ["scenario"]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Need
+      description: Describe the need for this change.
+      value: |
+        In order to <do something>
+        As a <user>
+        I want to <acheive some goal>
+  - type: textarea
+    id: scenario
+    attributes:
+      label: Scenario
+      description: State the behavior in the BDD test format.
+      value: |
+        Scenario: <something> should <behavior>
+        GIVEN <some satate>
+        WHEN <some action>
+        THEN <some expectation>
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: List what needs to be done to consider this scenario done.
+      value: |
+        - What: ...
+          Why: ...
+          Impact: ...
