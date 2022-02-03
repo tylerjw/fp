@@ -1,0 +1,36 @@
+name: Issue
+description: Describe a change such as a feature request or bug fix.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Need
+      description: Describe the need for this change.
+      value: |
+        _In order to_ <do something>
+        _As a_ <user>
+        _I want to_ <achieve some goal>
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: State the behavior in the BDD test format.
+      value: |
+        **Scenario:** <something> should <behavior>
+        **GIVEN** <some preconditions>
+        **WHEN** <some action>
+        **THEN** <some expectation>
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: List what needs to be done to consider this scenario done.
+      value: |
+        - [ ] <Step the Assignee takes>
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add any other information here you think will be useful for those doing this work.
+      value: |
+        References:
