@@ -36,7 +36,6 @@ ament_export_targets(${PROJECT_NAME}Targets)
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following lines skip linters
-  set(ament_cmake_copyright_FOUND TRUE) # TODO
   set(ament_cmake_cpplint_FOUND TRUE) # Conflicts with clang-foramt
   set(ament_cmake_flake8_FOUND TRUE) # Conflicts with black
   set(ament_cmake_uncrustify_FOUND TRUE) # Conflicts with clang-format
