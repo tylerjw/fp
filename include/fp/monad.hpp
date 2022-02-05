@@ -105,7 +105,7 @@ constexpr Ret mbind(const tl::expected<T, E>& exp, F f) {
  */
 template <typename F, typename Ret = typename std::result_of<F()>::type,
           typename Exp = tl::expected<Ret, std::exception_ptr>>
-constexpr Exp mtry(F f) {
+Exp mtry(F f) {
   try {
     return Exp{f()};
   } catch (...) {

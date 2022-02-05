@@ -280,6 +280,34 @@ TEST(ResultTests, MaybeError) {
   EXPECT_EQ(error.value().code, fp::ErrorCode::UNKNOWN);
 }
 
+TEST(ResultTests, TryToResultError) {
+  // GIVEN function that throws an exception
+  const auto f = [] {
+    throw std::runtime_error("");
+    return 0;
+  };
+
+  // WHEN I lift it with try_to_result
+  const auto result = fp::try_to_result(f);
+
+  // THEN I get a result with an error that has the code EXCEPTION
+  ASSERT_FALSE(result) << fmt::format("{}", result);
+  EXPECT_EQ(result.error().code, fp::ErrorCode::EXCEPTION)
+      << fmt::format("{}", result);
+}
+
+TEST(ResultTests, TryToResultValue) {
+  // GIVEN a function that returns a value
+  const auto f = [] { return 0; };
+
+  // WHEN I lift it with try_to_result
+  const auto result = fp::try_to_result(f);
+
+  // THEN I get the same value in the result as if I'd called the function
+  ASSERT_TRUE(result) << fmt::format("{}", result);
+  EXPECT_EQ(result.value(), f()) << fmt::format("{}", result);
+}
+
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
