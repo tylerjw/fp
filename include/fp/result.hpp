@@ -28,6 +28,7 @@
 
 #pragma once
 
+#include <cxxabi.h>
 #include <fmt/format.h>
 
 #include <iostream>
@@ -240,6 +241,36 @@ constexpr std::optional<E> maybe_error(tl::expected<Args, E>... args) {
       }(args),
       ...);
   return maybe;
+}
+
+/**
+ * @brief      Try to Result<T>.  Lifts a function that throws an excpetpion to
+ * one that returns a Result<T>
+ *
+ * @param[in]  f     The function to call
+ *
+ * @tparam     F     The function type
+ * @tparam     Ret   The return value of the function
+ * @tparam     Exp   The expected type
+ *
+ * @return     The return value of the function
+ */
+template <typename F, typename Ret = typename std::result_of<F()>::type,
+          typename Exp = Result<Ret>>
+Exp try_to_result(F f) {
+  try {
+    return make_result(f());
+  } catch (const std::exception& ex) {
+    return [&] {
+      auto const type = [] {
+        int status;
+        return abi::__cxa_demangle(abi::__cxa_current_exception_type()->name(),
+                                   0, 0, &status);
+      }();
+      return tl::make_unexpected(
+          Exception(fmt::format("[{}: {}]", type, ex.what())));
+    }();
+  }
 }
 
 }  // namespace fp
