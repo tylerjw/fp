@@ -30,7 +30,8 @@
 
 void validate_int_step() {
   const auto value = 14;
-  const auto result = fp::validate_range<int>{.from = 0, .step = 3}(value);
+  const auto result =
+      fp::validate_range<int>{.from = 0, .step = 3}(value, "foo");
   if (!result) {
     fmt::print("{} failed fp::validate_range with result: {}\n", value, result);
   } else {
@@ -40,7 +41,8 @@ void validate_int_step() {
 
 void validate_double() {
   const auto value = -2.1;
-  const auto result = fp::validate_range<double>{.from = -15, .to = 23}(value);
+  const auto result =
+      fp::validate_range<double>{.from = -15, .to = 23}(value, "foo");
   if (!result) {
     fmt::print("{} failed fp::validate_range with result: {}\n", value, result);
   } else {
@@ -51,7 +53,8 @@ void validate_double() {
 int main() {
   validate_int_step();
   // 14 failed fp::validate_range with result: [Result<T>: [Error:
-  //   [OutOfRange] 14 is 0.33333333333333304 away from the nearest valid step]]
+  //   [OutOfRange] foo: 14 is 0.33333333333333304 away from the nearest valid
+  //   step]]
 
   validate_double();
   // -2.1 passed fp::validate_range with result: [Result<T>: value=-2.1]

@@ -33,10 +33,11 @@
 int main() {
   const auto day = "monday";
   const auto weekends = std::vector<std::string>{"saturday", "sunday"};
-  const auto result = fp::validate_in(weekends, day);
+  const auto result = fp::validate_in(weekends, day, "day");
   fmt::print("Is \'{}\' in {}?\n{}\n", day, weekends, result);
 
   // Output:
   // Is 'monday' in {"saturday", "sunday"}?
-  // [Result<T>: [Error: [OutOfRange] monday is not in {"saturday", "sunday"}]]
+  // [Result<T>: [Error: [OutOfRange] day: monday is not in {"saturday",
+  // "sunday"}]]
 }

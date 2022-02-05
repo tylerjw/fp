@@ -38,7 +38,7 @@ TEST(ValidateTests, ValidateRangeFromIntTrue) {
   const auto test = fp::validate_range<int>{.from = -10};
 
   // WHEN we we validate the value 14
-  const auto result = test(14);
+  const auto result = test(14, "test");
 
   // THEN we expect it be true
   EXPECT_TRUE(result);
@@ -49,7 +49,7 @@ TEST(ValidateTests, ValidateRangeFromIntFalse) {
   const auto test = fp::validate_range<int>{.from = -10};
 
   // WHEN we we validate the value -100
-  const auto result = test(-100);
+  const auto result = test(-100, "test");
 
   // THEN we expect it be false
   EXPECT_FALSE(result);
@@ -60,7 +60,7 @@ TEST(ValidateTests, ValidateRangeFalseIsOutOfRange) {
   const auto test = fp::validate_range<int>{.from = -10};
 
   // WHEN we we validate the value -100
-  const auto result = test(-100);
+  const auto result = test(-100, "test");
 
   // THEN we expect the error code to be OutOfRange
   EXPECT_EQ(result.error().code, fp::ErrorCode::OUT_OF_RANGE);
@@ -71,7 +71,7 @@ TEST(ValidateTests, ValidateRangeToIntFalse) {
   const auto test = fp::validate_range<int>{.to = 4};
 
   // WHEN we we validate the value 5
-  const auto result = test(5);
+  const auto result = test(5, "test");
 
   // THEN we expect it be false
   EXPECT_FALSE(result);
@@ -82,7 +82,7 @@ TEST(ValidateTests, ValidateRangeStepInt) {
   const auto test = fp::validate_range<int>{.from = 0, .step = 3};
 
   // WHEN we we validate the value 14
-  const auto result = test(14);
+  const auto result = test(14, "test");
 
   // THEN we expect it be false
   EXPECT_FALSE(result);
@@ -93,7 +93,7 @@ TEST(ValidateTests, ValidateRangeToDoubleTrue) {
   const auto test = fp::validate_range<double>{.step = 2};
 
   // WHEN we we validate the value 4
-  const auto result = test(4);
+  const auto result = test(4, "test");
 
   // THEN we expect it be true
   EXPECT_TRUE(result) << fmt::format("{}", result);
@@ -104,7 +104,7 @@ TEST(ValidateTests, ValidateRangeToDoubleFalse) {
   const auto test = fp::validate_range<double>{.step = 2};
 
   // WHEN we we validate the value 5
-  const auto result = test(5);
+  const auto result = test(5, "test");
 
   // THEN we expect it be false
   EXPECT_FALSE(result) << fmt::format("{}", result);
@@ -116,7 +116,7 @@ TEST(ValidateTests, ValidateInTrue) {
   const auto valid_values = std::set<std::string>{"a", "b", "c"};
 
   // WHEN we we validate with in
-  const auto result = fp::validate_in(valid_values, value);
+  const auto result = fp::validate_in(valid_values, value, "test");
 
   // THEN we expect it be true
   EXPECT_TRUE(result) << fmt::format("{}", result);
@@ -128,20 +128,10 @@ TEST(ValidateTests, ValidateInFalse) {
   const auto valid_values = std::set<std::string>{"a", "b", "c"};
 
   // WHEN we we validate with in
-  const auto result = fp::validate_in(valid_values, value);
+  const auto result = fp::validate_in(valid_values, value, "test");
 
   // THEN we expect it be false
   EXPECT_FALSE(result) << fmt::format("{}", result);
-}
-
-TEST(ValidateTests, PrependNameNoThrow) {
-  // GIVEN a error value
-  const auto error = fp::DataLoss("something went wrong");
-
-  // WHEN we call make_named
-  // THEN we expect it to not throw
-  EXPECT_NO_THROW(const auto _ = fp::make_named(error, "foo"))
-      << fmt::format("{}", error);
 }
 
 int main(int argc, char** argv) {

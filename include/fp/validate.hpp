@@ -55,20 +55,21 @@ struct validate_range {
   std::optional<T> step = std::nullopt;
   double step_threshold = 1e-3;
 
-  constexpr Result<T> operator()(T value) const {
+  constexpr Result<T> operator()(T value, std::string const& name) const {
     if (value < from || value > to) {
-      return tl::make_unexpected(OutOfRange(
-          fmt::format("{} is outside of the range [{}, {}]", value, from, to)));
+      return tl::make_unexpected(OutOfRange(fmt::format(
+          "{}: {} is outside of the range [{}, {}]", name, value, from, to)));
     }
 
     if (step) {
-      const double step_value = static_cast<double>(step.value());
-      const double ratio = static_cast<double>(value - from) / step_value;
-      const double distance = fabs(ratio - round(ratio));
+      double const step_value = static_cast<double>(step.value());
+      double const ratio = static_cast<double>(value - from) / step_value;
+      double const distance = fabs(ratio - round(ratio));
 
       if (distance > step_threshold) {
-        return tl::make_unexpected(OutOfRange(fmt::format(
-            "{} is {} away from the nearest valid step", value, distance)));
+        return tl::make_unexpected(OutOfRange(
+            fmt::format("{}: {} is {} away from the nearest valid step", name,
+                        value, distance)));
       }
     }
 
@@ -91,7 +92,8 @@ struct validate_range {
  *             This is an example of how to use in
  */
 template <typename Rng, typename T>
-constexpr Result<T> validate_in(const Rng& valid_values, const T& value) {
+constexpr Result<T> validate_in(Rng const& valid_values, T const& value,
+                                std::string const& name) {
   if (ranges::contains(valid_values, value)) {
     return value;
   }
@@ -99,18 +101,5 @@ constexpr Result<T> validate_in(const Rng& valid_values, const T& value) {
       OutOfRange(fmt::format("{} is not in {}", value, valid_values)));
   ;
 }
-
-/**
- * @brief      Makes a named error.  Useful when validating parameters.
- *
- * @param[in]  error  The error
- * @param[in]  name   The name
- *
- * @return     Prepends "{name}: " to the Error what string
- */
-const auto make_named = [](const Error& error, const std::string& name) {
-  return Error{.code = error.code,
-               .what = fmt::format("{}: {}", name, error.what)};
-};
 
 }  // namespace fp

@@ -264,8 +264,11 @@ Exp try_to_result(F f) {
     return [&] {
       auto const type = [] {
         int status;
-        return abi::__cxa_demangle(abi::__cxa_current_exception_type()->name(),
-                                   0, 0, &status);
+        auto const what_buff = abi::__cxa_demangle(
+            abi::__cxa_current_exception_type()->name(), 0, 0, &status);
+        auto const what = std::string(what_buff);
+        std::free(what_buff);
+        return what;
       }();
       return tl::make_unexpected(
           Exception(fmt::format("[{}: {}]", type, ex.what())));
