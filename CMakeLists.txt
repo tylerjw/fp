@@ -1,6 +1,14 @@
 cmake_minimum_required(VERSION 3.15)
 project(fp)
 
+# Link this 'library' to set the c++ standard / compile-time options requested
+add_library(project_options INTERFACE)
+target_compile_features(project_options INTERFACE cxx_std_17)
+
+# sanitizer options if supported by compiler
+include(cmake/Sanitizers.cmake)
+enable_sanitizers(project_options)
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(fmt REQUIRED)

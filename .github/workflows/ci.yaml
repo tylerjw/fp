@@ -17,21 +17,19 @@ jobs:
       matrix:
         env:
           - NAME: "rolling-testing-ccov"
-            ROS_DISTRO: rolling
-            ROS_REPO: testing
-            TARGET_CMAKE_ARGS: -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS='--coverage -fno-omit-frame-pointer'
+            TARGET_CMAKE_ARGS: |
+              -DCMAKE_BUILD_TYPE=Debug
+              -DCMAKE_CXX_FLAGS='--coverage -fno-omit-frame-pointer'
             CCOV: true
           - NAME: "rolling-main"
-            ROS_DISTRO: rolling
             ROS_REPO: main
-          - NAME: "galactic-testing"
-            ROS_DISTRO: galactic
-            ROS_REPO: testing
-          - NAME: "galactic-main"
-            ROS_DISTRO: galactic
-            ROS_REPO: main
+          - NAME: "thread-sanitizer"
+            TARGET_CMAKE_ARGS: |
+              -DCMAKE_BUILD_TYPE=Debug
+              -DENABLE_SANITIZER_THREAD=ON
 
     env:
+      ROS_DISTRO: rolling
       # Clear the ccache stats before and log the stats after the build
       AFTER_SETUP_CCACHE: ccache --zero-stats --max-size=10.0G
       AFTER_BUILD_TARGET_WORKSPACE: ccache --show-stats
