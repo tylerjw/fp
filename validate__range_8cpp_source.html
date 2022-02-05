@@ -102,36 +102,39 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a>() {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> value = 14;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a class="code" href="structfp_1_1validate__range.html">fp::validate_range&lt;int&gt;</a>{.<a class="code" href="structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce">from</a> = 0, .step = 3}(value);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">if</span> (!result) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} failed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} passed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a>() {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> value = -2.1;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result = <a class="code" href="structfp_1_1validate__range.html">fp::validate_range&lt;double&gt;</a>{.<a class="code" href="structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce">from</a> = -15, .to = 23}(value);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordflow">if</span> (!result) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} failed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} passed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="comment">// 14 failed fp::validate_range with result: [Result&lt;T&gt;: [Error:</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="comment">//   [OutOfRange] 14 is 0.33333333333333304 away from the nearest valid step]]</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">// -2.1 passed fp::validate_range with result: [Result&lt;T&gt;: value=-2.1]</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result =</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="structfp_1_1validate__range.html">fp::validate_range&lt;int&gt;</a>{.<a class="code" href="structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce">from</a> = 0, .step = 3}(value, <span class="stringliteral">&quot;foo&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">if</span> (!result) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} failed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} passed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">   42</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a>() {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> value = -2.1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> result =</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <a class="code" href="structfp_1_1validate__range.html">fp::validate_range&lt;double&gt;</a>{.<a class="code" href="structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce">from</a> = -15, .to = 23}(value, <span class="stringliteral">&quot;foo&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (!result) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} failed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    fmt::print(<span class="stringliteral">&quot;{} passed fp::validate_range with result: {}\n&quot;</span>, value, result);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   53</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// 14 failed fp::validate_range with result: [Result&lt;T&gt;: [Error:</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">//   [OutOfRange] foo: 14 is 0.33333333333333304 away from the nearest valid</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="comment">//   step]]</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// -2.1 passed fp::validate_range with result: [Result&lt;T&gt;: value=-2.1]</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructfp_1_1validate__range_html"><div class="ttname"><a href="structfp_1_1validate__range.html">fp::validate_range</a></div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00052">validate.hpp:52</a></div></div>
-<div class="ttc" id="avalidate__range_8cpp_html_a45dade0a0ed3bc9cc3945d33888a3d53"><div class="ttname"><a href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a></div><div class="ttdeci">void validate_double()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00041">validate_range.cpp:41</a></div></div>
-<div class="ttc" id="avalidate__range_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00051">validate_range.cpp:51</a></div></div>
+<div class="ttc" id="avalidate__range_8cpp_html_a45dade0a0ed3bc9cc3945d33888a3d53"><div class="ttname"><a href="validate__range_8cpp.html#a45dade0a0ed3bc9cc3945d33888a3d53">validate_double</a></div><div class="ttdeci">void validate_double()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00042">validate_range.cpp:42</a></div></div>
+<div class="ttc" id="avalidate__range_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="validate__range_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00053">validate_range.cpp:53</a></div></div>
 <div class="ttc" id="astructfp_1_1validate__range_html_a01aafcb6de1b43ab241229e5159f27ce"><div class="ttname"><a href="structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce">fp::validate_range::from</a></div><div class="ttdeci">T from</div><div class="ttdef"><b>Definition:</b> <a href="validate_8hpp_source.html#l00053">validate.hpp:53</a></div></div>
 <div class="ttc" id="avalidate__range_8cpp_html_a23c3f3583f3021edf5f227df3498ab01"><div class="ttname"><a href="validate__range_8cpp.html#a23c3f3583f3021edf5f227df3498ab01">validate_int_step</a></div><div class="ttdeci">void validate_int_step()</div><div class="ttdef"><b>Definition:</b> <a href="validate__range_8cpp_source.html#l00031">validate_range.cpp:31</a></div></div>
 <div class="ttc" id="aall_8hpp_html"><div class="ttname"><a href="all_8hpp.html">all.hpp</a></div></div>

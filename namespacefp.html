@@ -164,9 +164,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1823f974ec16c3c85d33082a68497090"><td class="memTemplItemLeft" align="right" valign="top">Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a1823f974ec16c3c85d33082a68497090">try_to_result</a> (F f)</td></tr>
 <tr class="memdesc:a1823f974ec16c3c85d33082a68497090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt;  <a href="namespacefp.html#a1823f974ec16c3c85d33082a68497090">More...</a><br /></td></tr>
 <tr class="separator:a1823f974ec16c3c85d33082a68497090"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eb73b13b9f5b02a5a4104d3345c0f07"><td class="memTemplParams" colspan="2">template&lt;typename Rng , typename T &gt; </td></tr>
-<tr class="memitem:a8eb73b13b9f5b02a5a4104d3345c0f07"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a8eb73b13b9f5b02a5a4104d3345c0f07">validate_in</a> (const Rng &amp;valid_values, const T &amp;value)</td></tr>
-<tr class="separator:a8eb73b13b9f5b02a5a4104d3345c0f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af03b19cffde3419cf786ca2555b40802"><td class="memTemplParams" colspan="2">template&lt;typename Rng , typename T &gt; </td></tr>
+<tr class="memitem:af03b19cffde3419cf786ca2555b40802"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#af03b19cffde3419cf786ca2555b40802">validate_in</a> (Rng const &amp;valid_values, T const &amp;value, std::string const &amp;name)</td></tr>
+<tr class="separator:af03b19cffde3419cf786ca2555b40802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -206,9 +206,6 @@ Variables</h2></td></tr>
 <tr class="separator:a49bf582bc32c85001b9ca42b5a0f1942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15d015459034378c2405495aabcacd35"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefp.html#a15d015459034378c2405495aabcacd35">Exception</a></td></tr>
 <tr class="separator:a15d015459034378c2405495aabcacd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a52c46c8e2559a0185d6fd4d1eba07b"><td class="memItemLeft" align="right" valign="top">const auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefp.html#a3a52c46c8e2559a0185d6fd4d1eba07b">make_named</a></td></tr>
-<tr class="memdesc:a3a52c46c8e2559a0185d6fd4d1eba07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a named error. Useful when validating parameters.  <a href="namespacefp.html#a3a52c46c8e2559a0185d6fd4d1eba07b">More...</a><br /></td></tr>
-<tr class="separator:a3a52c46c8e2559a0185d6fd4d1eba07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ab2fd6c0c6da3190e5f73479e50a69c71"></a>
@@ -923,8 +920,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a8eb73b13b9f5b02a5a4104d3345c0f07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eb73b13b9f5b02a5a4104d3345c0f07">&#9670;&nbsp;</a></span>validate_in()</h2>
+<a id="af03b19cffde3419cf786ca2555b40802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03b19cffde3419cf786ca2555b40802">&#9670;&nbsp;</a></span>validate_in()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -937,14 +934,20 @@ template&lt;typename Rng , typename T &gt; </div>
         <tr>
           <td class="memname">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt;T&gt; fp::validate_in </td>
           <td>(</td>
-          <td class="paramtype">const Rng &amp;&#160;</td>
+          <td class="paramtype">Rng const &amp;&#160;</td>
           <td class="paramname"><em>valid_values</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramtype">T const &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -961,12 +964,12 @@ template&lt;typename Rng , typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="validate_in_8cpp-example.html#a1">validate_in.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8hpp_source.html#l00094">94</a> of file <a class="el" href="validate_8hpp_source.html">validate.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8hpp_source.html#l00095">95</a> of file <a class="el" href="validate_8hpp_source.html">validate.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_cgraph.png" border="0" usemap="#namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_cgraph" alt=""/></div>
-<map name="namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_cgraph" id="namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_cgraph">
+<div class="center"><img src="namespacefp_af03b19cffde3419cf786ca2555b40802_cgraph.png" border="0" usemap="#namespacefp_af03b19cffde3419cf786ca2555b40802_cgraph" alt=""/></div>
+<map name="namespacefp_af03b19cffde3419cf786ca2555b40802_cgraph" id="namespacefp_af03b19cffde3419cf786ca2555b40802_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,120,32"/>
 <area shape="rect" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="168,5,327,32"/>
 </map>
@@ -974,8 +977,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_icgraph.png" border="0" usemap="#namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_icgraph" alt=""/></div>
-<map name="namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_icgraph" id="namespacefp_a8eb73b13b9f5b02a5a4104d3345c0f07_icgraph">
+<div class="center"><img src="namespacefp_af03b19cffde3419cf786ca2555b40802_icgraph.png" border="0" usemap="#namespacefp_af03b19cffde3419cf786ca2555b40802_icgraph" alt=""/></div>
+<map name="namespacefp_af03b19cffde3419cf786ca2555b40802_icgraph" id="namespacefp_af03b19cffde3419cf786ca2555b40802_icgraph">
 <area shape="rect" title=" " alt="" coords="108,5,223,32"/>
 <area shape="rect" href="validate__in_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 </map>
@@ -1199,36 +1202,6 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00093">93</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
-
-</div>
-</div>
-<a id="a3a52c46c8e2559a0185d6fd4d1eba07b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a52c46c8e2559a0185d6fd4d1eba07b">&#9670;&nbsp;</a></span>make_named</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const auto fp::make_named</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](<span class="keyword">const</span> Error&amp; error, <span class="keyword">const</span> std::string&amp; name) {</div>
-<div class="line">  <span class="keywordflow">return</span> Error{.code = error.code,</div>
-<div class="line">               .what = fmt::format(<span class="stringliteral">&quot;{}: {}&quot;</span>, name, error.what)};</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Makes a named error. Useful when validating parameters. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>The error </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Prepends "{name}: " to the <a class="el" href="structfp_1_1Error.html" title="Error type used by Result&lt;T&gt;">Error</a> what string </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="validate_8hpp_source.html#l00111">111</a> of file <a class="el" href="validate_8hpp_source.html">validate.hpp</a>.</p>
 
 </div>
 </div>
