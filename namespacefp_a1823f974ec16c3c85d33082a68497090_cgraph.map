@@ -1,0 +1,5 @@
+<map id="fp::try_to_result" name="fp::try_to_result">
+<area shape="rect" id="node1" title="Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt;" alt="" coords="5,31,131,57"/>
+<area shape="rect" id="node2" href="$namespacefp.html#ab858d18687924bd9947f25d5de916edb" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="197,5,319,32"/>
+<area shape="rect" id="node3" href="$namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="179,56,337,83"/>
+</map>

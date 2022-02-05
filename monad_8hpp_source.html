@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>fp: include/fp/mbind.hpp Source File</title>
+<title>fp: include/fp/monad.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,10 +67,10 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">mbind.hpp</div>  </div>
+<div class="title">monad.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="mbind_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2022, Tyler Weaver</span></div>
+<a href="monad_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2022, Tyler Weaver</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Redistribution and use in source and binary forms, with or without</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// modification, are permitted provided that the following conditions are met:</span></div>
@@ -132,7 +132,7 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> F, <span class="keyword">typename</span> Ret = <span class="keyword">typename</span> std::result_of&lt;F()&gt;::type,</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          <span class="keyword">typename</span> Exp = tl::expected&lt;Ret, std::exception_ptr&gt;&gt;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">  108</a></span>&#160;constexpr Exp <a class="code" href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">mtry</a>(F f) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">  108</a></span>&#160;Exp <a class="code" href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">mtry</a>(F f) {</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> Exp{f()};</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  } <span class="keywordflow">catch</span> (...) {</div>
@@ -154,26 +154,26 @@ $(function() {
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}  <span class="comment">// namespace fp</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> F&gt;</div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">  165</a></span>&#160;constexpr <span class="keyword">auto</span> <a class="code" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a>(<span class="keyword">const</span> std::optional&lt;T&gt;&amp; opt, F f) {</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a">  165</a></span>&#160;constexpr <span class="keyword">auto</span> <a class="code" href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a>(<span class="keyword">const</span> std::optional&lt;T&gt;&amp; opt, F f) {</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(opt, f);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> E, <span class="keyword">typename</span> F,</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;          <span class="keyword">typename</span> Ret = <span class="keyword">typename</span> std::result_of&lt;F(T)&gt;::type&gt;</div>
-<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="mbind_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">  184</a></span>&#160;constexpr Ret <a class="code" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a>(<span class="keyword">const</span> <a class="code" href="classtl_1_1expected.html">tl::expected&lt;T, E&gt;</a>&amp; exp, F f) {</div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="monad_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">  184</a></span>&#160;constexpr Ret <a class="code" href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a>(<span class="keyword">const</span> <a class="code" href="classtl_1_1expected.html">tl::expected&lt;T, E&gt;</a>&amp; exp, F f) {</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(exp, f);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacefp_html_ab150aaacb5c0e80260d14b8a11d0b1bf"><div class="ttname"><a href="namespacefp.html#ab150aaacb5c0e80260d14b8a11d0b1bf">fp::make_opt</a></div><div class="ttdeci">constexpr std::optional&lt; T &gt; make_opt(T value)</div><div class="ttdoc">Makes an optional&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00047">mbind.hpp:47</a></div></div>
+<div class="ttc" id="anamespacefp_html_ab150aaacb5c0e80260d14b8a11d0b1bf"><div class="ttname"><a href="namespacefp.html#ab150aaacb5c0e80260d14b8a11d0b1bf">fp::make_opt</a></div><div class="ttdeci">constexpr std::optional&lt; T &gt; make_opt(T value)</div><div class="ttdoc">Makes an optional&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00047">monad.hpp:47</a></div></div>
 <div class="ttc" id="anamespacetl_html_a01de1a0282a693451af969f35e88bcf9"><div class="ttname"><a href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9">tl::make_unexpected</a></div><div class="ttdeci">unexpected&lt; typename std::decay&lt; E &gt;::type &gt; make_unexpected(E &amp;&amp;e)</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l00178">expected.hpp:178</a></div></div>
-<div class="ttc" id="ambind_8hpp_html_abd8b70189113e335e72d993e2596371a"><div class="ttname"><a href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a></div><div class="ttdeci">constexpr auto operator|(const std::optional&lt; T &gt; &amp;opt, F f)</div><div class="ttdoc">Overload of the | operator as bind.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00165">mbind.hpp:165</a></div></div>
-<div class="ttc" id="anamespacefp_html_a9b1050477e7a529d7ae3c2e1e8cc2296"><div class="ttname"><a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a></div><div class="ttdeci">constexpr auto mcompose(F f, G g)</div><div class="ttdoc">Monadic compose two monad functions.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00128">mbind.hpp:128</a></div></div>
-<div class="ttc" id="anamespacefp_html_afbeecf9dbdf9b3c9e6bfaab97c06fc97"><div class="ttname"><a href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a></div><div class="ttdeci">constexpr auto mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</div><div class="ttdoc">Monad optional bind.</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00063">mbind.hpp:63</a></div></div>
+<div class="ttc" id="amonad_8hpp_html_abd8b70189113e335e72d993e2596371a"><div class="ttname"><a href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a></div><div class="ttdeci">constexpr auto operator|(const std::optional&lt; T &gt; &amp;opt, F f)</div><div class="ttdoc">Overload of the | operator as bind.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00165">monad.hpp:165</a></div></div>
+<div class="ttc" id="anamespacefp_html_a9b1050477e7a529d7ae3c2e1e8cc2296"><div class="ttname"><a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a></div><div class="ttdeci">constexpr auto mcompose(F f, G g)</div><div class="ttdoc">Monadic compose two monad functions.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00128">monad.hpp:128</a></div></div>
+<div class="ttc" id="anamespacefp_html_afbeecf9dbdf9b3c9e6bfaab97c06fc97"><div class="ttname"><a href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a></div><div class="ttdeci">constexpr auto mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</div><div class="ttdoc">Monad optional bind.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00063">monad.hpp:63</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html_a0f173ccbdbb2df23a3a1e80320a335c3"><div class="ttname"><a href="classtl_1_1expected.html#a0f173ccbdbb2df23a3a1e80320a335c3">tl::expected::value</a></div><div class="ttdeci">const TL_EXPECTED_11_CONSTEXPR U &amp; value() const &amp;</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01957">expected.hpp:1957</a></div></div>
-<div class="ttc" id="anamespacefp_html"><div class="ttname"><a href="namespacefp.html">fp</a></div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00035">mbind.hpp:35</a></div></div>
+<div class="ttc" id="anamespacefp_html"><div class="ttname"><a href="namespacefp.html">fp</a></div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00035">monad.hpp:35</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html_aea2a9099a048578ee49e85549cc6ee3d"><div class="ttname"><a href="classtl_1_1expected.html#aea2a9099a048578ee49e85549cc6ee3d">tl::expected::error</a></div><div class="ttdeci">constexpr const E &amp; error() const &amp;</div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l01984">expected.hpp:1984</a></div></div>
-<div class="ttc" id="anamespacefp_html_a9f5aa358134ba4276638cc13438f1a74"><div class="ttname"><a href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">fp::mtry</a></div><div class="ttdeci">constexpr Exp mtry(F f)</div><div class="ttdoc">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T,...</div><div class="ttdef"><b>Definition:</b> <a href="mbind_8hpp_source.html#l00108">mbind.hpp:108</a></div></div>
 <div class="ttc" id="aexpected_8hpp_html"><div class="ttname"><a href="expected_8hpp.html">expected.hpp</a></div></div>
+<div class="ttc" id="anamespacefp_html_aabfbea33056ab12466381b0b6bde7284"><div class="ttname"><a href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">fp::mtry</a></div><div class="ttdeci">Exp mtry(F f)</div><div class="ttdoc">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T,...</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00108">monad.hpp:108</a></div></div>
 <div class="ttc" id="aclasstl_1_1expected_html"><div class="ttname"><a href="classtl_1_1expected.html">tl::expected</a></div><div class="ttdef"><b>Definition:</b> <a href="expected_8hpp_source.html#l00121">expected.hpp:121</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

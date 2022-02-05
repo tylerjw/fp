@@ -134,10 +134,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a0568325d21fdaf20a43afa26b1205189"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a0568325d21fdaf20a43afa26b1205189">mbind</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
 <tr class="memdesc:a0568325d21fdaf20a43afa26b1205189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad tl::expected&lt;T,E&gt;  <a href="namespacefp.html#a0568325d21fdaf20a43afa26b1205189">More...</a><br /></td></tr>
 <tr class="separator:a0568325d21fdaf20a43afa26b1205189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f5aa358134ba4276638cc13438f1a74"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
-<tr class="memitem:a9f5aa358134ba4276638cc13438f1a74"><td class="memTemplItemLeft" align="right" valign="top">constexpr Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">mtry</a> (F f)</td></tr>
-<tr class="memdesc:a9f5aa358134ba4276638cc13438f1a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">More...</a><br /></td></tr>
-<tr class="separator:a9f5aa358134ba4276638cc13438f1a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabfbea33056ab12466381b0b6bde7284"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
+<tr class="memitem:aabfbea33056ab12466381b0b6bde7284"><td class="memTemplItemLeft" align="right" valign="top">Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">mtry</a> (F f)</td></tr>
+<tr class="memdesc:aabfbea33056ab12466381b0b6bde7284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">More...</a><br /></td></tr>
+<tr class="separator:aabfbea33056ab12466381b0b6bde7284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memTemplParams" colspan="2">template&lt;typename F , typename G &gt; </td></tr>
 <tr class="memitem:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">mcompose</a> (F f, G g)</td></tr>
 <tr class="memdesc:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic compose two monad functions.  <a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">More...</a><br /></td></tr>
@@ -160,6 +160,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ae6161b2ffcda278db444bcd60c6764b4"><td class="memTemplParams" colspan="2">template&lt;typename E , typename... Args&gt; </td></tr>
 <tr class="memitem:ae6161b2ffcda278db444bcd60c6764b4"><td class="memTemplItemLeft" align="right" valign="top">constexpr std::optional&lt; E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#ae6161b2ffcda278db444bcd60c6764b4">maybe_error</a> (<a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; Args, E &gt;... args)</td></tr>
 <tr class="separator:ae6161b2ffcda278db444bcd60c6764b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1823f974ec16c3c85d33082a68497090"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = Result&lt;Ret&gt;&gt; </td></tr>
+<tr class="memitem:a1823f974ec16c3c85d33082a68497090"><td class="memTemplItemLeft" align="right" valign="top">Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a1823f974ec16c3c85d33082a68497090">try_to_result</a> (F f)</td></tr>
+<tr class="memdesc:a1823f974ec16c3c85d33082a68497090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt;  <a href="namespacefp.html#a1823f974ec16c3c85d33082a68497090">More...</a><br /></td></tr>
+<tr class="separator:a1823f974ec16c3c85d33082a68497090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8eb73b13b9f5b02a5a4104d3345c0f07"><td class="memTemplParams" colspan="2">template&lt;typename Rng , typename T &gt; </td></tr>
 <tr class="memitem:a8eb73b13b9f5b02a5a4104d3345c0f07"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a8eb73b13b9f5b02a5a4104d3345c0f07">validate_in</a> (const Rng &amp;valid_values, const T &amp;value)</td></tr>
 <tr class="separator:a8eb73b13b9f5b02a5a4104d3345c0f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,7 +225,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00194">194</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00195">195</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +273,7 @@ template&lt;typename T &gt; </div>
 <tr><td class="fieldname"><a id="ab7edc7bd4d0d366ca827a5a09b71f3cca72b49a7cbf0c0e3dff052d091d838252"></a>__END&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00047">47</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00048">48</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -316,7 +320,7 @@ template&lt;typename T , typename E &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>if the expected has an error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00219">219</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00220">220</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -372,7 +376,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A optional&lt;T&gt; containing the value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00047">47</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00047">47</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 
 </div>
 </div>
@@ -419,15 +423,16 @@ template&lt;typename T &gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a9">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#a6">result.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00206">206</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00207">207</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacefp_ab858d18687924bd9947f25d5de916edb_icgraph.png" border="0" usemap="#namespacefp_ab858d18687924bd9947f25d5de916edb_icgraph" alt=""/></div>
 <map name="namespacefp_ab858d18687924bd9947f25d5de916edb_icgraph" id="namespacefp_ab858d18687924bd9947f25d5de916edb_icgraph">
-<area shape="rect" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="235,31,357,57"/>
-<area shape="rect" href="result_8cpp.html#a59232b6fdc2d41566b78c7d8b86ab4ea" title=" " alt="" coords="108,5,187,32"/>
-<area shape="rect" href="maybe__error_8cpp.html#afce0b68664ea5a6a6347dde5777a55eb" title=" " alt="" coords="109,56,186,83"/>
+<area shape="rect" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="281,56,404,83"/>
+<area shape="rect" href="result_8cpp.html#a59232b6fdc2d41566b78c7d8b86ab4ea" title=" " alt="" coords="131,5,210,32"/>
+<area shape="rect" href="maybe__error_8cpp.html#afce0b68664ea5a6a6347dde5777a55eb" title=" " alt="" coords="132,56,209,83"/>
+<area shape="rect" href="namespacefp.html#a1823f974ec16c3c85d33082a68497090" title="Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt;" alt="" coords="108,107,233,133"/>
 <area shape="rect" href="result_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,32"/>
 <area shape="rect" href="maybe__error_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
 </map>
@@ -463,7 +468,7 @@ template&lt;typename E , typename... Args&gt; </div>
 <dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a10">maybe_error.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00234">234</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00235">235</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -539,7 +544,7 @@ template&lt;typename T , typename F &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return type of f </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00063">63</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00063">63</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -547,7 +552,7 @@ Here is the caller graph for this function:</div>
 <map name="namespacefp_afbeecf9dbdf9b3c9e6bfaab97c06fc97_icgraph" id="namespacefp_afbeecf9dbdf9b3c9e6bfaab97c06fc97_icgraph">
 <area shape="rect" title="Monad optional bind." alt="" coords="331,31,415,57"/>
 <area shape="rect" href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296" title="Monadic compose two monad functions." alt="" coords="168,5,283,32"/>
-<area shape="rect" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a" title="Overload of the | operator as bind." alt="" coords="185,56,266,83"/>
+<area shape="rect" href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a" title="Overload of the | operator as bind." alt="" coords="185,56,266,83"/>
 <area shape="rect" href="namespacefp.html#a5dec9dac95def1910da37991cbc6a70b" title="Variadic mcompose." alt="" coords="5,5,120,32"/>
 </map>
 </div>
@@ -609,7 +614,7 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The return type of the function </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00087">87</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00087">87</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -679,7 +684,7 @@ template&lt;typename F , typename G &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A functional composition of two monad functions </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00128">128</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00128">128</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -762,7 +767,7 @@ template&lt;typename T , typename G , typename... Types&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A functional composition of variadic monad functions </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00146">146</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00146">146</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,30 +781,22 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a9f5aa358134ba4276638cc13438f1a74"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f5aa358134ba4276638cc13438f1a74">&#9670;&nbsp;</a></span>mtry()</h2>
+<a id="aabfbea33056ab12466381b0b6bde7284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabfbea33056ab12466381b0b6bde7284">&#9670;&nbsp;</a></span>mtry()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr Exp fp::mtry </td>
+          <td class="memname">Exp fp::mtry </td>
           <td>(</td>
           <td class="paramtype">F&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt; </p>
@@ -819,12 +816,12 @@ template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::typ
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The return value of the function </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00108">108</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00108">108</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacefp_a9f5aa358134ba4276638cc13438f1a74_cgraph.png" border="0" usemap="#namespacefp_a9f5aa358134ba4276638cc13438f1a74_cgraph" alt=""/></div>
-<map name="namespacefp_a9f5aa358134ba4276638cc13438f1a74_cgraph" id="namespacefp_a9f5aa358134ba4276638cc13438f1a74_cgraph">
+<div class="center"><img src="namespacefp_aabfbea33056ab12466381b0b6bde7284_cgraph.png" border="0" usemap="#namespacefp_aabfbea33056ab12466381b0b6bde7284_cgraph" alt=""/></div>
+<map name="namespacefp_aabfbea33056ab12466381b0b6bde7284_cgraph" id="namespacefp_aabfbea33056ab12466381b0b6bde7284_cgraph">
 <area shape="rect" title="Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T,..." alt="" coords="5,5,80,32"/>
 <area shape="rect" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="128,5,287,32"/>
 </map>
@@ -864,7 +861,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00143">143</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00144">144</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -872,6 +869,55 @@ Here is the caller graph for this function:</div>
 <map name="namespacefp_ae52db7081f20720a307a27e1b940cfe1_icgraph" id="namespacefp_ae52db7081f20720a307a27e1b940cfe1_icgraph">
 <area shape="rect" title="convert ErrorCode to string_view for easy formatting" alt="" coords="196,13,323,39"/>
 <area shape="rect" href="structfmt_1_1formatter_3_01fp_1_1Error_01_4.html#a9ce0bd025d08c0e3acb10be903510ffc" title=" " alt="" coords="5,5,148,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1823f974ec16c3c85d33082a68497090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1823f974ec16c3c85d33082a68497090">&#9670;&nbsp;</a></span>try_to_result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = Result&lt;Ret&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Exp fp::try_to_result </td>
+          <td>(</td>
+          <td class="paramtype">F&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt; </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>The function to call</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">F</td><td>The function type </td></tr>
+    <tr><td class="paramname">Ret</td><td>The return value of the function </td></tr>
+    <tr><td class="paramname">Exp</td><td>The expected type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The return value of the function </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00260">260</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacefp_a1823f974ec16c3c85d33082a68497090_cgraph.png" border="0" usemap="#namespacefp_a1823f974ec16c3c85d33082a68497090_cgraph" alt=""/></div>
+<map name="namespacefp_a1823f974ec16c3c85d33082a68497090_cgraph" id="namespacefp_a1823f974ec16c3c85d33082a68497090_cgraph">
+<area shape="rect" title="Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt;" alt="" coords="5,31,131,57"/>
+<area shape="rect" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb" title="Makes a Result&lt;T&gt; from a T value." alt="" coords="197,5,319,32"/>
+<area shape="rect" href="namespacetl.html#a01de1a0282a693451af969f35e88bcf9" title=" " alt="" coords="179,56,337,83"/>
 </map>
 </div>
 
@@ -961,7 +1007,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::ABORTED, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00113">113</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00114">114</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -988,7 +1034,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::ALREADY_EXISTS, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00101">101</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00102">102</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1061,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::CANCELLED, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00086">86</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00087">87</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1088,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::DATA_LOSS, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00128">128</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00129">129</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1069,7 +1115,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::EXCEPTION, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00134">134</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00135">135</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1142,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::FAILED_PRECONDITION, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00110">110</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00111">111</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1123,7 +1169,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::INTERNAL, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00122">122</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00123">123</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1152,7 +1198,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment --><dl class="section examples"><dt>Examples</dt><dd><a class="el" href="maybe_error_8cpp-example.html#a3">maybe_error.cpp</a>, and <a class="el" href="result_8cpp-example.html#a3">result.cpp</a>.</dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00092">92</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00093">93</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1209,7 +1255,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::NOT_FOUND, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00098">98</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00099">99</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1233,7 +1279,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00085">85</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00086">86</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1260,7 +1306,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::OUT_OF_RANGE, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00116">116</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00117">117</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1287,7 +1333,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::PERMISSION_DENINED, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00104">104</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00105">105</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1360,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::RESOURCE_EXHAUSTED, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00107">107</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00108">108</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1341,7 +1387,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::TIMEOUT, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00095">95</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00096">96</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1368,7 +1414,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::UNAUTHENTICATED, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00131">131</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00132">132</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1395,7 +1441,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::UNAVAILABLE, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00125">125</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00126">126</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1422,7 +1468,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::UNIMPLEMENTED, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00119">119</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00120">120</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>
@@ -1449,7 +1495,7 @@ Here is the caller graph for this function:</div>
 <div class="line">  <span class="keywordflow">return</span> Error{ErrorCode::UNKNOWN, what};</div>
 <div class="line">}</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00089">89</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="result_8hpp_source.html#l00090">90</a> of file <a class="el" href="result_8hpp_source.html">result.hpp</a>.</p>
 
 </div>
 </div>

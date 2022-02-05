@@ -16,8 +16,8 @@ var searchData=
   ['maybe_5ferror_130',['maybe_error',['../namespacefp.html#ae6161b2ffcda278db444bcd60c6764b4',1,'fp']]],
   ['maybe_5ferror_2ecpp_131',['maybe_error.cpp',['../maybe__error_8cpp.html',1,'']]],
   ['mbind_132',['mbind',['../namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97',1,'fp::mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))'],['../namespacefp.html#a0568325d21fdaf20a43afa26b1205189',1,'fp::mbind(const tl::expected&lt; T, E &gt; &amp;exp, F f)']]],
-  ['mbind_2ehpp_133',['mbind.hpp',['../mbind_8hpp.html',1,'']]],
-  ['mcompose_134',['mcompose',['../namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296',1,'fp::mcompose(F f, G g)'],['../namespacefp.html#a5dec9dac95def1910da37991cbc6a70b',1,'fp::mcompose(T t, G g, Types... vars)']]],
+  ['mcompose_133',['mcompose',['../namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296',1,'fp::mcompose(F f, G g)'],['../namespacefp.html#a5dec9dac95def1910da37991cbc6a70b',1,'fp::mcompose(T t, G g, Types... vars)']]],
+  ['monad_2ehpp_134',['monad.hpp',['../monad_8hpp.html',1,'']]],
   ['monostate_135',['monostate',['../classtl_1_1monostate.html',1,'tl']]],
-  ['mtry_136',['mtry',['../namespacefp.html#a9f5aa358134ba4276638cc13438f1a74',1,'fp']]]
+  ['mtry_136',['mtry',['../namespacefp.html#aabfbea33056ab12466381b0b6bde7284',1,'fp']]]
 ];

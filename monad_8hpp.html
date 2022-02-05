@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>fp: include/fp/mbind.hpp File Reference</title>
+<title>fp: include/fp/monad.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,17 +70,17 @@ $(function() {
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">mbind.hpp File Reference</div>  </div>
+<div class="title">monad.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &quot;<a class="el" href="expected_8hpp_source.html">fp/_external/expected.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for mbind.hpp:</div>
+Include dependency graph for monad.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="mbind_8hpp__incl.png" border="0" usemap="#include_2fp_2mbind_8hpp" alt=""/></div>
-<map name="include_2fp_2mbind_8hpp" id="include_2fp_2mbind_8hpp">
-<area shape="rect" title=" " alt="" coords="57,5,216,32"/>
+<div class="center"><img src="monad_8hpp__incl.png" border="0" usemap="#include_2fp_2monad_8hpp" alt=""/></div>
+<map name="include_2fp_2monad_8hpp" id="include_2fp_2monad_8hpp">
+<area shape="rect" title=" " alt="" coords="55,5,218,32"/>
 <area shape="rect" title=" " alt="" coords="21,80,95,107"/>
 <area shape="rect" href="expected_8hpp.html" title=" " alt="" coords="119,80,311,107"/>
 <area shape="rect" title=" " alt="" coords="5,155,92,181"/>
@@ -92,9 +92,9 @@ Include dependency graph for mbind.hpp:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="mbind_8hpp__dep__incl.png" border="0" usemap="#include_2fp_2mbind_8hppdep" alt=""/></div>
-<map name="include_2fp_2mbind_8hppdep" id="include_2fp_2mbind_8hppdep">
-<area shape="rect" title=" " alt="" coords="437,5,596,32"/>
+<div class="center"><img src="monad_8hpp__dep__incl.png" border="0" usemap="#include_2fp_2monad_8hppdep" alt=""/></div>
+<map name="include_2fp_2monad_8hppdep" id="include_2fp_2monad_8hppdep">
+<area shape="rect" title=" " alt="" coords="435,5,598,32"/>
 <area shape="rect" href="all_8hpp.html" title=" " alt="" coords="449,80,584,107"/>
 <area shape="rect" href="maybe__error_8cpp.html" title=" " alt="" coords="5,155,204,181"/>
 <area shape="rect" href="no__discard_8cpp.html" title=" " alt="" coords="229,155,415,181"/>
@@ -104,7 +104,7 @@ This graph shows which files directly or indirectly include this file:</div>
 </map>
 </div>
 </div>
-<p><a href="mbind_8hpp_source.html">Go to the source code of this file.</a></p>
+<p><a href="monad_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -125,10 +125,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a0568325d21fdaf20a43afa26b1205189"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a0568325d21fdaf20a43afa26b1205189">fp::mbind</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
 <tr class="memdesc:a0568325d21fdaf20a43afa26b1205189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monad tl::expected&lt;T,E&gt;  <a href="namespacefp.html#a0568325d21fdaf20a43afa26b1205189">More...</a><br /></td></tr>
 <tr class="separator:a0568325d21fdaf20a43afa26b1205189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f5aa358134ba4276638cc13438f1a74"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
-<tr class="memitem:a9f5aa358134ba4276638cc13438f1a74"><td class="memTemplItemLeft" align="right" valign="top">constexpr Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">fp::mtry</a> (F f)</td></tr>
-<tr class="memdesc:a9f5aa358134ba4276638cc13438f1a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacefp.html#a9f5aa358134ba4276638cc13438f1a74">More...</a><br /></td></tr>
-<tr class="separator:a9f5aa358134ba4276638cc13438f1a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabfbea33056ab12466381b0b6bde7284"><td class="memTemplParams" colspan="2">template&lt;typename F , typename Ret  = typename std::result_of&lt;F()&gt;::type, typename Exp  = tl::expected&lt;Ret, std::exception_ptr&gt;&gt; </td></tr>
+<tr class="memitem:aabfbea33056ab12466381b0b6bde7284"><td class="memTemplItemLeft" align="right" valign="top">Exp&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">fp::mtry</a> (F f)</td></tr>
+<tr class="memdesc:aabfbea33056ab12466381b0b6bde7284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T, std::exception_ptr&gt;  <a href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">More...</a><br /></td></tr>
+<tr class="separator:aabfbea33056ab12466381b0b6bde7284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memTemplParams" colspan="2">template&lt;typename F , typename G &gt; </td></tr>
 <tr class="memitem:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a> (F f, G g)</td></tr>
 <tr class="memdesc:a9b1050477e7a529d7ae3c2e1e8cc2296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monadic compose two monad functions.  <a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">More...</a><br /></td></tr>
@@ -138,12 +138,12 @@ Functions</h2></td></tr>
 <tr class="memdesc:a5dec9dac95def1910da37991cbc6a70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variadic mcompose.  <a href="namespacefp.html#a5dec9dac95def1910da37991cbc6a70b">More...</a><br /></td></tr>
 <tr class="separator:a5dec9dac95def1910da37991cbc6a70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename F &gt; </td></tr>
-<tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a> (const std::optional&lt; T &gt; &amp;opt, F f)</td></tr>
-<tr class="memdesc:abd8b70189113e335e72d993e2596371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#abd8b70189113e335e72d993e2596371a">More...</a><br /></td></tr>
+<tr class="memitem:abd8b70189113e335e72d993e2596371a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a">operator|</a> (const std::optional&lt; T &gt; &amp;opt, F f)</td></tr>
+<tr class="memdesc:abd8b70189113e335e72d993e2596371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="monad_8hpp.html#abd8b70189113e335e72d993e2596371a">More...</a><br /></td></tr>
 <tr class="separator:abd8b70189113e335e72d993e2596371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E , typename F , typename Ret  = typename std::result_of&lt;F(T)&gt;::type&gt; </td></tr>
-<tr class="memitem:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="mbind_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">operator|</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
-<tr class="memdesc:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="mbind_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">More...</a><br /></td></tr>
+<tr class="memitem:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memTemplItemLeft" align="right" valign="top">constexpr Ret&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="monad_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">operator|</a> (const <a class="el" href="classtl_1_1expected.html">tl::expected</a>&lt; T, E &gt; &amp;exp, F f)</td></tr>
+<tr class="memdesc:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of the | operator as bind.  <a href="monad_8hpp.html#a6ca497ee78636570bc7ca9a61a5f5c7c">More...</a><br /></td></tr>
 <tr class="separator:a6ca497ee78636570bc7ca9a61a5f5c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -200,12 +200,12 @@ template&lt;typename T , typename F &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return type of f </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00165">165</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00165">165</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph.png" border="0" usemap="#mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" alt=""/></div>
-<map name="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" id="mbind_8hpp_abd8b70189113e335e72d993e2596371a_cgraph">
+<div class="center"><img src="monad_8hpp_abd8b70189113e335e72d993e2596371a_cgraph.png" border="0" usemap="#monad_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" alt=""/></div>
+<map name="monad_8hpp_abd8b70189113e335e72d993e2596371a_cgraph" id="monad_8hpp_abd8b70189113e335e72d993e2596371a_cgraph">
 <area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
 <area shape="rect" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97" title="Monad optional bind." alt="" coords="135,5,219,32"/>
 </map>
@@ -268,12 +268,12 @@ template&lt;typename T , typename E , typename F , typename Ret  = typename std:
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The return type of the function </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="mbind_8hpp_source.html#l00184">184</a> of file <a class="el" href="mbind_8hpp_source.html">mbind.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="monad_8hpp_source.html#l00184">184</a> of file <a class="el" href="monad_8hpp_source.html">monad.hpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph.png" border="0" usemap="#mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" alt=""/></div>
-<map name="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" id="mbind_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph">
+<div class="center"><img src="monad_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph.png" border="0" usemap="#monad_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" alt=""/></div>
+<map name="monad_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph" id="monad_8hpp_a6ca497ee78636570bc7ca9a61a5f5c7c_cgraph">
 <area shape="rect" title="Overload of the | operator as bind." alt="" coords="5,5,87,32"/>
 <area shape="rect" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97" title="Monad optional bind." alt="" coords="135,5,219,32"/>
 </map>

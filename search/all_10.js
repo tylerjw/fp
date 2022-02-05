@@ -5,7 +5,7 @@ var searchData=
   ['tag_179',['tag',['../structtl_1_1detail_1_1swap__adl__tests_1_1tag.html',1,'tl::detail::swap_adl_tests']]],
   ['tc_180',['TC',['../structtl_1_1detail_1_1TC.html',1,'tl::detail']]],
   ['throw_5fexception_181',['throw_exception',['../namespacetl_1_1detail.html#aa5e6dc2362309394a354a099490713ea',1,'tl::detail']]],
-  ['timeout_182',['TIMEOUT',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca070a0fb40f6c308ab544b227660aadff',1,'fp::TIMEOUT()'],['../namespacefp.html#a2529e081aee9494c26baa4b6577d4b18',1,'fp::Timeout()']]],
+  ['timeout_182',['Timeout',['../namespacefp.html#a2529e081aee9494c26baa4b6577d4b18',1,'fp::Timeout()'],['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca070a0fb40f6c308ab544b227660aadff',1,'fp::TIMEOUT()']]],
   ['tl_183',['tl',['../namespacetl.html',1,'']]],
   ['tl_5fexpected_5f11_5fconstexpr_184',['TL_EXPECTED_11_CONSTEXPR',['../expected_8hpp.html#afcf2885de795b56720e6b1859f024878',1,'expected.hpp']]],
   ['tl_5fexpected_5fgcc49_5fconstexpr_185',['TL_EXPECTED_GCC49_CONSTEXPR',['../expected_8hpp.html#a1e481c5da9cbeafb13bc26e7d56b4174',1,'expected.hpp']]],
@@ -21,5 +21,6 @@ var searchData=
   ['to_195',['to',['../structfp_1_1validate__range.html#a889b668ac55b05338cc421f5f99883d1',1,'fp::validate_range']]],
   ['tostringview_196',['toStringView',['../namespacefp.html#ae52db7081f20720a307a27e1b940cfe1',1,'fp']]],
   ['transform_197',['transform',['../classtl_1_1expected.html#a74da316fae7d5bca90c432f5f5c771b0',1,'tl::expected::transform()'],['../classtl_1_1expected.html#a707ec3e992fcdbb51e0609bac58c6489',1,'tl::expected::transform()'],['../classtl_1_1expected.html#a599c8f85ed9c43e09a3fa3258213a07c',1,'tl::expected::transform()'],['../classtl_1_1expected.html#a7c688b3550927481a7af57b12c8a9997',1,'tl::expected::transform(F &amp;&amp;f) &amp;&amp;']]],
-  ['type_198',['type',['../structtl_1_1detail_1_1invoke__result__impl_3_01F_00_01decltype_07detail_1_1invoke_07std_1_1declvcbceb13962854eff875073298b31c9c4.html#a4d5adc2f2bf22b54507454d55ecb865b',1,'tl::detail::invoke_result_impl&lt; F, decltype(detail::invoke(std::declval&lt; F &gt;(), std::declval&lt; Us &gt;()...), void()), Us... &gt;']]]
+  ['try_5fto_5fresult_198',['try_to_result',['../namespacefp.html#a1823f974ec16c3c85d33082a68497090',1,'fp']]],
+  ['type_199',['type',['../structtl_1_1detail_1_1invoke__result__impl_3_01F_00_01decltype_07detail_1_1invoke_07std_1_1declvcbceb13962854eff875073298b31c9c4.html#a4d5adc2f2bf22b54507454d55ecb865b',1,'tl::detail::invoke_result_impl&lt; F, decltype(detail::invoke(std::declval&lt; F &gt;(), std::declval&lt; Us &gt;()...), void()), Us... &gt;']]]
 ];

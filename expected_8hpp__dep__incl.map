@@ -1,12 +1,12 @@
 <map id="include/fp/_external/expected.hpp" name="include/fp/_external/expected.hpp">
 <area shape="rect" id="node1" title=" " alt="" coords="383,5,533,47"/>
 <area shape="rect" id="node2" href="$all_8hpp.html" title=" " alt="" coords="449,244,584,271"/>
-<area shape="rect" id="node8" href="$mbind_8hpp.html" title=" " alt="" coords="379,169,537,196"/>
-<area shape="rect" id="node9" href="$result_8hpp.html" title=" " alt="" coords="498,95,653,121"/>
+<area shape="rect" id="node8" href="$monad_8hpp.html" title=" " alt="" coords="377,169,539,196"/>
+<area shape="rect" id="node9" href="$result_8hpp.html" title=" " alt="" coords="499,95,654,121"/>
 <area shape="rect" id="node3" href="$maybe__error_8cpp.html" title=" " alt="" coords="5,319,204,345"/>
 <area shape="rect" id="node4" href="$no__discard_8cpp.html" title=" " alt="" coords="229,319,415,345"/>
 <area shape="rect" id="node5" href="$result_8cpp.html" title=" " alt="" coords="439,319,594,345"/>
 <area shape="rect" id="node6" href="$validate__in_8cpp.html" title=" " alt="" coords="618,319,807,345"/>
 <area shape="rect" id="node7" href="$validate__range_8cpp.html" title=" " alt="" coords="832,319,1047,345"/>
-<area shape="rect" id="node10" href="$validate_8hpp.html" title=" " alt="" coords="613,169,783,196"/>
+<area shape="rect" id="node10" href="$validate_8hpp.html" title=" " alt="" coords="614,169,785,196"/>
 </map>
