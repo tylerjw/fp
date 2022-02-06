@@ -6,5 +6,5 @@ var searchData=
   ['fp_15',['fp',['../namespacefp.html',1,'']]],
   ['from_16',['from',['../structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce',1,'fp::validate_range']]],
   ['fp_17',['fp',['../index.html',1,'']]],
-  ['functions_20that_20can_20fail_18',['Functions that can fail',['../md_doc_1_functions_that_can_fail.html',1,'']]]
+  ['functions_20that_20can_20fail_18',['Functions that can fail',['../md_doc_1_returning_results.html',1,'']]]
 ];
