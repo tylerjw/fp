@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>fp: fp</title>
+<title>fp: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -23,7 +27,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">fp
    </div>
-   <div id="projectbrief">FP (Functional Programming) extensions for C++</div>
+   <div id="projectbrief">Functional Programming extensions to C++ for ROS projects.</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +51,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,62 +81,20 @@ $(function() {
 </iframe>
 </div>
 
-<div class="PageDoc"><div class="header">
+<div class="header">
   <div class="headertitle">
-<div class="title">fp </div>  </div>
+<div class="title">fp Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>FP (Functional Programming) extensions for C++</p>
-<p><a href="https://github.com/tylerjw/fp/actions/workflows/ci.yaml?query=branch%3Amain"><object type="image/svg+xml" data="https://github.com/tylerjw/fp/actions/workflows/ci.yaml/badge.svg?branch=main" style="pointer-events: none;">CI</object></a> <a href="https://github.com/tylerjw/fp/actions/workflows/doxygen.yaml?query=branch%3Amain"><object type="image/svg+xml" data="https://github.com/tylerjw/fp/actions/workflows/doxygen.yaml/badge.svg?branch=main" style="pointer-events: none;">Doxygen</object></a> <a href="https://tylerjw.testspace.com/spaces/162241?utm_campaign=badge&amp;utm_medium=referral&amp;utm_source=test" title="Test Cases"><img src="https://tylerjw.testspace.com/spaces/162241/badge?token=942f36be0e57d277368e06dd911d23098a89be84" alt="Space Metric" class="inline"/></a> <a href="https://codecov.io/gh/tylerjw/fp"><object type="image/svg+xml" data="https://codecov.io/gh/tylerjw/fp/branch/main/graph/badge.svg?token=W7uHKcY0ly" style="pointer-events: none;">Code Coverage</object></a></p>
-<p><a href="https://github.com/tylerjw/fp/blob/main/LICENSE"><img src="https://img.shields.io/github/license/tylerjw/fp" alt="license" class="inline"/></a> <a href="#"><img src="https://img.shields.io/badge/C%2B%2B-17-blue" alt="cpp" class="inline"/></a> <a href="#"><img src="https://img.shields.io/badge/ROS-rolling-blue" alt="ROS" class="inline"/></a> <a href="#"><img src="https://img.shields.io/badge/Dependencies-fmt%2C%20range--v3-blue" alt="Dependencies" class="inline"/></a> <a href="#"><img src="https://img.shields.io/badge/Released-no!-red" alt="Released" class="inline"/></a></p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Getting started</h1>
-<p><b>upstream.repos</b> </p><div class="fragment"><div class="line">fp:</div>
-<div class="line">  type: git</div>
-<div class="line">  url: https://github.com/tylerjw/fp</div>
-<div class="line">  version: main</div>
-</div><!-- fragment --><p><b>package.xml</b> </p><div class="fragment"><div class="line">&lt;<span class="keywordtype">depend</span>&gt;<span class="keyword">fp</span>&lt;/<span class="keywordtype">depend</span>&gt;</div>
-</div><!-- fragment --><p><b>CMakeLists.txt</b> </p><div class="fragment"><div class="line">find_package(fp REQUIRED)</div>
-<div class="line"> </div>
-<div class="line">target_link_libraries(your_library</div>
-<div class="line">  fp::fp</div>
-<div class="line">)</div>
-</div><!-- fragment --><p><b>include in source</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="all_8hpp.html">fp/all.hpp</a>&gt;</span></div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
-Tutorials</h1>
-<ol type="1">
-<li><a class="el" href="md_doc_1_functions_that_can_fail.html">Functions that can fail</a></li>
-<li><a class="el" href="md_doc_2_combining_results.html">Combining Result&lt;T&gt;s</a></li>
-<li><a class="el" href="md_doc_3_chaining_functions.html">Chaining functions that return Result&lt;T&gt;</a></li>
-<li><a class="el" href="md_doc_4_validate.html">Validating values</a></li>
-</ol>
-<p><a href="https://tylerjw.github.io/fp/">API Documentation</a></p>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Vendored libraries</h1>
-<ul>
-<li><a href="https://tl.tartanllama.xyz/en/latest/api/expected.html#tl-expected">tl::expected library</a></li>
-</ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Interface Dependencies</h1>
-<p>These dependencies are added to the cmake INTERFACE library <code>fp</code>.</p>
-<ul>
-<li><a href="https://fmt.dev/latest/index.html">fmtlib: A modern formatting library</a></li>
-<li><a href="https://ericniebler.github.io/range-v3/">range-v3: Range library, basis for C++20's std::ranges</a></li>
-</ul>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Achnologements</h1>
-<ul>
-<li><a href="https://www.manning.com/books/functional-programming-in-c-plus-plus">'Functional Programming in C++' by Ivan Čukić</a></li>
-<li><a href="https://github.com/abseil/abseil-cpp/blob/master/absl/status/statusor.h">ABSL <code>StatusOr</code></a> </li>
-</ul>
-</div></div><!-- PageDoc -->
 </div><!-- contents -->
-<div class="ttc" id="aall_8hpp_html"><div class="ttname"><a href="all_8hpp.html">all.hpp</a></div></div>
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.17
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
 </body>
 </html>

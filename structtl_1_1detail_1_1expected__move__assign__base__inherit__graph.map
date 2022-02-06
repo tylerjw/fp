@@ -1,8 +1,0 @@
-<map id="tl::detail::expected_move_assign_base&lt; T, E, bool &gt;" name="tl::detail::expected_move_assign_base&lt; T, E, bool &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="16,452,196,508"/>
-<area shape="rect" id="node2" href="$structtl_1_1detail_1_1expected__copy__assign__base.html" title=" " alt="" coords="5,363,207,404"/>
-<area shape="rect" id="node3" href="$structtl_1_1detail_1_1expected__move__base.html" title=" " alt="" coords="27,273,185,315"/>
-<area shape="rect" id="node4" href="$structtl_1_1detail_1_1expected__copy__base.html" title=" " alt="" coords="30,184,182,225"/>
-<area shape="rect" id="node5" href="$structtl_1_1detail_1_1expected__operations__base.html" title=" " alt="" coords="11,95,201,136"/>
-<area shape="rect" id="node6" href="$structtl_1_1detail_1_1expected__storage__base.html" title=" " alt="" coords="21,5,191,47"/>
-</map>

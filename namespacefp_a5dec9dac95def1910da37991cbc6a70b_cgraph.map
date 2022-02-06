@@ -1,5 +1,0 @@
-<map id="fp::mcompose" name="fp::mcompose">
-<area shape="rect" id="node1" title="Variadic mcompose." alt="" coords="5,5,120,32"/>
-<area shape="rect" id="node2" href="$namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296" title="Monadic compose two monad functions." alt="" coords="168,5,283,32"/>
-<area shape="rect" id="node3" href="$namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97" title="Monad optional bind." alt="" coords="331,5,415,32"/>
-</map>

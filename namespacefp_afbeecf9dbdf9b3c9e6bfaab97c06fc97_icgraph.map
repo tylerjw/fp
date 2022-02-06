@@ -1,6 +1,0 @@
-<map id="fp::mbind" name="fp::mbind">
-<area shape="rect" id="node1" title="Monad optional bind." alt="" coords="331,31,415,57"/>
-<area shape="rect" id="node2" href="$namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296" title="Monadic compose two monad functions." alt="" coords="168,5,283,32"/>
-<area shape="rect" id="node4" href="$monad_8hpp.html#abd8b70189113e335e72d993e2596371a" title="Overload of the | operator as bind." alt="" coords="185,56,266,83"/>
-<area shape="rect" id="node3" href="$namespacefp.html#a5dec9dac95def1910da37991cbc6a70b" title="Variadic mcompose." alt="" coords="5,5,120,32"/>
-</map>
