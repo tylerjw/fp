@@ -22,12 +22,68 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "fp", "index.html", ]
+  [ "fp", "index.html", [
+    [ "Tutorials", "index.html#autotoc_md31", null ],
+    [ "Getting started", "md_doc_0_getting_started.html", [
+      [ "Next tutorial", "md_doc_0_getting_started.html#autotoc_md1", null ]
+    ] ],
+    [ "Functions that can fail", "md_doc_1_functions_that_can_fail.html", [
+      [ "Returning a Result<T>", "md_doc_1_functions_that_can_fail.html#autotoc_md3", [
+        [ "tl::make_unexpected", "md_doc_1_functions_that_can_fail.html#autotoc_md4", null ],
+        [ "Error Types", "md_doc_1_functions_that_can_fail.html#autotoc_md5", null ],
+        [ "Returning a value type", "md_doc_1_functions_that_can_fail.html#autotoc_md6", null ]
+      ] ],
+      [ "Calling a function that returns a Result<T>", "md_doc_1_functions_that_can_fail.html#autotoc_md7", null ],
+      [ "Helper functions", "md_doc_1_functions_that_can_fail.html#autotoc_md8", null ],
+      [ "Summary", "md_doc_1_functions_that_can_fail.html#autotoc_md9", null ],
+      [ "Next Tutorial", "md_doc_1_functions_that_can_fail.html#autotoc_md10", null ]
+    ] ],
+    [ "Combining Result<T>s", "md_doc_2_combining_results.html", [
+      [ "Calling the functions that can fail", "md_doc_2_combining_results.html#autotoc_md12", [
+        [ "Testing if any of them failed", "md_doc_2_combining_results.html#autotoc_md13", null ],
+        [ "Using the valid results", "md_doc_2_combining_results.html#autotoc_md14", null ]
+      ] ],
+      [ "Summary", "md_doc_2_combining_results.html#autotoc_md15", null ],
+      [ "Next Tutorial", "md_doc_2_combining_results.html#autotoc_md16", null ]
+    ] ],
+    [ "Chaining monadic functions", "md_doc_3_chaining_functions.html", [
+      [ "Example Functions", "md_doc_3_chaining_functions.html#autotoc_md18", null ],
+      [ "The monadic bind function", "md_doc_3_chaining_functions.html#autotoc_md19", null ],
+      [ "The operator| overload", "md_doc_3_chaining_functions.html#autotoc_md20", null ],
+      [ "The FP extensions from tl::expected", "md_doc_3_chaining_functions.html#autotoc_md21", null ],
+      [ "Reasining about computations without values", "md_doc_3_chaining_functions.html#autotoc_md22", null ],
+      [ "Summary", "md_doc_3_chaining_functions.html#autotoc_md23", null ],
+      [ "Next Tutorial", "md_doc_3_chaining_functions.html#autotoc_md24", null ]
+    ] ],
+    [ "Tools for Validating", "md_doc_4_validate.html", [
+      [ "Validate in", "md_doc_4_validate.html#autotoc_md26", null ],
+      [ "Validate Range", "md_doc_4_validate.html#autotoc_md27", null ],
+      [ "Validating multiple items", "md_doc_4_validate.html#autotoc_md28", null ],
+      [ "Summary", "md_doc_4_validate.html#autotoc_md29", null ]
+    ] ],
+    [ "Namespace Members", "namespacemembers.html", [
+      [ "All", "namespacemembers.html", null ],
+      [ "Functions", "namespacemembers_func.html", null ],
+      [ "Variables", "namespacemembers_vars.html", null ],
+      [ "Typedefs", "namespacemembers_type.html", null ],
+      [ "Enumerations", "namespacemembers_enum.html", null ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Examples", "examples.html", "examples" ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
