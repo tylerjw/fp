@@ -23,8 +23,8 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "fp", "index.html", [
-    [ "Tutorials", "index.html#autotoc_md31", null ],
     [ "Getting started", "md_doc_0_getting_started.html", [
+      [ "Tutorials", "index.html#autotoc_md31", null ],
       [ "Next tutorial", "md_doc_0_getting_started.html#autotoc_md1", null ]
     ] ],
     [ "Functions that can fail", "md_doc_1_functions_that_can_fail.html", [
@@ -57,7 +57,7 @@ var NAVTREE =
     ] ],
     [ "Tools for Validating", "md_doc_4_validate.html", [
       [ "Validate in", "md_doc_4_validate.html#autotoc_md26", null ],
-      [ "Validate Range", "md_doc_4_validate.html#autotoc_md27", null ],
+      [ "Validate range", "md_doc_4_validate.html#autotoc_md27", null ],
       [ "Validating multiple items", "md_doc_4_validate.html#autotoc_md28", null ],
       [ "Summary", "md_doc_4_validate.html#autotoc_md29", null ]
     ] ],
