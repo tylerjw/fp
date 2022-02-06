@@ -6,9 +6,22 @@ FP (Functional Programming) extensions for C++
 [![Doxygen](https://github.com/tylerjw/fp/actions/workflows/doxygen.yaml/badge.svg?branch=main)](https://github.com/tylerjw/fp/actions/workflows/doxygen.yaml?query=branch%3Amain)
 [![Space Metric](https://tylerjw.testspace.com/spaces/162241/badge?token=942f36be0e57d277368e06dd911d23098a89be84)](https://tylerjw.testspace.com/spaces/162241?utm_campaign=badge&utm_medium=referral&utm_source=test "Test Cases")
 [![Code Coverage](https://codecov.io/gh/tylerjw/fp/branch/main/graph/badge.svg?token=W7uHKcY0ly)](https://codecov.io/gh/tylerjw/fp)
+
 [![license](https://img.shields.io/github/license/tylerjw/fp)](https://github.com/tylerjw/fp/blob/main/LICENSE)
+[![cpp](https://img.shields.io/badge/C%2B%2B-17-blue)](#)
+[![ROS](https://img.shields.io/badge/ROS-rolling-blue)](#)
+[![Dependencies](https://img.shields.io/badge/Dependencies-fmt%2C%20range--v3-blue)](#)
+[![Released](https://img.shields.io/badge/Released-no!-red)](#)
 
 ## Getting started
+
+**upstream.repos**
+```yaml
+  fp:
+    type: git
+    url: https://github.com/tylerjw/fp
+    version: main
+```
 
 **package.xml**
 ```xml
