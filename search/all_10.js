@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['unauthenticated_200',['Unauthenticated',['../namespacefp.html#a49bf582bc32c85001b9ca42b5a0f1942',1,'fp::Unauthenticated()'],['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca456dc2351b6dbb9db3b40552b2e8c5a9',1,'fp::UNAUTHENTICATED()']]],
-  ['unavailable_201',['Unavailable',['../namespacefp.html#a09adfeacfa1ad33ed6ee12324ec699fe',1,'fp::Unavailable()'],['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca084f4ca2c0fe703e46514a144b4d6ead',1,'fp::UNAVAILABLE()']]],
-  ['unexpect_5ft_202',['unexpect_t',['../structtl_1_1unexpect__t.html',1,'tl::unexpect_t'],['../structtl_1_1unexpect__t.html#ad94db1708740d2d3fd60aac010b95a69',1,'tl::unexpect_t::unexpect_t()']]],
-  ['unexpected_203',['unexpected',['../classtl_1_1unexpected.html',1,'tl::unexpected&lt; E &gt;'],['../classtl_1_1unexpected.html#ade43638e3b95ea0cf7ac70a7a71619cb',1,'tl::unexpected::unexpected()=delete'],['../classtl_1_1unexpected.html#a1550c67187a881cfdb309248894eeaf2',1,'tl::unexpected::unexpected(const E &amp;e)'],['../classtl_1_1unexpected.html#ac6a93c792d2212941647aab8961ae95f',1,'tl::unexpected::unexpected(E &amp;&amp;e)']]],
-  ['unexpected_5ftype_204',['unexpected_type',['../classtl_1_1expected.html#ad7177eece2a4d803f244ef2a19b14c46',1,'tl::expected']]],
-  ['unimplemented_205',['Unimplemented',['../namespacefp.html#ae0e7256ba961aca8d5407dfce1d760c2',1,'fp::Unimplemented()'],['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccaaa528108d473f663f8947b4d16e7c13c',1,'fp::UNIMPLEMENTED()']]],
-  ['unknown_206',['UNKNOWN',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca696b031073e74bf2cb98e5ef201d4aa3',1,'fp::UNKNOWN()'],['../namespacefp.html#a8e38cd143ac13ab9a09402c4dcb262c0',1,'fp::Unknown()']]],
-  ['uses_5fstd_207',['uses_std',['../namespacetl_1_1detail_1_1swap__adl__tests.html#ae78e4f3ea4f160cf3b7b116199a8dee0',1,'tl::detail::swap_adl_tests::uses_std()'],['../namespacetl_1_1detail_1_1swap__adl__tests.html#a0fa5e6edd0bffbdd56c74eef0c1da04e',1,'tl::detail::swap_adl_tests::uses_std(...)']]]
+  ['parse_168',['parse',['../structfmt_1_1formatter_3_01fp_1_1Error_01_4.html#ad70bbff82a8134085b0199782f0f23b5',1,'fmt::formatter&lt; fp::Error &gt;::parse()'],['../structfmt_1_1formatter_3_01fp_1_1Result_3_01T_01_4_01_4.html#a064100071ff776d6ffb6b093c0f05275',1,'fmt::formatter&lt; fp::Result&lt; T &gt; &gt;::parse()']]],
+  ['permission_5fdenied_169',['PERMISSION_DENIED',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca255df50c140519133f1489ab44a389d9',1,'fp']]],
+  ['permissiondenied_170',['PermissionDenied',['../namespacefp.html#ac4a66b14097b5f9257f8e9f485770c28',1,'fp']]],
+  ['print_5ferrors_171',['print_errors',['../result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8',1,'result.cpp']]]
 ];

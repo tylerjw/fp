@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_293',['README.md',['../README_8md.html',1,'']]],
-  ['result_2ecpp_294',['result.cpp',['../result_8cpp.html',1,'']]],
-  ['result_2ehpp_295',['result.hpp',['../result_8hpp.html',1,'']]]
+  ['cmakelists_2etxt_299',['CMakeLists.txt',['../CMakeLists_8txt.html',1,'(Global Namespace)'],['../examples_2CMakeLists_8txt.html',1,'(Global Namespace)']]],
+  ['contributing_2emd_300',['CONTRIBUTING.md',['../CONTRIBUTING_8md.html',1,'']]]
 ];

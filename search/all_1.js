@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bad_5fexpected_5faccess_8',['bad_expected_access',['../classtl_1_1bad__expected__access.html',1,'tl::bad_expected_access&lt; E &gt;'],['../classtl_1_1bad__expected__access.html#a0fba3223b81997e499cded09ec0d6d16',1,'tl::bad_expected_access::bad_expected_access()']]]
+  ['2_5fcombining_5fresults_2emd_1',['2_combining_results.md',['../2__combining__results_8md.html',1,'(Global Namespace)'],['../_22__combining__results_8md.html',1,'(Global Namespace)']]]
 ];
