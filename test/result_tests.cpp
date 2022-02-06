@@ -255,7 +255,7 @@ TEST(ResultTests, StringToViewNoThrow) {
   // GIVEN each type of error
   const auto each_type_of_error =
       ranges::views::iota(static_cast<int>(fp::ErrorCode::OK),
-                          static_cast<int>(fp::ErrorCode::__END)) |
+                          static_cast<int>(fp::ErrorCode::EXCEPTION) + 1) |
       ranges::views::transform(
           [](int i) { return static_cast<fp::ErrorCode>(i); }) |
       ranges::to<std::vector>();

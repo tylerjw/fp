@@ -64,7 +64,6 @@ enum class ErrorCode : int {
   DATA_LOSS,
   UNAUTHENTICATED,
   EXCEPTION,
-  __END,
 };
 
 /**
@@ -179,11 +178,9 @@ constexpr auto Exception = [](const std::string& what = "") {
       return "Unauthenticated";
     case ErrorCode::EXCEPTION:
       return "Exception";
-    case ErrorCode::__END:
+    default:
       __builtin_unreachable();
   }
-
-  __builtin_unreachable();
 }
 
 /**
