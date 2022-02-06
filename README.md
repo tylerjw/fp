@@ -42,11 +42,18 @@ target_link_libraries(your_library
 #include <fp/all.hpp>
 ```
 
-For more info see the [:memo: Detailed Documentation](https://tylerjw.github.io/fp/)
+## Tutorials
+
+1. [Functions that can fail](doc/1_functions_that_can_fail.md)
+2. [Combining Result<T>s](doc/2_combining_results.md)
+3. [Chaining functions that return Result<T>](doc/3_chaining_functions.md)
+4. [Validating values](doc/4_validate.md)
+
+[API Documentation](https://tylerjw.github.io/fp/)
 
 ## Vendored libraries
 
-- [tl::expected library](https://github.com/TartanLlama/expected)
+- [tl::expected library](https://tl.tartanllama.xyz/en/latest/api/expected.html#tl-expected)
 
 ## Interface Dependencies
 

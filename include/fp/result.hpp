@@ -46,14 +46,13 @@ namespace fp {
  * @brief      Enum for ErrorCodes inspired by absl::StatusCode
  */
 enum class ErrorCode : int {
-  OK,
-  CANCELLED,
   UNKNOWN,
+  CANCELLED,
   INVALID_ARGUMENT,
   TIMEOUT,
   NOT_FOUND,
   ALREADY_EXISTS,
-  PERMISSION_DENINED,
+  PERMISSION_DENIED,
   RESOURCE_EXHAUSTED,
   FAILED_PRECONDITION,
   ABORTED,
@@ -73,7 +72,6 @@ struct [[nodiscard]] Error {
   ErrorCode code = ErrorCode::UNKNOWN;
   std::string what = "";
 
-  inline operator bool() const noexcept { return code == ErrorCode::OK; }
   inline bool operator==(const Error& other) const noexcept {
     return code == other.code && what == other.what;
   }
@@ -82,12 +80,11 @@ struct [[nodiscard]] Error {
   }
 };
 
-constexpr auto Ok = [] { return Error{ErrorCode::OK, ""}; };
-constexpr auto Canceled = [](const std::string& what = "") {
-  return Error{ErrorCode::CANCELLED, what};
-};
 constexpr auto Unknown = [](const std::string& what = "") {
   return Error{ErrorCode::UNKNOWN, what};
+};
+constexpr auto Cancelled = [](const std::string& what = "") {
+  return Error{ErrorCode::CANCELLED, what};
 };
 constexpr auto InvalidArgument = [](const std::string& what = "") {
   return Error{ErrorCode::INVALID_ARGUMENT, what};
@@ -102,7 +99,7 @@ constexpr auto AlreadyExists = [](const std::string& what = "") {
   return Error{ErrorCode::ALREADY_EXISTS, what};
 };
 constexpr auto PermissionDenied = [](const std::string& what = "") {
-  return Error{ErrorCode::PERMISSION_DENINED, what};
+  return Error{ErrorCode::PERMISSION_DENIED, what};
 };
 constexpr auto ResourceExhausted = [](const std::string& what = "") {
   return Error{ErrorCode::RESOURCE_EXHAUSTED, what};
@@ -142,10 +139,8 @@ constexpr auto Exception = [](const std::string& what = "") {
  */
 [[nodiscard]] constexpr std::string_view toStringView(const ErrorCode& code) {
   switch (code) {
-    case ErrorCode::OK:
-      return "Ok";
     case ErrorCode::CANCELLED:
-      return "Canceled";
+      return "Cancelled";
     case ErrorCode::UNKNOWN:
       return "Unknown";
     case ErrorCode::INVALID_ARGUMENT:
@@ -156,7 +151,7 @@ constexpr auto Exception = [](const std::string& what = "") {
       return "NotFound";
     case ErrorCode::ALREADY_EXISTS:
       return "AlreadyExists";
-    case ErrorCode::PERMISSION_DENINED:
+    case ErrorCode::PERMISSION_DENIED:
       return "PermissionDenied";
     case ErrorCode::RESOURCE_EXHAUSTED:
       return "ResourceExhausted";
