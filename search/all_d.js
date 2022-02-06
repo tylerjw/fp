@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['parse_161',['parse',['../structfmt_1_1formatter_3_01fp_1_1Error_01_4.html#ad70bbff82a8134085b0199782f0f23b5',1,'fmt::formatter&lt; fp::Error &gt;::parse()'],['../structfmt_1_1formatter_3_01fp_1_1Result_3_01T_01_4_01_4.html#a064100071ff776d6ffb6b093c0f05275',1,'fmt::formatter&lt; fp::Result&lt; T &gt; &gt;::parse()']]],
-  ['permission_5fdenined_162',['PERMISSION_DENINED',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccaf819039636add117ded2bb0613cac106',1,'fp']]],
-  ['permissiondenied_163',['PermissionDenied',['../namespacefp.html#ac4a66b14097b5f9257f8e9f485770c28',1,'fp']]],
-  ['print_5ferrors_164',['print_errors',['../result_8cpp.html#acaa8affbfe8428571f9f51f8ebd584c8',1,'result.cpp']]]
+  ['readme_2emd_164',['README.md',['../README_8md.html',1,'']]],
+  ['remove_5fconst_5ft_165',['remove_const_t',['../namespacetl_1_1detail.html#a5ac5a627aff1a69cee7d44f447a04d81',1,'tl::detail']]],
+  ['remove_5freference_5ft_166',['remove_reference_t',['../namespacetl_1_1detail.html#aa2f4a922b14321cfc7292414836d7d5b',1,'tl::detail']]],
+  ['resource_5fexhausted_167',['RESOURCE_EXHAUSTED',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca4a739fa42dcdbdb8dfe5a5e4d9c5a627',1,'fp']]],
+  ['resourceexhausted_168',['ResourceExhausted',['../namespacefp.html#aceb1dfea0551d5a98456018669cde875',1,'fp']]],
+  ['result_169',['Result',['../namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71',1,'fp']]],
+  ['result_2ecpp_170',['result.cpp',['../result_8cpp.html',1,'']]],
+  ['result_2ehpp_171',['result.hpp',['../result_8hpp.html',1,'']]],
+  ['ret_5ft_172',['ret_t',['../namespacetl_1_1detail.html#a91c66ff3380d56c877773f2b264fd7b1',1,'tl::detail']]]
 ];

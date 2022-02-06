@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cancelled_442',['CANCELLED',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cca9f935beb31030ad0d4d26126c0f39bf2',1,'fp']]]
+  ['data_5floss_441',['DATA_LOSS',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccafb1a9c3daaa0683c4ffac41183243e20',1,'fp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_5floss_443',['DATA_LOSS',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccafb1a9c3daaa0683c4ffac41183243e20',1,'fp']]]
+  ['exception_442',['EXCEPTION',['../namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3ccacccc265b14c17af799a1834f4fbbe7cf',1,'fp']]]
 ];
