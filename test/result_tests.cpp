@@ -29,172 +29,163 @@
 #include "fp/all.hpp"
 #include "gtest/gtest.h"
 
-TEST(ResultTests, OkErrorTrue) {
-  // GIVEN Ok error
-  const auto error = fp::Ok();
+TEST(ResultTests, CancelledErrorFalse) {
+  // GIVEN Cancelled error
+  const auto error = fp::Cancelled();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be true
-  EXPECT_TRUE(error);
-}
-
-TEST(ResultTests, CanceledErrorFalse) {
-  // GIVEN Canceled error
-  const auto error = fp::Canceled();
-
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Canceled
+  EXPECT_EQ(error.code, fp::ErrorCode::CANCELLED);
 }
 
 TEST(ResultTests, UnknownErrorFalse) {
   // GIVEN Unknown error
   const auto error = fp::Unknown();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Unknown
+  EXPECT_EQ(error.code, fp::ErrorCode::UNKNOWN);
 }
 
 TEST(ResultTests, InvalidArgumentErrorFalse) {
   // GIVEN InvalidArgument error
   const auto error = fp::InvalidArgument();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be InvalidArgument
+  EXPECT_EQ(error.code, fp::ErrorCode::INVALID_ARGUMENT);
 }
 
 TEST(ResultTests, TimeoutErrorFalse) {
   // GIVEN Timeout error
   const auto error = fp::Timeout();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Timeout
+  EXPECT_EQ(error.code, fp::ErrorCode::TIMEOUT);
 }
 
 TEST(ResultTests, NotFoundErrorFalse) {
   // GIVEN NotFound error
   const auto error = fp::NotFound();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be NotFound
+  EXPECT_EQ(error.code, fp::ErrorCode::NOT_FOUND);
 }
 
 TEST(ResultTests, AlreadyExistsErrorFalse) {
   // GIVEN AlreadyExists error
   const auto error = fp::AlreadyExists();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be AlreadyExists
+  EXPECT_EQ(error.code, fp::ErrorCode::ALREADY_EXISTS);
 }
 
 TEST(ResultTests, PermissionDeniedErrorFalse) {
   // GIVEN PermissionDenied error
   const auto error = fp::PermissionDenied();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be PermissionDenied
+  EXPECT_EQ(error.code, fp::ErrorCode::PERMISSION_DENIED);
 }
 
 TEST(ResultTests, ResourceExhaustedErrorFalse) {
   // GIVEN ResourceExhausted error
   const auto error = fp::ResourceExhausted();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be ResourceExhausted
+  EXPECT_EQ(error.code, fp::ErrorCode::RESOURCE_EXHAUSTED);
 }
 
 TEST(ResultTests, FailedPreconditionErrorFalse) {
   // GIVEN FailedPrecondition error
   const auto error = fp::FailedPrecondition();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be FailedPrecondition
+  EXPECT_EQ(error.code, fp::ErrorCode::FAILED_PRECONDITION);
 }
 
 TEST(ResultTests, AbortedErrorFalse) {
   // GIVEN Aborted error
   const auto error = fp::Aborted();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Aborted
+  EXPECT_EQ(error.code, fp::ErrorCode::ABORTED);
 }
 
 TEST(ResultTests, OutOfRangeErrorFalse) {
   // GIVEN OutOfRange error
   const auto error = fp::OutOfRange();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be OutOfRange
+  EXPECT_EQ(error.code, fp::ErrorCode::OUT_OF_RANGE);
 }
 
 TEST(ResultTests, UnimplementedErrorFalse) {
   // GIVEN Unimplemented error
   const auto error = fp::Unimplemented();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Unimplemented
+  EXPECT_EQ(error.code, fp::ErrorCode::UNIMPLEMENTED);
 }
 
 TEST(ResultTests, InternalErrorFalse) {
   // GIVEN Internal error
   const auto error = fp::Internal();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Internal
+  EXPECT_EQ(error.code, fp::ErrorCode::INTERNAL);
 }
 
 TEST(ResultTests, UnavailableErrorFalse) {
   // GIVEN Unavailable error
   const auto error = fp::Unavailable();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Unavailable
+  EXPECT_EQ(error.code, fp::ErrorCode::UNAVAILABLE);
 }
 
 TEST(ResultTests, DataLossErrorFalse) {
   // GIVEN DataLoss error
   const auto error = fp::DataLoss();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be DataLoss
+  EXPECT_EQ(error.code, fp::ErrorCode::DATA_LOSS);
 }
 
 TEST(ResultTests, UnauthenticatedErrorFalse) {
   // GIVEN Unauthenticated error
   const auto error = fp::Unauthenticated();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Unauthenticated
+  EXPECT_EQ(error.code, fp::ErrorCode::UNAUTHENTICATED);
 }
 
 TEST(ResultTests, ExceptionErrorFalse) {
   // GIVEN Exception error
   const auto error = fp::Exception();
 
-  // WHEN we cast to bool
-  // THEN we expect it to be false
-  EXPECT_FALSE(error);
+  // WHEN we read the code
+  // THEN we expect it to be Exception
+  EXPECT_EQ(error.code, fp::ErrorCode::EXCEPTION);
 }
 
 TEST(ResultTests, ErrorEqualityTrue) {
-  // Given two different Ok Errors
-  const auto first_error = fp::Ok();
-  const auto second_error = fp::Ok();
+  // Given two different Unknown Errors
+  const auto first_error = fp::Unknown();
+  const auto second_error = fp::Unknown();
 
   // WHEN we test their equality
   // THEN we expect it to be true
@@ -204,7 +195,7 @@ TEST(ResultTests, ErrorEqualityTrue) {
 
 TEST(ResultTests, ErrorEqualityCodeFalse) {
   // Given two different errors with different codes
-  const auto first_error = fp::Ok();
+  const auto first_error = fp::Timeout();
   const auto second_error = fp::Unknown();
 
   // WHEN we test their equality
@@ -254,7 +245,7 @@ TEST(ResultTests, FormatResultErrorNoThrow) {
 TEST(ResultTests, StringToViewNoThrow) {
   // GIVEN each type of error
   const auto each_type_of_error =
-      ranges::views::iota(static_cast<int>(fp::ErrorCode::OK),
+      ranges::views::iota(static_cast<int>(fp::ErrorCode::UNKNOWN),
                           static_cast<int>(fp::ErrorCode::EXCEPTION) + 1) |
       ranges::views::transform(
           [](int i) { return static_cast<fp::ErrorCode>(i); }) |
