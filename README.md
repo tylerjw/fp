@@ -13,7 +13,7 @@ Functional Programming extensions to C++ for ROS projects.
 [![ROS](https://img.shields.io/badge/ROS-rolling-blue)](#)
 [![Dependencies](https://img.shields.io/badge/Dependencies-fmt%2C%20range--v3-blue)](#)
 [![Vendored](https://img.shields.io/badge/Vendored-tl%3A%3Aexpected-blue)](https://tl.tartanllama.xyz/en/latest/api/expected.html#tl-expected)
-[![Released](https://img.shields.io/badge/Released-no!-red)](#)
+[![Released](https://img.shields.io/badge/Released-bloomed-yellow)](#)
 
 ## Features
 
