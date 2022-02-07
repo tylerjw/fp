@@ -168,7 +168,7 @@ Calling a function that returns a Result&lt;T&gt;</h1>
 </div><!-- fragment --><p>In the above example there are a couple more important pieces of the <code>Result&lt;T&gt;</code> interface. If you cast it to a bool as is done in the if statement it will return <code>true</code> if it is a value and <code>false</code> if it is a Error. Secondly, to get the Error type you can call the function <code>error()</code> on the result. Finally, <code>fp</code> the error type can be formatted into a human readable string using the <code>fmt</code> library.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 Helper functions</h1>
-<p><code>fp</code> implements a few helper functions that can be used to simplify some code.</p>
+<p><code>fp</code> implements a few helper functions that can be used to simplify some code. You will see uses of these functions in later tutorials.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Function </th><th class="markdownTableHeadNone">Description  </th></tr>
@@ -181,7 +181,6 @@ Helper functions</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">try_to_result(F f) -&gt; Result&lt;Ret&gt; </td><td class="markdownTableBodyNone">Lifts a function that throws and returns T to one that returns a Result&lt;T&gt;  </td></tr>
 </table>
-<p>You will see uses of these functions in later tutorials.</p>
 <h1><a class="anchor" id="autotoc_md9"></a>
 Summary</h1>
 <p>In this tutorial you learned to write functions that can fail and how to call those functions.</p>
