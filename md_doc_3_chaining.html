@@ -144,7 +144,7 @@ The FP extensions from tl::expected</h1>
 <p>An example of using <code>and_then</code> to do the same thing as above.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <span class="keyword">const</span> result = square_positive(2).and_then(convert_small_values);</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
-Reasining about computations without values</h1>
+Composing monadic function</h1>
 <p>A final thing that you might want to do is construct a function that combines calling various functions in sequence. To make this easier we've implemented the <code>mcompose</code> function that takes n number of functions that chain together and constructs a function that represents the result of calling them in order.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> constexpr launch_satelite = <a class="code" href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">mcompose</a>(</div>
 <div class="line">  build_rocket,</div>

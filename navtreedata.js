@@ -51,7 +51,7 @@ var NAVTREE =
       [ "The monadic bind function", "md_doc_3_chaining.html#autotoc_md19", null ],
       [ "The operator| overload", "md_doc_3_chaining.html#autotoc_md20", null ],
       [ "The FP extensions from tl::expected", "md_doc_3_chaining.html#autotoc_md21", null ],
-      [ "Reasining about computations without values", "md_doc_3_chaining.html#autotoc_md22", null ],
+      [ "Composing monadic function", "md_doc_3_chaining.html#autotoc_md22", null ],
       [ "Summary", "md_doc_3_chaining.html#autotoc_md23", null ],
       [ "Next Tutorial", "md_doc_3_chaining.html#autotoc_md24", null ]
     ] ],
