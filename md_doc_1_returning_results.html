@@ -165,7 +165,7 @@ Calling a function that returns a Result&lt;T&gt;</h1>
 <div class="line">  <span class="comment">// result is an error</span></div>
 <div class="line">  fmt::print(<span class="stringliteral">&quot;{}&quot;</span>, result.error());</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>In the above example there are a couple more important pieces of the <code>Result&lt;T&gt;</code> interface. If you cast it to a bool as is done in the if statement it will return <code>true</code> if it is a value and <code>false</code> if it is a Error. Secondly, to get the Error type you can call the function <code>error()</code> on the result. Finally, <code>fp</code> the error type can be formatted into a human readable string using the <code>fmt</code> library.</p>
+</div><!-- fragment --><p>In the above example there are a couple more important pieces of the <code>Result&lt;T&gt;</code> interface. If you cast it to a bool as is done in the if statement it will return <code>true</code> if it is a value and <code>false</code> if it is a Error. Secondly, to get the Error type you can call the function <code>error()</code> on the result. Finally, the error type can be formatted into a human readable string using the <code>fmt</code> library.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 Helper functions</h1>
 <p><code>fp</code> implements a few helper functions that can be used to simplify some code. You will see uses of these functions in later tutorials.</p>
