@@ -95,7 +95,7 @@ if (result) {
 In the above example there are a couple more important pieces of the `Result<T>` interface.
 If you cast it to a bool as is done in the if statement it will return `true` if it is a value and `false` if it is a Error.
 Secondly, to get the Error type you can call the function `error()` on the result.
-Finally, `fp` the error type can be formatted into a human readable string using the `fmt` library.
+Finally, the error type can be formatted into a human readable string using the `fmt` library.
 
 ## Helper functions
 

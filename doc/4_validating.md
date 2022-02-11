@@ -46,7 +46,7 @@ auto const result = []{
   ret.from = 2;
   ret.step = 3;
   return ret;
-}(value);
+}()(value);
 ```
 
 ## Validating multiple items
