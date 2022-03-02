@@ -26,7 +26,7 @@ Functional Programming extensions to C++ for ROS projects.
 * add `[[nodiscard]]` attribute to lambdas
 * validation helper callables
 
-### Achnologements
+### Acknowledgements
 
 - [ABSL `StatusOr`](https://github.com/abseil/abseil-cpp/blob/master/absl/status/statusor.h)
 - [Rust `Result`](https://doc.rust-lang.org/std/result/)
