@@ -28,24 +28,13 @@
 
 #pragma once
 
-namespace fp {
+#include <optional>
 
-/**
- * @brief      Template for creating lambdas with the nodiscard attribute
- *
- * @tparam     F     The lambda
- *
- * @example    no_discard.cpp
- */
-template <typename F>
-struct NoDiscard {
-  F f_;
-  NoDiscard(F const& f) : f_(f) {}
-  template <typename... T>
-  [[nodiscard]] constexpr auto operator()(T&&... t) const
-      noexcept(noexcept(f_(std::forward<T>(t)...))) {
-    return f_(std::forward<T>(t)...);
-  }
-};
+#include "fp/_external/expected.hpp"
 
-}  // namespace fp
+#define TRY(m)                                                     \
+  ({                                                               \
+    auto const& exp = (m);                                         \
+    if (!exp.has_value()) return tl::make_unexpected(exp.error()); \
+    exp.value();                                                   \
+  })
