@@ -221,7 +221,7 @@ TEST(ResultTests, FormatErrorNoThrow) {
 
   // WHEN we call fmt::format on it
   // THEN we expect it not to throw
-  EXPECT_NO_THROW(fmt::format("{}", error));
+  EXPECT_NO_THROW(auto const _ = fmt::format("{}", error));
 }
 
 TEST(ResultTests, FormatResultValueNoThrow) {
@@ -230,7 +230,7 @@ TEST(ResultTests, FormatResultValueNoThrow) {
 
   // WHEN we call fmt::format on it
   // THEN we expect it not to throw
-  EXPECT_NO_THROW(fmt::format("{}", result));
+  EXPECT_NO_THROW(auto const _ = fmt::format("{}", result));
 }
 
 TEST(ResultTests, FormatResultErrorNoThrow) {
@@ -239,7 +239,7 @@ TEST(ResultTests, FormatResultErrorNoThrow) {
 
   // WHEN we call fmt::format on it
   // THEN we expect it not to throw
-  EXPECT_NO_THROW(fmt::format("{}", result));
+  EXPECT_NO_THROW(auto const _ = fmt::format("{}", result));
 }
 
 TEST(ResultTests, StringToViewNoThrow) {

@@ -183,8 +183,8 @@ constexpr auto Exception = [](const std::string& what = "") {
  *
  * @example    result.cpp
  */
-template <typename T>
-using Result = tl::expected<T, Error>;
+template <typename T, typename E = Error>
+using Result = tl::expected<T, E>;
 
 /**
  * @brief      Makes a Result<T> from a T value
@@ -195,9 +195,9 @@ using Result = tl::expected<T, Error>;
  *
  * @return     A Result<T> containing value
  */
-template <typename T>
-constexpr Result<T> make_result(T value) {
-  return Result<T>{value};
+template <typename T, typename E = Error>
+constexpr Result<T, E> make_result(T value) {
+  return Result<T, E>{value};
 }
 
 /**
