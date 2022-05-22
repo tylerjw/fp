@@ -40,6 +40,7 @@ install(
 
 ament_export_include_directories(include)
 ament_export_targets(${PROJECT_NAME}Targets)
+ament_export_dependencies(fmt range-v3)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
