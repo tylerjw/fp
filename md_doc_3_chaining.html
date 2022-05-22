@@ -109,15 +109,15 @@ The monadic bind function</h1>
 </div><!-- fragment --><p>If the passed in <code>Result&lt;T1&gt;</code> is an error it stores that error in the return type <code>Result&lt;T2&gt;</code>. If the passed in <code>Result&lt;T1&gt;</code> contains a value it calls the function that you passed in and returns it's result. Here is an example of how you could use it to call the two example functions.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <span class="keyword">const</span> result</div>
 <div class="line">  = <a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(</div>
-<div class="line">      <a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(<a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(2), square_positive),</div>
+<div class="line">      <a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(<a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(2), square_positive),</div>
 <div class="line">      convert_small_values</div>
 <div class="line">    );</div>
 </div><!-- fragment --><p>This will first calculate the result of <code>square_positive(2)</code> and then the result of that (if successful) will be sent to the second function <code>convert_small_values</code>.</p>
 <h1><a class="anchor" id="autotoc_md20"></a>
 The operator| overload</h1>
 <p>This syntax is rather cumbersome so we have implemented an overload for the <code>operator|</code> that makes it using it much nicer. This creates syntax that resembles the shell pipe syntax where one operation is chained into the next if it succeeds.</p>
-<div class="fragment"><div class="line"><span class="keyword">auto</span> <span class="keyword">const</span> result = <a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(2) | square_positive | convert_small_values;</div>
-</div><!-- fragment --><p>Aternatively you can call the first function instead of using the <code><a class="el" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb" title="Makes a Result&lt;T&gt; from a T value.">fp::make_result</a></code> function.</p>
+<div class="fragment"><div class="line"><span class="keyword">auto</span> <span class="keyword">const</span> result = <a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(2) | square_positive | convert_small_values;</div>
+</div><!-- fragment --><p>Aternatively you can call the first function instead of using the <code><a class="el" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6" title="Makes a Result&lt;T&gt; from a T value.">fp::make_result</a></code> function.</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <span class="keyword">const</span> result = square_positive(2) | convert_small_values;</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
 The FP extensions from tl::expected</h1>
@@ -164,7 +164,7 @@ Next Tutorial</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacefp_html_ab858d18687924bd9947f25d5de916edb"><div class="ttname"><a href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
+<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
 <div class="ttc" id="anamespacefp_html_a2decaf550bd0e7811f5fe7ce850b1ded"><div class="ttname"><a href="namespacefp.html#a2decaf550bd0e7811f5fe7ce850b1ded">fp::OutOfRange</a></div><div class="ttdeci">constexpr auto OutOfRange</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00113">result.hpp:113</a></div></div>
 <div class="ttc" id="anamespacefp_html_a9b1050477e7a529d7ae3c2e1e8cc2296"><div class="ttname"><a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a></div><div class="ttdeci">constexpr auto mcompose(F f, G g)</div><div class="ttdoc">Monadic compose two monad functions.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00128">monad.hpp:128</a></div></div>
 <div class="ttc" id="anamespacefp_html_afbeecf9dbdf9b3c9e6bfaab97c06fc97"><div class="ttname"><a href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a></div><div class="ttdeci">constexpr auto mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</div><div class="ttdoc">Monad optional bind.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00063">monad.hpp:63</a></div></div>

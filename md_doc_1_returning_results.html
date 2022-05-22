@@ -96,14 +96,14 @@ Returning a Result&lt;T&gt;</h1>
 </blockquote>
 <p><code>fp</code> provides a type called <code>Result&lt;T&gt;</code> that is either the type <code>T</code> or the type <code><a class="el" href="structfp_1_1_error.html" title="Error type used by Result&lt;T&gt;">fp::Error</a></code>. This construct is called a 'sum type' which builds the possibility of the error into the interface of your function.</p>
 <p>Here is an example of how to write a function that returns a <code>Result&lt;T&gt;</code>:</p>
-<div class="fragment"><div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
+<div class="fragment"><div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x == 0.0)</div>
 <div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(<span class="stringliteral">&quot;divide by 0&quot;</span>));</div>
 <div class="line">  <span class="keywordflow">return</span> 4.0 / x;</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 tl::make_unexpected</h2>
-<p>The first thing you'll notice is that to return an error type we have to wrap it in a call to <code>tl::make_unexpected</code>. This is because <code><a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a>&lt;T&gt;</code> is an alias of <code>tl::expected&lt;T, <a class="el" href="structfp_1_1_error.html" title="Error type used by Result&lt;T&gt;">fp::Error</a>&gt;</code>. <code>fp</code> vendors the <a href="https://tl.tartanllama.xyz/en/latest/api/expected.html#tl-expected">library tl::expected</a> which is a library that is proposed to be added the the stl. To create a <code><a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a>&lt;T&gt;</code> that contains the error type we have to use the function <code>tl::make_unexpected</code>.</p>
+<p>The first thing you'll notice is that to return an error type we have to wrap it in a call to <code>tl::make_unexpected</code>. This is because <code><a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a>&lt;T&gt;</code> is an alias of <code>tl::expected&lt;T, <a class="el" href="structfp_1_1_error.html" title="Error type used by Result&lt;T&gt;">fp::Error</a>&gt;</code>. <code>fp</code> vendors the <a href="https://tl.tartanllama.xyz/en/latest/api/expected.html#tl-expected">library tl::expected</a> which is a library that is proposed to be added the the stl. To create a <code><a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a>&lt;T&gt;</code> that contains the error type we have to use the function <code>tl::make_unexpected</code>.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Error Types</h2>
 <p>The <code><a class="el" href="structfp_1_1_error.html" title="Error type used by Result&lt;T&gt;">fp::Error</a></code> type contains two things, a enum code and a string. To make it easier to create the errors <code>fp</code> contains a set of constexpr lambdas that will construct an error of a specific type. The available types are:</p>
@@ -190,8 +190,8 @@ Next Tutorial</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacefp_html_ab2fd6c0c6da3190e5f73479e50a69c71"><div class="ttname"><a href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, Error &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00089">result.hpp:89</a></div></div>
+<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

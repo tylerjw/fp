@@ -133,21 +133,21 @@ $(document).ready(function(){initNavTree('maybe_error_8cpp-example.html',''); in
 <div class="line"> </div>
 <div class="line"><span class="keyword">namespace </span>views = ::ranges::views;</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x == 0.0) {</div>
 <div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a name="a0"></a><a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(fmt::format(<span class="stringliteral">&quot;divide by 0&quot;</span>)));</div>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">return</span> 4.0 / x;</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> f1(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
-<div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> f2(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
-<div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> f3(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
-<div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> f4(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
+<div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> f1(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
+<div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> f2(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
+<div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> f3(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
+<div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> f4(<span class="keywordtype">double</span> x) { <span class="keywordflow">return</span> divide_4_by(x); }</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> do_work() {</div>
-<div class="line">  <span class="keyword">auto</span> <span class="keyword">const</span> a = <a name="a1"></a><a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(2.4) | f1 | f2;</div>
-<div class="line">  <span class="keyword">auto</span> <span class="keyword">const</span> b = <a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(0.0) | f3 | f4;</div>
+<div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> do_work() {</div>
+<div class="line">  <span class="keyword">auto</span> <span class="keyword">const</span> a = <a name="a1"></a><a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(2.4) | f1 | f2;</div>
+<div class="line">  <span class="keyword">auto</span> <span class="keyword">const</span> b = <a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(0.0) | f3 | f4;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">if</span> (<span class="keyword">auto</span> <span class="keyword">const</span> error = <a name="a2"></a><a class="code" href="namespacefp.html#ae6161b2ffcda278db444bcd60c6764b4">fp::maybe_error</a>(a, b); error) {</div>
 <div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(*error);</div>
@@ -165,10 +165,10 @@ $(document).ready(function(){initNavTree('maybe_error_8cpp-example.html',''); in
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
 <div class="ttc" id="anamespacefp_html_ae6161b2ffcda278db444bcd60c6764b4"><div class="ttname"><a href="namespacefp.html#ae6161b2ffcda278db444bcd60c6764b4">fp::maybe_error</a></div><div class="ttdeci">constexpr std::optional&lt; E &gt; maybe_error(tl::expected&lt; Args, E &gt;... args)</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00227">result.hpp:227</a></div></div>
-<div class="ttc" id="anamespacefp_html_ab858d18687924bd9947f25d5de916edb"><div class="ttname"><a href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
-<div class="ttc" id="anamespacefp_html_ab2fd6c0c6da3190e5f73479e50a69c71"><div class="ttname"><a href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, Error &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00089">result.hpp:89</a></div></div>
+<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

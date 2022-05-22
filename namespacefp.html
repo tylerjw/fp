@@ -106,9 +106,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ab2fd6c0c6da3190e5f73479e50a69c71"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab2fd6c0c6da3190e5f73479e50a69c71"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a> = tl::expected&lt; T, <a class="el" href="structfp_1_1_error.html">Error</a> &gt;</td></tr>
-<tr class="separator:ab2fd6c0c6da3190e5f73479e50a69c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5208abccff41c3cfee00bcf78ab1f367"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E  = Error&gt; </td></tr>
+<tr class="memitem:a5208abccff41c3cfee00bcf78ab1f367"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">Result</a> = tl::expected&lt; T, E &gt;</td></tr>
+<tr class="separator:a5208abccff41c3cfee00bcf78ab1f367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -168,10 +168,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ae52db7081f20720a307a27e1b940cfe1"><td class="memItemLeft" align="right" valign="top">constexpr std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacefp.html#ae52db7081f20720a307a27e1b940cfe1">toStringView</a> (const <a class="el" href="namespacefp.html#ab7edc7bd4d0d366ca827a5a09b71f3cc">ErrorCode</a> &amp;code)</td></tr>
 <tr class="memdesc:ae52db7081f20720a307a27e1b940cfe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert ErrorCode to string_view for easy formatting  <a href="namespacefp.html#ae52db7081f20720a307a27e1b940cfe1">More...</a><br /></td></tr>
 <tr class="separator:ae52db7081f20720a307a27e1b940cfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab858d18687924bd9947f25d5de916edb"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab858d18687924bd9947f25d5de916edb"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">make_result</a> (T value)</td></tr>
-<tr class="memdesc:ab858d18687924bd9947f25d5de916edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a Result&lt;T&gt; from a T value.  <a href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">More...</a><br /></td></tr>
-<tr class="separator:ab858d18687924bd9947f25d5de916edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac7f2f3366a4cfce9808ddd612c6dc6"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E  = Error&gt; </td></tr>
+<tr class="memitem:a4ac7f2f3366a4cfce9808ddd612c6dc6"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">Result</a>&lt; T, E &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">make_result</a> (T value)</td></tr>
+<tr class="memdesc:a4ac7f2f3366a4cfce9808ddd612c6dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a Result&lt;T&gt; from a T value.  <a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">More...</a><br /></td></tr>
+<tr class="separator:a4ac7f2f3366a4cfce9808ddd612c6dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e64f36fb5419a173ce4fb9c54c9559c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename E &gt; </td></tr>
 <tr class="memitem:a6e64f36fb5419a173ce4fb9c54c9559c"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#a6e64f36fb5419a173ce4fb9c54c9559c">has_error</a> (const tl::expected&lt; T, E &gt; &amp;exp)</td></tr>
 <tr class="memdesc:a6e64f36fb5419a173ce4fb9c54c9559c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter function for testing if a result has an error.  <a href="namespacefp.html#a6e64f36fb5419a173ce4fb9c54c9559c">More...</a><br /></td></tr>
@@ -184,7 +184,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a1823f974ec16c3c85d33082a68497090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to Result&lt;T&gt;. Lifts a function that throws an excpetpion to one that returns a Result&lt;T&gt;  <a href="namespacefp.html#a1823f974ec16c3c85d33082a68497090">More...</a><br /></td></tr>
 <tr class="separator:a1823f974ec16c3c85d33082a68497090"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af03b19cffde3419cf786ca2555b40802"><td class="memTemplParams" colspan="2">template&lt;typename Rng , typename T &gt; </td></tr>
-<tr class="memitem:af03b19cffde3419cf786ca2555b40802"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#af03b19cffde3419cf786ca2555b40802">validate_in</a> (Rng const &amp;valid_values, T const &amp;value, std::string const &amp;name)</td></tr>
+<tr class="memitem:af03b19cffde3419cf786ca2555b40802"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">Result</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacefp.html#af03b19cffde3419cf786ca2555b40802">validate_in</a> (Rng const &amp;valid_values, T const &amp;value, std::string const &amp;name)</td></tr>
 <tr class="separator:af03b19cffde3419cf786ca2555b40802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -225,16 +225,16 @@ Variables</h2></td></tr>
 <tr class="separator:a15d015459034378c2405495aabcacd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ab2fd6c0c6da3190e5f73479e50a69c71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2fd6c0c6da3190e5f73479e50a69c71">&#9670;&nbsp;</a></span>Result</h2>
+<a id="a5208abccff41c3cfee00bcf78ab1f367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5208abccff41c3cfee00bcf78ab1f367">&#9670;&nbsp;</a></span>Result</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename E  = Error&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a> = typedef tl::expected&lt;T, <a class="el" href="structfp_1_1_error.html">Error</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a> = typedef tl::expected&lt;T, E&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -381,19 +381,19 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ab858d18687924bd9947f25d5de916edb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab858d18687924bd9947f25d5de916edb">&#9670;&nbsp;</a></span>make_result()</h2>
+<a id="a4ac7f2f3366a4cfce9808ddd612c6dc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ac7f2f3366a4cfce9808ddd612c6dc6">&#9670;&nbsp;</a></span>make_result()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;typename T , typename E  = Error&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt;T&gt; fp::make_result </td>
+          <td class="memname">constexpr <a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">Result</a>&lt;T, E&gt; fp::make_result </td>
           <td>(</td>
           <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -824,7 +824,7 @@ template&lt;typename Rng , typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr <a class="el" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">Result</a>&lt;T&gt; fp::validate_in </td>
+          <td class="memname">constexpr <a class="el" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">Result</a>&lt;T&gt; fp::validate_in </td>
           <td>(</td>
           <td class="paramtype">Rng const &amp;&#160;</td>
           <td class="paramname"><em>valid_values</em>, </td>

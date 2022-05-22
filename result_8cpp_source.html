@@ -119,14 +119,14 @@ $(document).ready(function(){initNavTree('result_8cpp_source.html',''); initResi
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span>views = ::ranges::views;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">if</span> (x == 0.0) {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(fmt::format(<span class="stringliteral">&quot;divide by 0&quot;</span>)));</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">return</span> 4.0 / x;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> safe_sqrt(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> safe_sqrt(<span class="keywordtype">double</span> x) {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordflow">if</span> (x &lt; 0) {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        fmt::format(<span class="stringliteral">&quot;sqrt of value &lt; 0.0 is undefined: {}&quot;</span>, x)));</div>
@@ -135,11 +135,11 @@ $(document).ready(function(){initNavTree('result_8cpp_source.html',''); initResi
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">return</span> sqrt(x);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> do_math(<span class="keywordtype">double</span> x) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(x).and_then(divide_4_by).and_then(safe_sqrt);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> do_math(<span class="keywordtype">double</span> x) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(x).and_then(divide_4_by).and_then(safe_sqrt);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> print_errors(<a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> result) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> print_errors(<a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> result) {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordflow">if</span> (!result.has_value()) {</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    fmt::print(<span class="stringliteral">&quot;{}\n&quot;</span>, result.error());</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
@@ -181,9 +181,9 @@ $(document).ready(function(){initNavTree('result_8cpp_source.html',''); initResi
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacefp_html_ab858d18687924bd9947f25d5de916edb"><div class="ttname"><a href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
-<div class="ttc" id="anamespacefp_html_ab2fd6c0c6da3190e5f73479e50a69c71"><div class="ttname"><a href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, Error &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
+<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
 <div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00089">result.hpp:89</a></div></div>
+<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

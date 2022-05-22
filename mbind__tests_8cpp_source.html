@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('mbind__tests_8cpp_source.html',''); in
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">return</span> (in &lt; 3) ? <a class="code" href="namespacefp.html#ab150aaacb5c0e80260d14b8a11d0b1bf">fp::make_opt</a>(round(in)) : std::nullopt;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> val) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> val) {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">if</span> (val == 0) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>());</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
@@ -187,13 +187,13 @@ $(document).ready(function(){initNavTree('mbind__tests_8cpp_source.html',''); in
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// WHEN we fp::mbind it with the function divide_4_by</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// THEN we expect it true</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  EXPECT_TRUE(<a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(<a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(input), divide_4_by));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  EXPECT_TRUE(<a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(<a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(input), divide_4_by));</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;TEST(MBindTests, MBindResultOutputErrorTest) {</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// GIVEN input with value 0.0</span></div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">const</span> <span class="keyword">auto</span> input =</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result&lt;double&gt;</a>{tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>())};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a>{tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>())};</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  EXPECT_FALSE(input);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('mbind__tests_8cpp_source.html',''); in
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="comment">// WHEN we fp::mbind it with the function divide_4_by</span></div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="comment">// THEN we expect it false</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  EXPECT_FALSE(<a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(<a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(input), divide_4_by));</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  EXPECT_FALSE(<a class="code" href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a>(<a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(input), divide_4_by));</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;TEST(MBindTests, MBindResultValueOperatorChainTest) {</div>
@@ -217,7 +217,7 @@ $(document).ready(function(){initNavTree('mbind__tests_8cpp_source.html',''); in
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="comment">// WHEN we fp::mbind it with the function divide_4_by twice</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="comment">// THEN we expect it true</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  EXPECT_TRUE((<a class="code" href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a>(input) | divide_4_by | divide_4_by));</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  EXPECT_TRUE((<a class="code" href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a>(input) | divide_4_by | divide_4_by));</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;TEST(MBindTests, MTryTest) {</div>
@@ -276,12 +276,12 @@ $(document).ready(function(){initNavTree('mbind__tests_8cpp_source.html',''); in
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
 <div class="ttc" id="anamespacefp_html_ab150aaacb5c0e80260d14b8a11d0b1bf"><div class="ttname"><a href="namespacefp.html#ab150aaacb5c0e80260d14b8a11d0b1bf">fp::make_opt</a></div><div class="ttdeci">constexpr std::optional&lt; T &gt; make_opt(T value)</div><div class="ttdoc">Makes an optional&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00047">monad.hpp:47</a></div></div>
-<div class="ttc" id="anamespacefp_html_ab858d18687924bd9947f25d5de916edb"><div class="ttname"><a href="namespacefp.html#ab858d18687924bd9947f25d5de916edb">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
 <div class="ttc" id="anamespacefp_html_a9b1050477e7a529d7ae3c2e1e8cc2296"><div class="ttname"><a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a></div><div class="ttdeci">constexpr auto mcompose(F f, G g)</div><div class="ttdoc">Monadic compose two monad functions.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00128">monad.hpp:128</a></div></div>
 <div class="ttc" id="anamespacefp_html_afbeecf9dbdf9b3c9e6bfaab97c06fc97"><div class="ttname"><a href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a></div><div class="ttdeci">constexpr auto mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</div><div class="ttdoc">Monad optional bind.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00063">monad.hpp:63</a></div></div>
-<div class="ttc" id="anamespacefp_html_ab2fd6c0c6da3190e5f73479e50a69c71"><div class="ttname"><a href="namespacefp.html#ab2fd6c0c6da3190e5f73479e50a69c71">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, Error &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00089">result.hpp:89</a></div></div>
+<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <div class="ttc" id="anamespacefp_html_aabfbea33056ab12466381b0b6bde7284"><div class="ttname"><a href="namespacefp.html#aabfbea33056ab12466381b0b6bde7284">fp::mtry</a></div><div class="ttdeci">Exp mtry(F f)</div><div class="ttdoc">Monadic try, used to lift a function that throws an exception one that returns an tl::expected&lt;T,...</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00108">monad.hpp:108</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
