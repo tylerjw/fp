@@ -14,13 +14,13 @@ find_package(ament_cmake REQUIRED)
 find_package(fmt REQUIRED)
 find_package(range-v3 REQUIRED)
 
-add_library(fp INTERFACE)
-target_include_directories(fp
-  INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-            $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-target_compile_features(fp INTERFACE cxx_std_17)
+add_library(fp src/result.cpp)
+target_include_directories(fp PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
+target_compile_features(fp PUBLIC cxx_std_17)
 target_link_libraries(fp
-  INTERFACE
+  PUBLIC
     fmt::fmt
     range-v3::range-v3
 )

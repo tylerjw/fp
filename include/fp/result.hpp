@@ -80,57 +80,23 @@ struct [[nodiscard]] Error {
   }
 };
 
-constexpr auto Unknown = [](const std::string& what = "") {
-  return Error{ErrorCode::UNKNOWN, what};
-};
-constexpr auto Cancelled = [](const std::string& what = "") {
-  return Error{ErrorCode::CANCELLED, what};
-};
-constexpr auto InvalidArgument = [](const std::string& what = "") {
-  return Error{ErrorCode::INVALID_ARGUMENT, what};
-};
-constexpr auto Timeout = [](const std::string& what = "") {
-  return Error{ErrorCode::TIMEOUT, what};
-};
-constexpr auto NotFound = [](const std::string& what = "") {
-  return Error{ErrorCode::NOT_FOUND, what};
-};
-constexpr auto AlreadyExists = [](const std::string& what = "") {
-  return Error{ErrorCode::ALREADY_EXISTS, what};
-};
-constexpr auto PermissionDenied = [](const std::string& what = "") {
-  return Error{ErrorCode::PERMISSION_DENIED, what};
-};
-constexpr auto ResourceExhausted = [](const std::string& what = "") {
-  return Error{ErrorCode::RESOURCE_EXHAUSTED, what};
-};
-constexpr auto FailedPrecondition = [](const std::string& what = "") {
-  return Error{ErrorCode::FAILED_PRECONDITION, what};
-};
-constexpr auto Aborted = [](const std::string& what = "") {
-  return Error{ErrorCode::ABORTED, what};
-};
-constexpr auto OutOfRange = [](const std::string& what = "") {
-  return Error{ErrorCode::OUT_OF_RANGE, what};
-};
-constexpr auto Unimplemented = [](const std::string& what = "") {
-  return Error{ErrorCode::UNIMPLEMENTED, what};
-};
-constexpr auto Internal = [](const std::string& what = "") {
-  return Error{ErrorCode::INTERNAL, what};
-};
-constexpr auto Unavailable = [](const std::string& what = "") {
-  return Error{ErrorCode::UNAVAILABLE, what};
-};
-constexpr auto DataLoss = [](const std::string& what = "") {
-  return Error{ErrorCode::DATA_LOSS, what};
-};
-constexpr auto Unauthenticated = [](const std::string& what = "") {
-  return Error{ErrorCode::UNAUTHENTICATED, what};
-};
-constexpr auto Exception = [](const std::string& what = "") {
-  return Error{ErrorCode::EXCEPTION, what};
-};
+Error Unknown(const std::string& what = "");
+Error Cancelled(const std::string& what = "");
+Error InvalidArgument(const std::string& what = "");
+Error Timeout(const std::string& what = "");
+Error NotFound(const std::string& what = "");
+Error AlreadyExists(const std::string& what = "");
+Error PermissionDenied(const std::string& what = "");
+Error ResourceExhausted(const std::string& what = "");
+Error FailedPrecondition(const std::string& what = "");
+Error Aborted(const std::string& what = "");
+Error OutOfRange(const std::string& what = "");
+Error Unimplemented(const std::string& what = "");
+Error Internal(const std::string& what = "");
+Error Unavailable(const std::string& what = "");
+Error DataLoss(const std::string& what = "");
+Error Unauthenticated(const std::string& what = "");
+Error Exception(const std::string& what = "");
 
 /**
  * @brief      convert ErrorCode to string_view for easy formatting
