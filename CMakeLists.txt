@@ -40,7 +40,8 @@ install(
 
 ament_export_include_directories(include)
 ament_export_targets(${PROJECT_NAME}Targets)
-ament_export_dependencies(fmt range-v3)
+ament_export_dependencies(fmt)
+#ament_export_dependencies(range-v3) TODO(sjahr) Re-enable once it does not cause cmake errors
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
