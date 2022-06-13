@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['f_5f_93',['f_',['../structfp_1_1_no_discard.html#a2bf286250bc286bbf73544ac669ef039',1,'fp::NoDiscard']]],
-  ['from_94',['from',['../structfp_1_1validate__range.html#a01aafcb6de1b43ab241229e5159f27ce',1,'fp::validate_range']]]
+  ['cancelled_77',['Cancelled',['../namespacefp.html#a5e2974f9740f2a41253f0b1a0584c02c',1,'fp']]],
+  ['code_78',['code',['../structfp_1_1_error.html#adfd2685ec5db4a88a26bc89fb3ac3716',1,'fp::Error']]]
 ];

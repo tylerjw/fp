@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['step_95',['step',['../structfp_1_1validate__range.html#a1a97f2fc561d3ebba91aeca0da2895d5',1,'fp::validate_range']]],
-  ['step_5fthreshold_96',['step_threshold',['../structfp_1_1validate__range.html#ac507e40f1213f2883ee8e6f80217912d',1,'fp::validate_range']]]
+  ['dataloss_79',['DataLoss',['../namespacefp.html#a4f7c7aec60d11505510d18c29fb2e3a5',1,'fp']]]
 ];

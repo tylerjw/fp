@@ -93,13 +93,13 @@ Example Functions</h1>
 <p>Here are two example functions for use in this tutorial.</p>
 <div class="fragment"><div class="line">Result&lt;int&gt; convert_small_values(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x &gt; 10.0)</div>
-<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a63183c3fd51b9dd7d497181e468df5ce">fp::OutOfRange</a>(fp::format(<span class="stringliteral">&quot;{} &gt; 10&quot;</span>, x)));</div>
+<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a2decaf550bd0e7811f5fe7ce850b1ded">fp::OutOfRange</a>(fp::format(<span class="stringliteral">&quot;{} &gt; 10&quot;</span>, x)));</div>
 <div class="line">  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(x);</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line">Result&lt;double&gt; square_positive(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x &lt; 0)</div>
-<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a63183c3fd51b9dd7d497181e468df5ce">fp::OutOfRange</a>(fp::format(<span class="stringliteral">&quot;{} &lt; 0&quot;</span>, x)));</div>
+<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a2decaf550bd0e7811f5fe7ce850b1ded">fp::OutOfRange</a>(fp::format(<span class="stringliteral">&quot;{} &lt; 0&quot;</span>, x)));</div>
 <div class="line">  <span class="keywordflow">return</span> x * x;</div>
 <div class="line">}</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md19"></a>
@@ -164,10 +164,10 @@ Next Tutorial</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00165">result.hpp:165</a></div></div>
+<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
+<div class="ttc" id="anamespacefp_html_a2decaf550bd0e7811f5fe7ce850b1ded"><div class="ttname"><a href="namespacefp.html#a2decaf550bd0e7811f5fe7ce850b1ded">fp::OutOfRange</a></div><div class="ttdeci">constexpr auto OutOfRange</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00113">result.hpp:113</a></div></div>
 <div class="ttc" id="anamespacefp_html_a9b1050477e7a529d7ae3c2e1e8cc2296"><div class="ttname"><a href="namespacefp.html#a9b1050477e7a529d7ae3c2e1e8cc2296">fp::mcompose</a></div><div class="ttdeci">constexpr auto mcompose(F f, G g)</div><div class="ttdoc">Monadic compose two monad functions.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00128">monad.hpp:128</a></div></div>
 <div class="ttc" id="anamespacefp_html_afbeecf9dbdf9b3c9e6bfaab97c06fc97"><div class="ttname"><a href="namespacefp.html#afbeecf9dbdf9b3c9e6bfaab97c06fc97">fp::mbind</a></div><div class="ttdeci">constexpr auto mbind(const std::optional&lt; T &gt; &amp;opt, F f) -&gt; decltype(f(opt.value()))</div><div class="ttdoc">Monad optional bind.</div><div class="ttdef"><b>Definition:</b> <a href="monad_8hpp_source.html#l00063">monad.hpp:63</a></div></div>
-<div class="ttc" id="anamespacefp_html_a63183c3fd51b9dd7d497181e468df5ce"><div class="ttname"><a href="namespacefp.html#a63183c3fd51b9dd7d497181e468df5ce">fp::OutOfRange</a></div><div class="ttdeci">Error OutOfRange(const std::string &amp;what=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="src_2result_8cpp_source.html#l00073">result.cpp:73</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
