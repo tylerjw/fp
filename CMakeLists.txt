@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(fp)
+project(fp LANGUAGES CXX)
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 add_library(project_options INTERFACE)
@@ -14,23 +14,25 @@ find_package(ament_cmake REQUIRED)
 find_package(fmt REQUIRED)
 find_package(range-v3 REQUIRED)
 
-add_library(fp src/result.cpp)
-target_include_directories(fp PUBLIC
+add_library(${PROJECT_NAME} src/result.cpp)
+target_include_directories(${PROJECT_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-target_compile_features(fp PUBLIC cxx_std_17)
-target_link_libraries(fp
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
+target_link_libraries(${PROJECT_NAME}
   PUBLIC
     fmt::fmt
     range-v3::range-v3
 )
+set_target_properties(${PROJECT_NAME} PROPERTIES
+  POSITION_INDEPENDENT_CODE ON)
 
 add_subdirectory(examples)
 
 install(DIRECTORY include/ DESTINATION include/)
 
 install(
-  TARGETS fp
+  TARGETS ${PROJECT_NAME}
   EXPORT ${PROJECT_NAME}Targets
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
