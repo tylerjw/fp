@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('maybe_error_8cpp-example.html',''); in
 <div class="line"> </div>
 <div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x == 0.0) {</div>
-<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a name="a0"></a><a class="code" href="namespacefp.html#aafc4355e9ef5463351674ac5883133f6">fp::InvalidArgument</a>(fmt::format(<span class="stringliteral">&quot;divide by 0&quot;</span>)));</div>
+<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a name="a0"></a><a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(fmt::format(<span class="stringliteral">&quot;divide by 0&quot;</span>)));</div>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">return</span> 4.0 / x;</div>
 <div class="line">}</div>
@@ -165,10 +165,10 @@ $(document).ready(function(){initNavTree('maybe_error_8cpp-example.html',''); in
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00165">result.hpp:165</a></div></div>
-<div class="ttc" id="anamespacefp_html_ae6161b2ffcda278db444bcd60c6764b4"><div class="ttname"><a href="namespacefp.html#ae6161b2ffcda278db444bcd60c6764b4">fp::maybe_error</a></div><div class="ttdeci">constexpr std::optional&lt; E &gt; maybe_error(tl::expected&lt; Args, E &gt;... args)</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00193">result.hpp:193</a></div></div>
-<div class="ttc" id="anamespacefp_html_aafc4355e9ef5463351674ac5883133f6"><div class="ttname"><a href="namespacefp.html#aafc4355e9ef5463351674ac5883133f6">fp::InvalidArgument</a></div><div class="ttdeci">Error InvalidArgument(const std::string &amp;what=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="src_2result_8cpp_source.html#l00041">result.cpp:41</a></div></div>
-<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00153">result.hpp:153</a></div></div>
+<div class="ttc" id="anamespacefp_html_a4ac7f2f3366a4cfce9808ddd612c6dc6"><div class="ttname"><a href="namespacefp.html#a4ac7f2f3366a4cfce9808ddd612c6dc6">fp::make_result</a></div><div class="ttdeci">constexpr Result&lt; T, E &gt; make_result(T value)</div><div class="ttdoc">Makes a Result&lt;T&gt; from a T value.</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00199">result.hpp:199</a></div></div>
+<div class="ttc" id="anamespacefp_html_ae6161b2ffcda278db444bcd60c6764b4"><div class="ttname"><a href="namespacefp.html#ae6161b2ffcda278db444bcd60c6764b4">fp::maybe_error</a></div><div class="ttdeci">constexpr std::optional&lt; E &gt; maybe_error(tl::expected&lt; Args, E &gt;... args)</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00227">result.hpp:227</a></div></div>
+<div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00089">result.hpp:89</a></div></div>
+<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

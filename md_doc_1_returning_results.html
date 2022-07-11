@@ -98,7 +98,7 @@ Returning a Result&lt;T&gt;</h1>
 <p>Here is an example of how to write a function that returns a <code>Result&lt;T&gt;</code>:</p>
 <div class="fragment"><div class="line"><a class="code" href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result&lt;double&gt;</a> divide_4_by(<span class="keywordtype">double</span> x) {</div>
 <div class="line">  <span class="keywordflow">if</span> (x == 0.0)</div>
-<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#aafc4355e9ef5463351674ac5883133f6">fp::InvalidArgument</a>(<span class="stringliteral">&quot;divide by 0&quot;</span>));</div>
+<div class="line">    <span class="keywordflow">return</span> tl::make_unexpected(<a class="code" href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a>(<span class="stringliteral">&quot;divide by 0&quot;</span>));</div>
 <div class="line">  <span class="keywordflow">return</span> 4.0 / x;</div>
 <div class="line">}</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
@@ -190,8 +190,8 @@ Next Tutorial</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacefp_html_aafc4355e9ef5463351674ac5883133f6"><div class="ttname"><a href="namespacefp.html#aafc4355e9ef5463351674ac5883133f6">fp::InvalidArgument</a></div><div class="ttdeci">Error InvalidArgument(const std::string &amp;what=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="src_2result_8cpp_source.html#l00041">result.cpp:41</a></div></div>
-<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00153">result.hpp:153</a></div></div>
+<div class="ttc" id="anamespacefp_html_a65d790b30a1ae8afef77bfcc9ec699ac"><div class="ttname"><a href="namespacefp.html#a65d790b30a1ae8afef77bfcc9ec699ac">fp::InvalidArgument</a></div><div class="ttdeci">constexpr auto InvalidArgument</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00089">result.hpp:89</a></div></div>
+<div class="ttc" id="anamespacefp_html_a5208abccff41c3cfee00bcf78ab1f367"><div class="ttname"><a href="namespacefp.html#a5208abccff41c3cfee00bcf78ab1f367">fp::Result</a></div><div class="ttdeci">tl::expected&lt; T, E &gt; Result</div><div class="ttdef"><b>Definition:</b> <a href="result_8hpp_source.html#l00187">result.hpp:187</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
