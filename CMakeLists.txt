@@ -21,8 +21,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_17)
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
-    fmt::fmt
-    range-v3::range-v3
+    fmt
+    range-v3
 )
 set_target_properties(${PROJECT_NAME} PROPERTIES
   POSITION_INDEPENDENT_CODE ON)
@@ -43,7 +43,7 @@ install(
 ament_export_include_directories(include)
 ament_export_targets(${PROJECT_NAME}Targets)
 ament_export_dependencies(fmt)
-#ament_export_dependencies(range-v3) TODO(sjahr) Re-enable once it does not cause cmake errors
+ament_export_dependencies(range-v3)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
