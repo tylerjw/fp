@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>fp</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>FP extensions for C++</description>
   <maintainer email="squirrel428@pm.me">Tyler Weaver</maintainer>
 
@@ -14,8 +14,6 @@
   <author>Tyler Weaver</author>
   <author email="squirrel428@pm.me">Tyler Weaver</author>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
-
   <depend>fmt</depend>
   <depend>range-v3</depend>
 
@@ -24,6 +22,6 @@
   <test_depend>ament_lint_common</test_depend>
 
   <export>
-    <build_type>ament_cmake</build_type>
+    <build_type>cmake</build_type>
   </export>
 </package>

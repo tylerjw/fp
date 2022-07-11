@@ -1,0 +1,13 @@
+# - Config file for the fp package
+# It defines the following variables
+#  fp_INCLUDE_DIRS - include directories for FooBar
+#  fp_LIBRARIES    - libraries to link against
+#  fp_EXECUTABLE   - the bar executable
+
+set(fp_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+
+# Our library dependencies (contains definitions for IMPORTED targets)
+include("${fp_DIR}/export_fp.cmake")
+
+# These are IMPORTED targets created by fpTargets.cmake
+set(fp_LIBRARIES fp)
