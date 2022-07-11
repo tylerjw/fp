@@ -1,11 +1,5 @@
-cmake_minimum_required(VERSION 3.15)
-project(fp LANGUAGES CXX)
-
-set(fp_MAJOR_VERSION 0)
-set(fp_MINOR_VERSION 1)
-set(fp_PATCH_VERSION 0)
-set(fp_VERSION
-  ${fp_MAJOR_VERSION}.${fp_MINOR_VERSION}.${fp_PATCH_VERSION})
+cmake_minimum_required(VERSION 3.22.1)
+project(fp VERSION 0.1.0 LANGUAGES CXX)
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 add_library(project_options INTERFACE)
@@ -51,15 +45,18 @@ set(export_targets ${export_targets};${PROJECT_NAME})
 export(EXPORT export_fp
   FILE "${PROJECT_BINARY_DIR}/export_fp.cmake")
 
-# Create the fpConfig.cmake
+# Create fpConfig.cmake
 set(CONF_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include")
 configure_file(fpConfig.cmake.in
   "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake" @ONLY)
 
-# Create the fpConfigVersion.cmake
-configure_file(fpConfigVersion.cmake.in
-  "${PROJECT_BINARY_DIR}/fpConfigVersion.cmake" @ONLY)
+# Create fpConfigVersion.cmake
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(fpConfigVersion.cmake
+                                 VERSION ${PROJECT_VERSION}
+                                 COMPATIBILITY SameMajorVersion)
 
+# Install find_package cmake files
 install(FILES
   "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake"
   "${PROJECT_BINARY_DIR}/fpConfigVersion.cmake"
