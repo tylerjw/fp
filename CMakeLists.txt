@@ -33,7 +33,7 @@ install(
 )
 install(
   TARGETS ${PROJECT_NAME}
-  EXPORT export_fp
+  EXPORT export_${PROJECT_NAME}
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
@@ -42,8 +42,8 @@ install(
 
 # export targets
 set(export_targets ${export_targets};${PROJECT_NAME})
-export(EXPORT export_fp
-  FILE "${PROJECT_BINARY_DIR}/export_fp.cmake")
+export(EXPORT export_${PROJECT_NAME}
+  FILE "${PROJECT_BINARY_DIR}/export_${PROJECT_NAME}.cmake")
 
 # Create fpConfig.cmake
 set(CONF_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include")
@@ -53,8 +53,9 @@ configure_file(fpConfig.cmake.in
 # Create fpConfigVersion.cmake
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(fpConfigVersion.cmake
-                                 VERSION ${PROJECT_VERSION}
-                                 COMPATIBILITY SameMajorVersion)
+  VERSION ${PROJECT_VERSION}
+  COMPATIBILITY SameMajorVersion
+)
 
 # Install find_package cmake files
 install(FILES
