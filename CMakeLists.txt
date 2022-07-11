@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.15)
-project(fp LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.16.3)
+project(fp VERSION 0.1.0 LANGUAGES CXX)
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 add_library(project_options INTERFACE)
@@ -10,16 +10,16 @@ include(cmake/Sanitizers.cmake)
 enable_sanitizers(project_options)
 
 # find dependencies
-find_package(ament_cmake REQUIRED)
 find_package(fmt REQUIRED)
 find_package(range-v3 REQUIRED)
 
-add_library(${PROJECT_NAME} INTERFACE)
-target_include_directories(${PROJECT_NAME} INTERFACE
+add_library(fp INTERFACE)
+target_include_directories(fp INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
-target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_17)
-target_link_libraries(${PROJECT_NAME}
+  $<INSTALL_INTERFACE:include>
+)
+target_compile_features(fp INTERFACE cxx_std_17)
+target_link_libraries(fp
   INTERFACE
     fmt
     range-v3
@@ -27,21 +27,50 @@ target_link_libraries(${PROJECT_NAME}
 
 add_subdirectory(examples)
 
-install(DIRECTORY include/ DESTINATION include/)
-
 install(
-  TARGETS ${PROJECT_NAME}
-  EXPORT ${PROJECT_NAME}Targets
+  DIRECTORY include/
+  DESTINATION include
+)
+install(
+  TARGETS fp
+  EXPORT export_fp
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
   RUNTIME DESTINATION bin
   INCLUDES DESTINATION include
 )
 
-ament_export_include_directories(include)
-ament_export_targets(${PROJECT_NAME}Targets)
-ament_export_dependencies(fmt)
-ament_export_dependencies(range-v3)
+# export targets
+set(export_targets ${export_targets};fp)
+export(EXPORT export_fp
+  FILE "${PROJECT_BINARY_DIR}/export_fp.cmake"
+)
+
+# Create fpConfig.cmake
+set(CONF_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include")
+configure_file(fpConfig.cmake.in
+  "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake" @ONLY
+)
+
+# Create fpConfigVersion.cmake
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(fpConfigVersion.cmake
+  VERSION ${PROJECT_VERSION}
+  COMPATIBILITY SameMajorVersion
+)
+
+# Install find_package cmake files
+install(FILES
+  "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake"
+  "${PROJECT_BINARY_DIR}/fpConfigVersion.cmake"
+  DESTINATION "share/fp/cmake"
+  COMPONENT dev
+)
+install(EXPORT export_fp
+  DESTINATION "share/fp/cmake"
+  FILE export_fp.cmake
+  COMPONENT dev
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -53,5 +82,3 @@ if(BUILD_TESTING)
 
   add_subdirectory(test)
 endif()
-
-ament_package()
