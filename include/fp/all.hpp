@@ -28,14 +28,6 @@
 
 #pragma once
 
-#include <fmt/chrono.h>
-#include <fmt/core.h>
-#include <fmt/format.h>
-#include <fmt/ranges.h>
-
-#include <range/v3/all.hpp>
-
-#include "fp/_external/expected.hpp"
 #include "fp/macros.hpp"
 #include "fp/monad.hpp"
 #include "fp/no_discard.hpp"

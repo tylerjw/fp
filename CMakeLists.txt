@@ -13,13 +13,13 @@ enable_sanitizers(project_options)
 find_package(fmt REQUIRED)
 find_package(range-v3 REQUIRED)
 
-add_library(${PROJECT_NAME} INTERFACE)
-target_include_directories(${PROJECT_NAME} INTERFACE
+add_library(fp INTERFACE)
+target_include_directories(fp INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
 )
-target_compile_features(${PROJECT_NAME} INTERFACE cxx_std_17)
-target_link_libraries(${PROJECT_NAME}
+target_compile_features(fp INTERFACE cxx_std_17)
+target_link_libraries(fp
   INTERFACE
     fmt
     range-v3
@@ -43,12 +43,14 @@ install(
 # export targets
 set(export_targets ${export_targets};${PROJECT_NAME})
 export(EXPORT export_${PROJECT_NAME}
-  FILE "${PROJECT_BINARY_DIR}/export_${PROJECT_NAME}.cmake")
+  FILE "${PROJECT_BINARY_DIR}/export_${PROJECT_NAME}.cmake"
+)
 
 # Create fpConfig.cmake
 set(CONF_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include")
 configure_file(fpConfig.cmake.in
-  "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake" @ONLY)
+  "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake" @ONLY
+)
 
 # Create fpConfigVersion.cmake
 include(CMakePackageConfigHelpers)
@@ -61,11 +63,14 @@ write_basic_package_version_file(fpConfigVersion.cmake
 install(FILES
   "${PROJECT_BINARY_DIR}/${CMAKE_FILES_DIRECTORY}/fpConfig.cmake"
   "${PROJECT_BINARY_DIR}/fpConfigVersion.cmake"
-  DESTINATION "share/${PROJECT_NAME}/cmake" COMPONENT dev)
+  DESTINATION "share/${PROJECT_NAME}/cmake"
+  COMPONENT dev
+)
 install(EXPORT export_${PROJECT_NAME}
   DESTINATION "share/${PROJECT_NAME}/cmake"
   FILE export_${PROJECT_NAME}.cmake
-  COMPONENT dev)
+  COMPONENT dev
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
